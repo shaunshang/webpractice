@@ -1,0 +1,124 @@
+<script src="js/form.js"></script>
+
+<h2>Form Elements</h2>
+<div class="form-banner">
+  <span>Full size inputs</span>
+  <a class="form-options" href="javascript:;" data-trigger="dropdown1"><span></span></a>
+  <div class="dropdown1 hide">
+    <ul>
+      <li><a class="add-new" href="javascript:;">Add New</a></li>
+      <li><a class="statement" href="javascript:;">View Statement</a></li>
+      <li><a class="settings" href="javascript:;">Settings</a></li>
+    </ul>
+  </div>
+</div>
+<div class="form-body">
+  <form>
+    <table>
+      <colgroup>
+        <col width="20%" />
+        <col width="80%" />
+      </colgroup>
+      <thead>
+        <tr>
+          <td colspan="2">
+            <div class="error-message warning">
+              <span><b>Heads up!</b> This alert needs your attention, but it's not super important.</span>
+              <a class="remove-error" href="javascript:;">x</a>
+            </div>
+            <div class="error-message success">
+              <span><b>Well done!</b> You successfully read this important alert message.</span>
+              <a class="remove-error" href="javascript:;">x</a>
+            </div>
+            <div class="error-message alert">
+              <span><b>Oh snap!</b> Change a few things up and try submitting again.</span>
+              <a class="remove-error" href="javascript:;">x</a>
+            </div>
+          </td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th>Username:</th>
+          <td>
+            <input type="text" name="username" />
+          </td>
+        </tr>
+        <tr>
+          <th>Password:</th>
+          <td>
+            <input type="password" name="password" />
+          </td>
+        </tr>
+        <tr>
+          <th>Read only:</th>
+          <td>
+            <input type="text" name="read-only" readonly />
+          </td>
+        </tr>
+        <tr>
+          <th>Predefined value:</th>
+          <td>
+            <input type="text" name="predefined" value="http://" />
+          </td>
+        </tr>
+        <tr>
+          <th>Tooltip on focus:</th>
+          <td>
+            <div class="tooltips"><span>Tooltips</span></div>
+            <input type="text" name="tooltips" />
+          </td>
+        </tr>
+        <tr>
+          <th>Max 10 characters:</th>
+          <td>
+            <input type="text" name="max-characters" maxlength="10" />
+          </td>
+        </tr>
+        <tr>
+          <th>With placeholder:</th>
+          <td>
+            <input type="text" name="placeholder" placeholder="placeholder"/>
+          </td>
+        </tr>
+        <tr>
+          <th>With button:</th>
+          <td>
+            <input type="text" name="with-button" /><button>Go!</button>
+          </td>
+        </tr>
+        <tr>
+          <th>With dropdown:</th>
+          <td>
+            <input type="text" name="with-dropdown" /><a class="form-options" href="javascript:;" data-trigger="dropdown2">Action<i class="caret"></i></a>
+            <div class="dropdown2 hide">
+              <ul>
+                <li><a class="add-new" href="javascript:;">Add New</a></li>
+                <li><a class="statement" href="javascript:;">View Statement</a></li>
+                <li><a class="settings" href="javascript:;">Settings</a></li>
+              </ul>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <th>Tags:</th>
+          <td>
+            <div class="tags-container">
+              <div id="add-tag">
+                <input type="text" name="add-tag" placeholder="add a tag"/>
+              </div>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td colspan="2">
+            <input type="button" value="Submit" />
+            <input type="button" value="Cancel" />
+          </td>
+        </tr>
+      </tfoot>
+    </table>
+  </form>
+</div>
