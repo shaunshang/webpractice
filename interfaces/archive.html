@@ -1,39 +1,34 @@
+<link href="css/jquery-ui.custom.css" rel="stylesheet" />
+<script src="js/jquery-ui.custom.js"></script>
 <script src="js/table.js"></script>
 
 <ul class="tabs">
   <li class="current">
-    <a id="table-target" href="javascript:;">Global Home</a>
+    <a id="table-target" href="javascript:;">Archive</a>
   </li>
 </ul>
 
+<div class="search">
+  Updated from
+  <input type="text" id="from" name="from" />
+  to
+  <input type="text" id="to" name="to" />
+  <a href="javascript:;" class="search-btn">Search</a>
+</div>
+<script>
+  $(".search-btn").click(function(){
+    $(".table-control").removeClass("hide");
+    $(".table-checkbox").removeClass("hide");
+  })
+</script>
 <div class="tab-content">
-  <ul class="table-control">
+  <ul class="table-control hide">
     <li>
-      <a class="filter" href="javascript:;"><span></span>Edit</a>
-    </li><li>
-      <a class="delete-entry" href="javascript:;"><span></span>History</a>
-    </li><li>
-      <a class="filter" href="javascript:;"><span></span>Archive</a>
-    </li>
-  </ul>
-  
-  <ul class="table-control">
-    <li>
-      <a class="filter" href="javascript:;"><span></span>Pre-col Filtering</a>
-    </li><li>
       <a class="delete-entry" href="javascript:;"><span></span>Download report</a>
-    </li><li>
-      <a class="filter" href="javascript:;"><span></span>Download creatives</a>
-    </li><li>
-      <a class="important" href="javascript:;"><span></span>Historical Report</a>
-    </li><li>
-      <a class="label" href="javascript:;"><span></span>New report drive</a>
-    </li><li>
-      <a class="print" href="javascript:;"><span></span>Approve all</a>
     </li>
   </ul>
   
-  <table class="table-checkbox table-status">
+  <table class="table-checkbox table-status hide">
     <colgroup>
       <col width="68px" />
       <col />

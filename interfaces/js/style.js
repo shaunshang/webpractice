@@ -17,11 +17,11 @@ $(function(){
 		async: false,
 		cache: false,
 		type: "GET",
-		url: "global-home.html",
+		url: "archive.html",
 		error: function(xml){alert("Error request failed");},
 		timeout: 1000,
 		success: function(e) {
-			$(".tab-content").empty().append(e);
+			$(".wrapper-container").empty().append(e);
 		}
 	});
 	
@@ -112,7 +112,7 @@ function goto(obj, target) {
 		error: function(xml){alert("Error request failed");},
 		timeout: 1000,
 		success: function(e) {
-			$(".tab-content").empty().append(e);
+			$(".wrapper-container").empty().append(e);
 		}
 	});
 }
