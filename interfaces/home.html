@@ -40,13 +40,13 @@
       <!-- ==================== Sidebar ==================== -->
       <div class="sidebar">
         <ul>
-          <li class="btn-bg admin-home"><a class="current" href="javascript:;" name="Admin Home"><span></span></a></li>
-          <li class="btn-bg global-home"><a href="javascript:;" name="Global Home"><span></span></a></li>
-          <li class="btn-bg archive"><a href="javascript:;" name="Archive"><span></span></a></li>
-          <li class="btn-bg configuration"><a href="javascript:;" name="Configuration"><span></span></a></li>
-          <li class="btn-bg reporter"><a href="javascript:;" name="Reporter"><span></span></a></li>
-          <li class="btn-bg alljobs"><a href="javascript:;" name="All Jobs"><span></span></a></li>
-          <li class="btn-bg client-home"><a href="javascript:;" name="Client Home"><span></span></a></li>
+          <li class="btn-bg admin-home"><a class="current" href="javascript:;" name="Admin Home" onclick="goto(this, 'admin-home')"><span></span></a></li>
+          <li class="btn-bg global-home"><a href="javascript:;" name="Global Home" onclick="goto(this, 'global-home')"><span></span></a></li>
+          <li class="btn-bg archive"><a href="javascript:;" name="Archive" onclick="goto(this, 'archive')"><span></span></a></li>
+          <li class="btn-bg configuration"><a href="javascript:;" name="Configuration" onclick="goto(this, 'configuration')"><span></span></a></li>
+          <li class="btn-bg reporter"><a href="javascript:;" name="Reporter" onclick="goto(this, 'reporter')"><span></span></a></li>
+          <li class="btn-bg alljobs"><a href="javascript:;" name="All Jobs" onclick="goto(this, 'all-jobs')"><span></span></a></li>
+          <li class="btn-bg client-home"><a href="javascript:;" name="Client Home" onclick="goto(this, 'client-home')"><span></span></a></li>
         </ul>
         <div class="tooltips">
           <span></span>
@@ -59,6 +59,7 @@
       <!-- ==================== MainWrapper ==================== -->
       <div class="mainwrapper">
         <div class="wrapper-container">
+          <!--
           <ul class="tabs">
             <li class="current">
               <a id="table-target" href="javascript:;" onclick="goto('table')">Table</a>
@@ -70,7 +71,7 @@
               <a id="detail-target" href="javascript:;" onclick="goto('detail')">Detail</a>
             </li>
           </ul>
-          
+          -->
           <div class="tab-content"></div>
         </div>
       </div>

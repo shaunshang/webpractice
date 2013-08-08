@@ -17,7 +17,7 @@ $(function(){
 		async: false,
 		cache: false,
 		type: "GET",
-		url: "table.html",
+		url: "global-home.html",
 		error: function(xml){alert("Error request failed");},
 		timeout: 1000,
 		success: function(e) {
@@ -85,9 +85,24 @@ $(function(){
 });
 
 
-function goto(target) {
-	$(".tabs li").removeClass("current");
-	$("#" + target + "-target").parent().addClass("current");
+function goto(obj, target) {
+//	$(".tabs li").removeClass("current");
+//	$("#" + target + "-target").parent().addClass("current");
+//	
+//	$.ajax({
+//		async: false,
+//		cache: false,
+//		type: "GET",
+//		url: target+".html",
+//		error: function(xml){alert("Error request failed");},
+//		timeout: 1000,
+//		success: function(e) {
+//			$(".tab-content").empty().append(e);
+//		}
+//	});
+	
+	$(".sidebar ul li > a").removeClass("current");
+	obj.className = "current";
 	
 	$.ajax({
 		async: false,
