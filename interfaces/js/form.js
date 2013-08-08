@@ -81,6 +81,16 @@ $(function(){
 			$(this).parent().removeClass("checked");
 		};
 	});
+    
+    
+    $(".tabs a").click(function(){
+    	var target = $(this).attr("id");
+    	
+    	$(".tabs li").removeClass("current");
+    	$(this).parent().addClass("current");
+    	$(".tab-content").hide();
+    	$("div[name='" + target + "']").show();
+    });
 });
 
 function removeTag(obj) {

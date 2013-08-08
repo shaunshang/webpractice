@@ -3,15 +3,17 @@
 
 <ul class="tabs">
   <li class="current">
-    <a id="table-target" href="javascript:;">Reports</a>
+    <a id="reports-target" href="javascript:;">Reports</a>
   </li><li>
-    <a id="table-target" href="javascript:;">Reports</a>
+    <a id="reporters-target" href="javascript:;">Reporters</a>
+  </li><li>
+    <a id="clients-target" href="javascript:;">Clients</a>
   </li>
 </ul>
 
-<div class="tab-content">
+<div class="tab-content" name="reports-target">
   <div class="form-banner">
-    <span>Reports</span>
+    <span>Configuration - Reports</span>
   </div>
   <div class="form-body">
     <form>
@@ -72,12 +74,14 @@
           <tr>
             <th>Date Format:</th>
             <td>
-              <select>
-                <option>2111</option>
-                <option>2111</option>
-                <option>2111</option>
-                <option>2111</option>
-              </select>
+              <span class="select-container">
+                <select>
+                  <option>2111</option>
+                  <option>2111</option>
+                  <option>2111</option>
+                  <option>2111</option>
+                </select>
+              </span>
             </td>
           </tr>
           <tr>
@@ -132,4 +136,178 @@
       </table>
     </form>
   </div>
+</div>
+
+<div class="tab-content" name="reporters-target" style="display: none;">
+  <ul class="table-control">
+    <li>
+      <a class="new-entry" href="javascript:;"><span></span>Add Reporter</a>
+    </li><li>
+      <a class="edit-entry" href="javascript:;"><span></span>Edit</a>
+    </li><li>
+      <a class="delete-entry" href="javascript:;"><span></span>Delete</a>
+    </li>
+  </ul>
+  
+  <div class="form-banner">
+    <span>Configuration - Reporters</span>
+  </div>
+  
+  <table class="table-checkbox">
+    <colgroup>
+      <col />
+      <col />
+      <col />
+      <col />
+      <col width="300px" />
+    </colgroup>
+    <thead>
+      <tr>
+        <th colspan="5">
+          <span class="filter-container"><input type="text" class="filter"/></span>
+        </th>
+      </tr>
+      <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Can see all jobs</th>
+        <th>Shared access</th>
+        <th>Presets</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Bob Yin</td>
+        <td>bob.yin@tbwaworld.com</td>
+        <td>Yes</td>
+        <td>Yes</td>
+        <td>
+          Channels: Print, Retail, Digital, TV, Cinema, Outdoor, Spectacular, Activation, Event, PR, Other.
+          Category: Football, Running, Training.
+          Agency: 1.
+        </td>
+      </tr>
+      <tr>
+        <td>James Liu</td>
+        <td>james.liu@tbwaworld.com</td>
+        <td>Yes</td>
+        <td>Yes</td>
+        <td>
+          Country: Algeria, Argentina, Armenia.
+          Channels: Print.
+        </td>
+      </tr>
+      <tr>
+        <td>Selina Xu</td>
+        <td>selina.xu@tbwaworld.com</td>
+        <td>Yes</td>
+        <td>Yes</td>
+        <td>
+          Category: Football, OBC.
+        </td>
+      </tr>
+      <tr>
+        <td>Vivian Zheng</td>
+        <td>vivian.zheng@tbwaworld.com</td>
+        <td>Yes</td>
+        <td>Yes</td>
+        <td>
+          Market: CIS.
+        </td>
+      </tr>
+      <tr>
+        <td>Shell Xie</td>
+        <td>shell.xie@tbwaworld.com</td>
+        <td>Yes</td>
+        <td>Yes</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>Gabriel Tong</td>
+        <td>gabriel.tong@tbwaworld.com</td>
+        <td>Yes</td>
+        <td>Yes</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>Tony Cao</td>
+        <td>tony.cao@tbwaworld.com</td>
+        <td>Yes</td>
+        <td>Yes</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>Jerry Huo</td>
+        <td>jerry.huo@tbwaworld.com</td>
+        <td>Yes</td>
+        <td>Yes</td>
+        <td></td>
+      </tr>
+    </tbody>
+    <tfoot>
+      <tr>
+        <th colspan="5"></th>
+      </tr>
+    </tfoot>
+  </table>
+</div>
+
+<div class="tab-content" name="clients-target" style="display: none;">
+  <ul class="table-control">
+    <li>
+      <a class="new-entry" href="javascript:;"><span></span>Add client</a>
+    </li><li>
+      <a class="edit-entry" href="javascript:;"><span></span>Edit</a>
+    </li><li>
+      <a class="delete-entry" href="javascript:;"><span></span>Delete</a>
+    </li>
+  </ul>
+  
+  <div class="form-banner">
+    <span>Configuration - Clients</span>
+  </div>
+  
+  <table class="table-checkbox">
+    <colgroup>
+      <col />
+      <col />
+      <col />
+      <col />
+      <col width="300px" />
+    </colgroup>
+    <thead>
+      <tr>
+        <th colspan="2">
+          <span class="filter-container"><input type="text" class="filter"/></span>
+        </th>
+      </tr>
+      <tr>
+        <th>Client</th>
+        <th>Email</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Adidas</td>
+        <td>contact@adidas.com</td>
+      </tr>
+      <tr>
+        <td>Coca-Cola</td>
+        <td>contact@cocacola.com</td>
+      </tr>
+      <tr>
+        <td>Nike</td>
+        <td>contact@nike.com</td>
+      </tr>
+      <tr>
+        <td>Cisco</td>
+        <td>support@cisco.com</td>
+      </tr>
+    </tbody>
+    <tfoot>
+      <tr>
+        <th colspan="2"></th>
+      </tr>
+    </tfoot>
+  </table>
 </div>
