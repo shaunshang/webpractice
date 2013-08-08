@@ -1200,6 +1200,7 @@ div.ui-datepicker{
 }
 .error-message {
   width: 93%;
+  height: 30px;
   margin: 4px auto;
   white-space: normal;
   text-align: right;

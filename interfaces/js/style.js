@@ -17,7 +17,7 @@ $(function(){
 		async: false,
 		cache: false,
 		type: "GET",
-		url: "configuration.html",
+		url: "admin-home.html",
 		error: function(xml){alert("Error request failed");},
 		timeout: 1000,
 		success: function(e) {

@@ -1,4 +1,4 @@
-$(function(){
+	//alert();
 	/*
 	 * form options
 	 * 
@@ -57,8 +57,6 @@ $(function(){
 		}, 300)
 	});
 	
-	
-	
 	/*
 	 * Sortable
 	 * 
@@ -82,17 +80,15 @@ $(function(){
 		};
 	});
     
+    $(".tabs li a").click(function(){
+        var target = $(this).attr("id");
+        
+        $(".tabs li").removeClass("current");
+        $(this).parent().addClass("current");
+        $(".tab-content").hide();
+        $("div[name='" + target + "']").show();
+      });
     
-    $(".tabs a").click(function(){
-    	var target = $(this).attr("id");
-    	
-    	$(".tabs li").removeClass("current");
-    	$(this).parent().addClass("current");
-    	$(".tab-content").hide();
-    	$("div[name='" + target + "']").show();
-    });
-});
-
 function removeTag(obj) {
 	$(obj).parent().fadeOut("fast");
 	
