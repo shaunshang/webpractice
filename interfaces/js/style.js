@@ -1,5 +1,42 @@
 $(function(){
 	/*
+	 * Full Screen
+	 * 
+	 * */
+	var fullscreen = false;
+	$(".fullscreen a").click(function(){
+		$(".sidebar").toggle( "slide" );
+		if(fullscreen == false) {
+			fullscreen = true;
+			$(".fullscreen a").addClass("hover");
+			$(".wrapper-container").css("margin-left", "0");			
+		} else {
+			fullscreen = false;
+			$(".fullscreen a").removeClass("hover");
+			$(".wrapper-container").css("margin-left", "90px");
+		}
+		iframeLoaded();
+	});
+
+	/*
+	 * Tabs Toggle
+	 * 
+	 * */
+	var tabstoggle = false;
+	$(".tabstoggle a").click(function(){
+		$(".tabs").slideToggle("fast");
+		if(tabstoggle == false) {
+			tabstoggle = true;
+			$(".tabstoggle a").addClass("hover");
+			//$(".tab-content").css("margin-top", "50px");
+		} else {
+			tabstoggle = false;
+			$(".tabstoggle a").removeClass("hover");
+			//$(".tab-content").css("margin-top", "0px");
+		}
+	});
+	
+	/*
 	 * start button
 	 * 
 	 * */
@@ -43,45 +80,6 @@ $(function(){
 		$(".tooltips").offset({top:0, left:0});
     	$(".tooltips").hide();
 	});
-	
-	
-	/*
-	 * Full Screen
-	 * 
-	 * */
-	var fullscreen = false;
-	$(".fullscreen a").click(function(){
-		$(".sidebar").toggle( "slide" );
-		if(fullscreen == false) {
-			fullscreen = true;
-			$(".fullscreen a").addClass("hover");
-			$(".wrapper-container").css("margin-left", "0");			
-		} else {
-			fullscreen = false;
-			$(".fullscreen a").removeClass("hover");
-			$(".wrapper-container").css("margin-left", "90px");
-		}
-		iframeLoaded();
-	});
-	
-	/*
-	 * Tabs Toggle
-	 * 
-	 * */
-	var tabstoggle = false;
-	$(".tabstoggle a").click(function(){
-		$(".tabs").slideToggle("fast");
-		if(tabstoggle == false) {
-			tabstoggle = true;
-			$(".tabstoggle a").addClass("hover");
-			//$(".tab-content").css("margin-top", "50px");
-		} else {
-			tabstoggle = false;
-			$(".tabstoggle a").removeClass("hover");
-			//$(".tab-content").css("margin-top", "0px");
-		}
-	});
-	
 });
 
 

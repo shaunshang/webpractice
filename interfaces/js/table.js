@@ -1,4 +1,3 @@
-$(function(){
 	/*
 	 * table checkbox - check or uncheck all
 	 * 
@@ -86,4 +85,3 @@ $(function(){
 		}
 	});
 	*/
-})
