@@ -748,20 +748,7 @@ div.ui-datepicker{
 .status.confirm td{
   background: rgba(238,247,251,1);
 }
-.select-container {
-  height: 30px;
-  display: inline-block;
-  border: solid 1px #ccc;
-  background: #f5f5f5 url(../images/select-arrows.png);
-}
-.select-container select {
-  width: 150px;
-  height: 30px;
-  border: none;
-  background: none;
-  font-size: 14px;
-  opacity: 0;
-}
+
 /* ---------- Progress Bar ---------- */
 .progress {
   height: 20px;
@@ -1309,7 +1296,7 @@ div.ui-datepicker{
   font-size: 12px;
   padding: 15px 2px;
 }
-.media-banner > div select {
+.select-container select {
   position: absolute;
   left: 0;
   top: 0;
@@ -1325,7 +1312,7 @@ div.ui-datepicker{
   display: inline-block;
   vertical-align: middle;
 }
-.media-banner .select-container {
+.select-container {
   height: 30px;
   line-height: 30px;
   text-align: left;
@@ -1338,8 +1325,8 @@ div.ui-datepicker{
   cursor: pointer;
   overflow:hidden;
 }
-.media-banner .select-container:hover {
-  background: rgba(245,245,245,1) url(../images/select-arrows.png) no-repeat right center;
+.select-container:hover {
+  background: rgba(250,250,250,1) url(../images/select-arrows.png) no-repeat right center;
 }
 .loading {
   height: 30px;
