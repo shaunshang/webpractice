@@ -1,0 +1,135 @@
+<script src="js/jquery-ui.custom.js"></script>
+<script src="js/form.js"></script>
+
+<ul class="tabs">
+  <li class="current">
+    <a id="table-target" href="javascript:;">Reports</a>
+  </li><li>
+    <a id="table-target" href="javascript:;">Reports</a>
+  </li>
+</ul>
+
+<div class="tab-content">
+  <div class="form-banner">
+    <span>Reports</span>
+  </div>
+  <div class="form-body">
+    <form>
+      <table>
+        <colgroup>
+          <col width="20%" />
+          <col width="80%" />
+        </colgroup>
+        <thead>
+          <tr>
+            <td colspan="2">
+              <div class="error-message warning">
+                <span><b>Heads up!</b> This alert needs your attention, but it's not super important.</span>
+                <a class="remove-error" href="javascript:;">x</a>
+              </div>
+              <div class="error-message success">
+                <span><b>Well done!</b> You successfully read this important alert message.</span>
+                <a class="remove-error" href="javascript:;">x</a>
+              </div>
+              <div class="error-message alert">
+                <span><b>Oh snap!</b> Change a few things up and try submitting again.</span>
+                <a class="remove-error" href="javascript:;">x</a>
+              </div>
+            </td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th>Landing Page Title:</th>
+            <td>
+              <input type="text" />
+            </td>
+          </tr>
+          <tr>
+            <th>Landing Page Logo:</th>
+            <td>
+              <input type="text" readonly />
+            </td>
+          </tr>
+          <tr>
+            <th>PDF Title:</th>
+            <td>
+              <input type="text" />
+            </td>
+          </tr>
+          <tr>
+            <th>PDF Top Left Image:</th>
+            <td>
+              <input type="text" readonly />
+            </td>
+          </tr>
+          <tr>
+            <th>PDF Top Right Image:</th>
+            <td>
+              <input type="text" readonly />
+            </td>
+          </tr>
+          <tr>
+            <th>Date Format:</th>
+            <td>
+              <select>
+                <option>2111</option>
+                <option>2111</option>
+                <option>2111</option>
+                <option>2111</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <th>Order of Categories:</th>
+            <td>
+              <ul id="sortable">
+                <li>Category A</li>
+                <li>Category B</li>
+                <li>Category C</li>
+                <li>Category D</li>
+                <li>Category E</li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <th>Color-coding:</th>
+            <td>
+              <span class="checkbox-container"><input type="checkbox" /></span>
+              Use background colors to indicate project status on reports.
+            </td>
+          </tr>
+          <tr>
+            <th>Fixed Table Headers:</th>
+            <td>
+              <span class="checkbox-container"><input type="checkbox" /></span>
+              Table headers stay in place while the table scrolls.
+            </td>
+          </tr>
+          <tr>
+            <th>Table Caption:</th>
+            <td>
+              <span class="checkbox-container"><input type="checkbox" /></span>
+              If checked, when a category goes over more than one page, put the category title on the start of each new page it is on.
+            </td>
+          </tr>
+          <tr>
+            <th>Auto-done-updating:</th>
+            <td>
+              <span class="checkbox-container"><input type="checkbox" /></span>
+              Reporters are done updating just when they log in.
+            </td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <td colspan="2">
+              <input type="button" value="Save" />
+              <input type="button" value="Cancel" />
+            </td>
+          </tr>
+        </tfoot>
+      </table>
+    </form>
+  </div>
+</div>

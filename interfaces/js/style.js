@@ -17,7 +17,7 @@ $(function(){
 		async: false,
 		cache: false,
 		type: "GET",
-		url: "archive.html",
+		url: "configuration.html",
 		error: function(xml){alert("Error request failed");},
 		timeout: 1000,
 		success: function(e) {

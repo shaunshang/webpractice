@@ -4,7 +4,6 @@ $(function(){
 	 * 
 	 * */
 	$(".form-options").click(function(){
-		//alert();
 		var target = $(this).attr("data-trigger");
 		$("."+target).fadeToggle("fast");
 	});
@@ -58,6 +57,30 @@ $(function(){
 		}, 300)
 	});
 	
+	
+	
+	/*
+	 * Sortable
+	 * 
+	 * */
+	$( "#sortable" ).sortable();
+    $( "#sortable" ).disableSelection();
+    
+    
+    /*
+     * 
+     * Checkbox
+     * 
+     * */
+    $(".checkbox-container input[type='checkbox']").click(function(){
+		if($(this).is(":checked")) {
+			$(this).closest('tr').addClass("selected");
+			$(this).parent().addClass("checked");
+		} else {
+			$(this).closest('tr').removeClass("selected");
+			$(this).parent().removeClass("checked");
+		};
+	});
 });
 
 function removeTag(obj) {
