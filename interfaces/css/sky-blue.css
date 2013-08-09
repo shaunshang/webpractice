@@ -44,7 +44,7 @@ input[readonly]:focus {
   border-radius:          40px;
 }
 .btn-inner {
-  background: url(../images/default/banner-bg.png) repeat-x;
+  background: url(../images/banner-bg.png) repeat-x;
 }
 .caret {
   border-top: solid 4px rgba(0,0,0,1);
@@ -55,7 +55,7 @@ input[readonly]:focus {
 /* ============================== Banner ============================== */
 .banner {
   border-bottom: solid 1px rgba(160,160,160,1);
-  background: url(../images/default/banner-bg.png) repeat-x;
+  background: url(../images/banner-bg.png) repeat-x;
 }
 .banner .tabstoggle a:hover,
 .banner .tabstoggle .hover,
@@ -74,13 +74,13 @@ input[readonly]:focus {
   box-shadow:         0 1px 5px rgba(230,80,81,1);
 }
 .banner .start-btn a span {
-  background: url(../images/default/start-btn.png) no-repeat center center;
+  background: url(../images/start-btn.png) no-repeat center center;
 }
 .banner .change-theme a span {
-  background: url(../images/default/change-theme.png) no-repeat center 8px;
+  background: url(../images/change-theme.png) no-repeat center 8px;
 }
 .banner .logout a span {
-  background: url(../images/default/logout.png) no-repeat center center;
+  background: url(../images/logout.png) no-repeat center center;
 }
 .banner .start-btn > a,
 .banner .change-theme > a,
@@ -94,10 +94,10 @@ input[readonly]:focus {
   box-shadow:         0 1px 2px rgba(160,160,160,0.7);
 }
 .banner .tabstoggle a span {
-  background: url(../images/default/tabstoggle.png) no-repeat;
+  background: url(../images/tabstoggle.png) no-repeat;
 }
 .banner .fullscreen a span {
-  background: url(../images/default/fullscreen.png) no-repeat;
+  background: url(../images/fullscreen.png) no-repeat;
 }
 .banner .dropdown1 {
   left: -10px;
@@ -146,25 +146,25 @@ input[readonly]:focus {
   color: rgba(73,73,73,1);
 }
 .banner .dropdown li .profile {
-  background: url(../images/default/profile.png) no-repeat 15px center;
+  background: url(../images/profile.png) no-repeat 15px center;
   background-size: 16px;
   border-top: solid 2px #EF705B;
 }
 .banner .dropdown li .messages {
-  background: url(../images/default/messages.png) no-repeat 15px center;
+  background: url(../images/messages.png) no-repeat 15px center;
   background-size: 16px;
 }
 .banner .dropdown li .settings {
-  background: url(../images/default/settings.png) no-repeat 15px center;
+  background: url(../images/settings.png) no-repeat 15px center;
   background-size: 16px;
 }
 .banner .dropdown1 li .default {
-  background: url(../images/default/profile.png) no-repeat 15px center;
+  background: url(../images/profile.png) no-repeat 15px center;
   background-size: 16px;
   border-top: solid 2px #EF705B;
 }
 .banner .dropdown1 li .blue-sky {
-  background: url(../images/default/messages.png) no-repeat 15px center;
+  background: url(../images/messages.png) no-repeat 15px center;
   background-size: 16px;
 }
 /* ============================== END Banner ============================== */
@@ -208,7 +208,7 @@ input[readonly]:focus {
   box-shadow:         0 0 8px rgba(11,161,246,1);
 }
 .sidebar ul li > a span {
-  background: url(../images/default/sidebar-btn.png) no-repeat;
+  background: url(../images/sidebar-btn.png) no-repeat;
 }
 .sidebar ul .admin-home span {
   background-position: 0 0;
@@ -346,7 +346,7 @@ input[readonly]:focus {
   color: rgba(121,122,122,1);
 }
 .table-control li a span {
-  background: url(../images/default/control-btn.png) no-repeat;
+  background: url(../images/control-btn.png) no-repeat;
 }
 .table-control li .new-entry span {
   background-position: 0 0;
@@ -389,13 +389,13 @@ input[readonly]:focus {
 }
 .table-status .filter-container input[type="text"],
 .table-checkbox .filter-container input[type="text"] {
-  background: #ffffff url(../images/default/filter.png) no-repeat 10px center;
+  background: #ffffff url(../images/filter.png) no-repeat 10px center;
   -webkit-border-radius:  40px;
   -moz-border-radius:     40px;
   border-radius:          40px;
 }
 .checkbox-container {
-  background: url(../images/default/checkboxes.png) no-repeat;
+  background: url(../images/checkboxes.png) no-repeat;
   background-position: 0 0;
 }
 .checkbox-container:hover {
@@ -636,7 +636,7 @@ input[readonly]:focus {
   border-left: solid 1px rgba(226,226,226,1);
 }
 .form-banner > a span {
-  background: url(../images/default/form-option.png) no-repeat center center;
+  background: url(../images/form-option.png) no-repeat center center;
   background-size: 18px;
 }
 .form-banner > a:hover {
@@ -655,15 +655,15 @@ input[readonly]:focus {
 }
 .form-banner .dropdown1 .add-new,
 .form-body .dropdown2 .add-new {
-  background: url(../images/default/add-new.png) no-repeat 15px center;
+  background: url(../images/add-new.png) no-repeat 15px center;
 }
 .form-banner .dropdown1 .statement,
 .form-body .dropdown2 .statement {
-  background: url(../images/default/statement.png) no-repeat 15px center;
+  background: url(../images/statement.png) no-repeat 15px center;
 }
 .form-banner .dropdown1 .settings,
 .form-body .dropdown2 .settings {
-  background: url(../images/default/settings.png) no-repeat 15px center;
+  background: url(../images/settings.png) no-repeat 15px center;
 }
 /* ============================== END Form Banner ============================== */
 
@@ -814,7 +814,7 @@ input[readonly]:focus {
 }
 #sortable li:hover {
   cursor: move;
-  background: url(../images/default/draggable.png) no-repeat right center;
+  background: url(../images/draggable.png) no-repeat right center;
 }
 /* -------------------- END Sortable -------------------- */
 /* ============================== END Form Body ============================== */
@@ -833,14 +833,14 @@ input[readonly]:focus {
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#f7f7f7',GradientType=0 );
 }
 .select-container {
-  background: url(../images/default/select-arrows.png) no-repeat right center;
+  background: url(../images/select-arrows.png) no-repeat right center;
   border: solid 1px rgba(213,213,213,1);
 }
 .select-container:hover {
-  background: rgba(250,250,250,1) url(../images/default/select-arrows.png) no-repeat right center;
+  background: rgba(250,250,250,1) url(../images/select-arrows.png) no-repeat right center;
 }
 .loading .loading-gif {
-  background: url(../images/default/loading.gif) no-repeat;
+  background: url(../images/loading.gif) no-repeat;
 }
 .media-banner .bulk-actions .apply {
   color: #ffffff;
@@ -882,7 +882,7 @@ input[readonly]:focus {
   -moz-transition:    0.2s;
   -o-transition:      0.2s;
   transition:         0.2s;
-  background: rgba(0,0,0,0.5) url(../images/default/zoom.png) no-repeat center center;
+  background: rgba(0,0,0,0.5) url(../images/zoom.png) no-repeat center center;
 }
 .media-desc > a {
   color: rgba(67,161,208,1);
@@ -905,7 +905,7 @@ input[readonly]:focus {
   background: rgba(67,163,192,1);
 }
 .media-desc .media-control a[name="edit"] span {
-  background: url(../images/default/media-edit.png) no-repeat center center;
+  background: url(../images/media-edit.png) no-repeat center center;
 }
 .media-desc .media-control a[name="delete"] {
   border: solid 1px rgba(192,83,67,1);
@@ -922,7 +922,7 @@ input[readonly]:focus {
   background: rgba(193,84,68,1);
 }
 .media-desc .media-control a[name="delete"] span {
-  background: url(../images/default/media-delete.png) no-repeat center center;
+  background: url(../images/media-delete.png) no-repeat center center;
 }
 /* ============================== END Media Body ============================== */
 

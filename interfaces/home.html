@@ -6,12 +6,13 @@
 <script src="js/jquery-1.9.1.js"></script>
 <script src="js/style.js"></script>
 </head>
+<!--<body onload="setStyleFromCookie()">-->
 <body>
   <div class="container">
     <!-- ==================== Banner ==================== -->
     <div class="banner">
       <div class="start-btn btn-bg">
-        <a href="javascript:;" class="btn-inner" data-trigger="dropdown"><span></span></a>
+        <a href="javascript:;" class="btn-inner" data-trigger="dropdown" onclick="dropdown(this)"><span></span></a>
         <div class="dropdown hide">
           <ul>
             <li><a class="profile" href="javascript:;">Profile</a></li>
@@ -24,19 +25,20 @@
         <a href="index.html" class="btn-inner"><span></span></a>
       </div>
       <div class="change-theme btn-bg">
-        <a href="javascript:;" class="btn-inner" data-trigger="dropdown1"><span></span></a>
+        <a href="javascript:;" class="btn-inner" data-trigger="dropdown1" onclick="dropdown(this)"><span></span></a>
         <div class="dropdown1 hide">
           <ul>
             <li><a class="default" href="javascript:;">Default skin</a></li>
+            <!--<li><a class="blue-sky" href="javascript:;" onclick="changestyle('blue-sky')">Blue sky</a></li>-->
             <li><a class="blue-sky" href="javascript:;">Blue sky</a></li>
           </ul>
         </div>
       </div>
       <div class="tabstoggle">
-        <a href="javascript:;"><span></span></a>
+        <a href="javascript:;" onclick="tabtoggle()"><span></span></a>
       </div>
       <div class="fullscreen">
-        <a href="javascript:;"><span></span></a>
+        <a href="javascript:;" onclick="fullscreen()"><span></span></a>
       </div>
     </div>
     <!-- ==================== END Banner ==================== -->
@@ -47,13 +49,13 @@
       <!-- ==================== Sidebar ==================== -->
       <div class="sidebar">
         <ul>
-          <li class="btn-bg admin-home"><a class="current" href="javascript:;" name="Admin Home" onclick="goto(this, 'admin-home')"><span></span></a></li>
-          <li class="btn-bg global-home"><a href="javascript:;" name="Global Home" onclick="goto(this, 'global-home')"><span></span></a></li>
-          <li class="btn-bg archive"><a href="javascript:;" name="Archive" onclick="goto(this, 'archive')"><span></span></a></li>
-          <li class="btn-bg configuration"><a href="javascript:;" name="Configuration" onclick="goto(this, 'configuration')"><span></span></a></li>
-          <li class="btn-bg reporter"><a href="javascript:;" name="Reporter" onclick="goto(this, 'reporter-home')"><span></span></a></li>
-          <li class="btn-bg alljobs"><a href="javascript:;" name="All Jobs" onclick="goto(this, 'all-jobs')"><span></span></a></li>
-          <li class="btn-bg client-home"><a href="javascript:;" name="Client Home" onclick="goto(this, 'client-home')"><span></span></a></li>
+          <li class="btn-bg admin-home"><a class="current" href="javascript:;" name="Admin Home" onclick="gotopage(this, 'admin-home')"><span></span></a></li>
+          <li class="btn-bg global-home"><a href="javascript:;" name="Global Home" onclick="gotopage(this, 'global-home')"><span></span></a></li>
+          <li class="btn-bg archive"><a href="javascript:;" name="Archive" onclick="gotopage(this, 'archive')"><span></span></a></li>
+          <li class="btn-bg configuration"><a href="javascript:;" name="Configuration" onclick="gotopage(this, 'configuration')"><span></span></a></li>
+          <li class="btn-bg reporter"><a href="javascript:;" name="Reporter" onclick="gotopage(this, 'reporter-home')"><span></span></a></li>
+          <li class="btn-bg alljobs"><a href="javascript:;" name="All Jobs" onclick="gotopage(this, 'all-jobs')"><span></span></a></li>
+          <li class="btn-bg client-home"><a href="javascript:;" name="Client Home" onclick="gotopage(this, 'client-home')"><span></span></a></li>
         </ul>
         <div class="tooltips">
           <span></span>
