@@ -165,7 +165,7 @@ div.ui-datepicker{
 .banner .start-btn > a {
   width: 88px;
 }
-.banner .change-theme a {
+.banner .change-theme > a {
   width: 107px;
 }
 .banner .logout a {
@@ -210,6 +210,7 @@ div.ui-datepicker{
   margin-top: 12px;
 }
 .banner .dropdown,
+.banner .dropdown1,
 .form-banner .dropdown1,
 .form-body .dropdown2 {
   position: absolute;
@@ -218,25 +219,26 @@ div.ui-datepicker{
   margin-left: 10px;
 }
 .banner .dropdown li,
+.banner .dropdown1 li,
 .form-banner .dropdown1 li,
 .form-body .dropdown2 li {
   height: 38px;
 }
-.banner .dropdown:before {
+.banner .dropdown:before,
+.banner .dropdown1:before {
   display: block;
-  border-bottom: 4px solid #EF705B;
-  border-right: 4px solid transparent;
-  border-left: 4px solid transparent;
   content: "";
   position: absolute;
   margin-top: -4px;
   left: 10%;
   margin-left: -4px;
 }
-.banner .dropdown li:last-child {
+.banner .dropdown li:last-child,
+.banner .dropdown1 li:last-child {
   border: none;
 }
 .banner .dropdown li a,
+.banner .dropdown1 li a,
 .form-banner .dropdown1 li a,
 .form-body .dropdown2 li a {
   height: 100%;
