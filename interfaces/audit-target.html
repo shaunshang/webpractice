@@ -1,11 +1,59 @@
 <script src="js/barGraph.js"></script>
 
-<div class="audit-banner">
-  <h2>Google Account Audit</h2>
-  <p>See a summary of the <a href="javascript:;" style="display: inline-block;">license pools</a></p>
+<div class="detail-banner audit-banner">
+  <div class="banner-title">
+    <h2>Google Account Audit</h2>
+    <p>See a summary of the <a href="javascript:;" style="display: inline-block;">license pools</a></p>
+  </div>
+  
+  <div class="showcase">
+    <span>Total licenses:<b>13 licenses</b></span>
+    <canvas id="canvasId" width="190" height="80"></canvas>
+  </div>
 </div>
 
-<div class="System Statistics">
-  <canvas id="canvasId" width="190" height="100"></canvas>
-  <p>Looking at User accounts, there are 20 google accounts in use. This breaks down as follows:</p>
+<div class="statistics">
+  <div class="stat-cat active">
+    <div><span></span> 19</div>
+    <div>Active</div>
+  </div>
+  <div class="stat-cat create">
+    <div><span></span> 0</div>
+    <div>Create</div>
+  </div>
+  <div class="stat-cat backup">
+    <div><span></span> 0/1/0</div>
+    <div>Backup</div>
+  </div>
+  <div class="stat-cat storage">
+    <div><span></span> 0/0/0</div>
+    <div>Storage</div>
+  </div>
+  <div class="stat-cat to-destroy">
+    <div><span></span> 5</div>
+    <div>To be Destroyed</div>
+  </div>
+  <div class="stat-cat destroying">
+    <div><span></span> 12</div>
+    <div>Destroying</div>
+  </div>
+  <div class="stat-cat destroyed">
+    <div><span></span> 4</div>
+    <div>Destroyed</div>
+  </div>
+  <div class="stat-cat deleting">
+    <div><span></span> 10</div>
+    <div>Deleting</div>
+  </div>
 </div>
+
+<div class="tabs">
+  <a href="javascript:;">Accounts Status</a>
+  <span>You can also <a href="javascript:;">download</a> a CSV file of the accounts.</span>
+</div>
+
+<div class="media-banner">
+  <h2>asdfasdfasd</h2>
+  <div class="seperator"></div>
+</div>
+

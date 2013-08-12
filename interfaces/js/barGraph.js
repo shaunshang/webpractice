@@ -16,7 +16,7 @@ function BarGraph(cv, ctx) {
 	
 	this.drawRect = function(newArr) {
 		for(var i=0; i<newArr.length; i++) {
-			var curHeight = newArr[i] * 10;
+			var curHeight = newArr[i] * 7;
 			
 			ctx.fillStyle = "#EF705B";
 			ctx.fillRect(margin, cv.height - curHeight - 14, 20, curHeight);
@@ -45,7 +45,7 @@ function BarGraph(cv, ctx) {
 			ctx.font = "11px arial";
 			ctx.textAlign = "left";
 			ctx.fillStyle = "#000";
-			ctx.fillText(label, marginY, cv.height-label*10-20);
+			ctx.fillText(label, marginY, cv.height-label*7-18);
 			
 			marginY += 40;
 		}
