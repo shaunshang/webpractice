@@ -17,7 +17,19 @@ $(function(){
 		async: false,
 		cache: false,
 		type: "GET",
-		url: "table.html",
+		url: "audit-page.html",
+		error: function(xml){alert("Error request failed");},
+		timeout: 1000,
+		success: function(e) {
+			$(".wrapper-container").empty().append(e);
+		}
+	});
+	
+	$.ajax({
+		async: false,
+		cache: false,
+		type: "GET",
+		url: "audit-target.html",
 		error: function(xml){alert("Error request failed");},
 		timeout: 1000,
 		success: function(e) {
@@ -85,15 +97,15 @@ $(function(){
 });
 
 
-function goto(target) {
+function gototab(target) {
 	$(".tabs li").removeClass("current");
-	$("#" + target + "-target").parent().addClass("current");
+	$("#" + target).parent().addClass("current");
 	
 	$.ajax({
 		async: false,
 		cache: false,
 		type: "GET",
-		url: target+".html",
+		url: target + ".html",
 		error: function(xml){alert("Error request failed");},
 		timeout: 1000,
 		success: function(e) {
