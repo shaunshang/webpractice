@@ -11,17 +11,17 @@ $(function(){
 
 function BarGraph(cv, ctx) {
 	var margin = 20;
-	var marginX = 15;
+	var marginX = 14;
 	var marginY = 27;
 	
 	this.drawRect = function(newArr) {
 		for(var i=0; i<newArr.length; i++) {
-			var curHeight = newArr[i] * 7;
+			var curHeight = newArr[i] * 5;
 			
 			ctx.fillStyle = "#EF705B";
-			ctx.fillRect(margin, cv.height - curHeight - 14, 20, curHeight);
+			ctx.fillRect(margin, cv.height - curHeight - 17, 15, curHeight);
 			
-			margin += 40;
+			margin += 35;
 		}
 	}
 	
@@ -32,9 +32,9 @@ function BarGraph(cv, ctx) {
 			ctx.font = "11px arial";
 			ctx.textAlign = "left";
 			ctx.fillStyle = "#000";
-			ctx.fillText(label, marginX, cv.height);
+			ctx.fillText(label, marginX, cv.height-5);
 			
-			marginX += 39;
+			marginX += 34;
 		}
 	}
 	
@@ -45,9 +45,9 @@ function BarGraph(cv, ctx) {
 			ctx.font = "11px arial";
 			ctx.textAlign = "left";
 			ctx.fillStyle = "#000";
-			ctx.fillText(label, marginY, cv.height-label*7-18);
+			ctx.fillText(label, marginY, cv.height-label*5-20);
 			
-			marginY += 40;
+			marginY += 35;
 		}
 	}
 }
