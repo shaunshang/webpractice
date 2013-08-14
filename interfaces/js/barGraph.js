@@ -12,7 +12,7 @@ $(function(){
 function BarGraph(cv, ctx) {
 	var margin = 20;
 	var marginX = 14;
-	var marginY = 27;
+	var marginY = 24;
 	
 	this.drawRect = function(newArr) {
 		for(var i=0; i<newArr.length; i++) {
