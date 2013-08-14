@@ -25,18 +25,6 @@ $(function(){
 		}
 	});
 	
-	$.ajax({
-		async: false,
-		cache: false,
-		type: "GET",
-		url: "audit-target.html",
-		error: function(xml){alert("Error request failed");},
-		timeout: 1000,
-		success: function(e) {
-			$(".tab-content").empty().append(e);
-		}
-	});
-	
 	/*
 	 * Tool Tips
 	 * 
@@ -44,7 +32,7 @@ $(function(){
 	$(".sidebar ul li > a span").hover(function(){
 		var name = $(this).parent().attr("name");
 		var left = $(this).parent().parent().offset().left - 4;
-		var top = $(this).parent().parent().offset().top - 22;
+		var top = $(this).parent().parent().offset().top - 30;
 		$(".sidebar .tooltips").offset({top: top, left: left});
 		$(".sidebar .tooltips span").html(name);
 		$(".sidebar .tooltips").fadeIn("fast");
@@ -110,6 +98,23 @@ function gototab(target) {
 		timeout: 1000,
 		success: function(e) {
 			$(".tab-content").empty().append(e);
+		}
+	});
+}
+
+function gotopage(obj, target) {
+	$(".sidebar ul li > a").removeClass("current");
+	obj.className = "current";
+	
+	$.ajax({
+		async: false,
+		cache: false,
+		type: "GET",
+		url: target+".html",
+		error: function(xml){alert("Error request failed");},
+		timeout: 1000,
+		success: function(e) {
+			$(".wrapper-container").empty().append(e);
 		}
 	});
 }

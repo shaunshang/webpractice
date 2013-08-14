@@ -1,0 +1,3 @@
+$(function(){
+	gototab("audit-target")
+});
