@@ -2,15 +2,29 @@
 <script src="js/table.js"></script>
 
 <br/>
-<div class="table-search">
+<div class="new-group-banner table-search">
   <input type="text" name="with-button" placeholder="Please input an email address and then click check button" /><button>Check</button>
   <span>or <a href="javascript:;">Show just messages with action state failed</a></span>
 </div>
-
-<div class="form-banner">
+<script>
+$("button").click(function(){
+  //$(".form-banner").removeClass("hide");
+  //$(".form-body").removeClass("hide");
+  
+  $(".new-group-banner").animate({
+    marginTop: "0px"
+  },300);
+  
+  setTimeout(function(){
+    $(".form-banner").fadeIn("fast");
+    $(".form-body").fadeIn("fast");
+  }, 300);
+});
+</script>
+<div class="form-banner hide">
   
 </div>
-<div class="form-body">
+<div class="form-body hide">
   <form>
     <table>
       <colgroup>
@@ -64,63 +78,40 @@
                 <option>TBWA World Wide - Dalian</option>
               </select>
             </span>
-            <span class="checkbox-container"><input type="checkbox" /></span>
+            <label for="checkbox"><span class="checkbox-container"><input id="checkbox" type="checkbox" /></span><font>Auto-populated?</font></label>
           </td>
         </tr>
         <tr>
-          <th>Tooltip on focus:</th>
+          <th>Who can post messages?</th>
           <td>
-            <div class="tooltips"><span>Tooltips</span></div>
-            <input type="text" name="tooltips" />
+            <span class="select-container">
+              Owner
+              <select>
+                <option>Owner</option>
+                <option>Member</option>
+                <option>Domain</option>
+                <option>Anyone</option>
+              </select>
+            </span>
+            <span style="display: inline-block; vertical-align: middle;">
+              Owner - only Owners of the group<br/>
+              Member - all Members of the group<br/>
+              Domain - any user who belongs to the same domain as the group<br/>
+              Anyone - any user on the Internet
+            </span>
           </td>
         </tr>
         <tr>
-          <th>Max 10 characters:</th>
+          <th>Associated group or region?</th>
           <td>
-            <input type="text" name="max-characters" maxlength="10" />
-          </td>
-        </tr>
-        <tr>
-          <th>With placeholder:</th>
-          <td>
-            <input type="text" name="placeholder" placeholder="placeholder"/>
-          </td>
-        </tr>
-        <tr>
-          <th>With button:</th>
-          <td>
-            <input type="text" name="with-button" /><button>Go!</button>
-          </td>
-        </tr>
-        <tr>
-          <th>With dropdown:</th>
-          <td>
-            <input type="text" name="with-dropdown" /><a class="form-options" href="javascript:;" data-trigger="dropdown2">Action<i class="caret"></i></a>
-            <div class="dropdown2 hide">
-              <ul>
-                <li><a class="add-new" href="javascript:;">Add New</a></li>
-                <li><a class="statement" href="javascript:;">View Statement</a></li>
-                <li><a class="settings" href="javascript:;">Settings</a></li>
-              </ul>
-            </div>
-          </td>
-        </tr>
-        <tr>
-          <th>Tags:</th>
-          <td>
-            <div class="tags-container">
-              <div id="add-tag">
-                <input type="text" name="add-tag" placeholder="add a tag"/>
-              </div>
-            </div>
+            <span class="checkbox-container"><input id="checkbox" type="checkbox" /></span>
           </td>
         </tr>
       </tbody>
       <tfoot>
         <tr>
           <td colspan="2">
-            <input type="button" value="Submit" />
-            <input type="button" value="Cancel" />
+            <input type="button" value="Create" />
           </td>
         </tr>
       </tfoot>
