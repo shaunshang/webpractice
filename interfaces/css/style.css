@@ -723,15 +723,15 @@ input[readonly]:focus {
 .checkbox-container:hover {
   box-shadow: 0 0 2px #ccc;
 }
-.table-checkbox .checked {
-  background-position: -17px 0;
-}
-.table-checkbox input[type="checkbox"] {
+.checkbox-container input[type="checkbox"] {
    width: 16px;
    height: 16px;
    margin: 0 auto;
    cursor: pointer;
    opacity: 0;
+}
+.table-checkbox .checked {
+  background-position: -17px 0;
 }
 .table-checkbox tbody .selected td {
   background: rgba(238,247,251,1);
@@ -1352,14 +1352,6 @@ input[readonly]:focus {
   font-size: 12px;
   padding: 15px 2px;
 }
-.media-banner > div select {
-  position: absolute;
-  left: 0;
-  top: 0;
-  margin: 10px 0 0 10px;
-  opacity: 0;
-  cursor: pointer;
-}
 .media-banner .sorting {
   text-align: left;
 }
@@ -1368,7 +1360,7 @@ input[readonly]:focus {
   display: inline-block;
   vertical-align: middle;
 }
-.media-banner .select-container {
+.select-container {
   height: 30px;
   line-height: 30px;
   text-align: left;
@@ -1378,11 +1370,20 @@ input[readonly]:focus {
   vertical-align: middle;
   background: url(../images/select-arrows.png) no-repeat right center;
   border:solid 1px rgba(213,213,213,1);
+  font-size: 12px;
   cursor: pointer;
   overflow:hidden;
 }
-.media-banner .select-container:hover {
+.select-container:hover {
   background: rgba(245,245,245,1) url(../images/select-arrows.png) no-repeat right center;
+}
+.select-container select {
+  position: absolute;
+  left: 0;
+  top: 0;
+  margin: 10px 0 0 10px;
+  opacity: 0;
+  cursor: pointer;
 }
 .loading {
   height: 30px;

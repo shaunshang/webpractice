@@ -1,0 +1,129 @@
+<script src="js/form.js"></script>
+<script src="js/table.js"></script>
+
+<br/>
+<div class="table-search">
+  <input type="text" name="with-button" placeholder="Please input an email address and then click check button" /><button>Check</button>
+  <span>or <a href="javascript:;">Show just messages with action state failed</a></span>
+</div>
+
+<div class="form-banner">
+  
+</div>
+<div class="form-body">
+  <form>
+    <table>
+      <colgroup>
+        <col width="20%" />
+        <col width="80%" />
+      </colgroup>
+      <thead>
+        <tr>
+          <td colspan="2">
+            <div class="error-message warning">
+              <span><b>Heads up!</b> This alert needs your attention, but it's not super important.</span>
+              <a class="remove-error" href="javascript:;">x</a>
+            </div>
+            <div class="error-message success">
+              <span><b>Well done!</b> You successfully read this important alert message.</span>
+              <a class="remove-error" href="javascript:;">x</a>
+            </div>
+            <div class="error-message alert">
+              <span><b>Oh snap!</b> Change a few things up and try submitting again.</span>
+              <a class="remove-error" href="javascript:;">x</a>
+            </div>
+          </td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th>Group name:</th>
+          <td>
+            <input type="text" name="groupname" />
+          </td>
+        </tr>
+        <tr>
+          <th>Group email address:</th>
+          <td>
+            <input type="text" name="groupemail" />
+          </td>
+        </tr>
+        <tr>
+          <th>Description:</th>
+          <td>
+            <textarea name="description"></textarea>
+          </td>
+        </tr>
+        <tr>
+          <th>Agency:</th>
+          <td>
+            <span class="select-container">
+              Please select an agency
+              <select>
+                <option>Please select an agency</option>
+                <option>TBWA World Wide - Dalian</option>
+              </select>
+            </span>
+            <span class="checkbox-container"><input type="checkbox" /></span>
+          </td>
+        </tr>
+        <tr>
+          <th>Tooltip on focus:</th>
+          <td>
+            <div class="tooltips"><span>Tooltips</span></div>
+            <input type="text" name="tooltips" />
+          </td>
+        </tr>
+        <tr>
+          <th>Max 10 characters:</th>
+          <td>
+            <input type="text" name="max-characters" maxlength="10" />
+          </td>
+        </tr>
+        <tr>
+          <th>With placeholder:</th>
+          <td>
+            <input type="text" name="placeholder" placeholder="placeholder"/>
+          </td>
+        </tr>
+        <tr>
+          <th>With button:</th>
+          <td>
+            <input type="text" name="with-button" /><button>Go!</button>
+          </td>
+        </tr>
+        <tr>
+          <th>With dropdown:</th>
+          <td>
+            <input type="text" name="with-dropdown" /><a class="form-options" href="javascript:;" data-trigger="dropdown2">Action<i class="caret"></i></a>
+            <div class="dropdown2 hide">
+              <ul>
+                <li><a class="add-new" href="javascript:;">Add New</a></li>
+                <li><a class="statement" href="javascript:;">View Statement</a></li>
+                <li><a class="settings" href="javascript:;">Settings</a></li>
+              </ul>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <th>Tags:</th>
+          <td>
+            <div class="tags-container">
+              <div id="add-tag">
+                <input type="text" name="add-tag" placeholder="add a tag"/>
+              </div>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td colspan="2">
+            <input type="button" value="Submit" />
+            <input type="button" value="Cancel" />
+          </td>
+        </tr>
+      </tfoot>
+    </table>
+  </form>
+</div>
