@@ -7,6 +7,7 @@ $(function(){
 		items: "li:not(.add)"
 	});
 	$("#tabs").disableSelection();
+	
 });
 
 function removeTab(obj) {
