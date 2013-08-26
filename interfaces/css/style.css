@@ -1945,12 +1945,11 @@ and (max-width: 1024px) {
   display: block;
   line-height: 50px;
 }
-/* ============================== Detail Footer ============================== */
+/* ============================== END Detail Footer ============================== */
 
 .new-group-banner {
   margin-top: 200px;
 }
-
 .dropdown2 {
   width: 168px;
   position: absolute;
@@ -1961,3 +1960,28 @@ and (max-width: 1024px) {
   -moz-box-shadow:    0 1px 5px #ccc;
   box-shadow:         0 1px 5px #ccc;
 }
+
+/* ============================== Fadein effect for page loading ============================== */
+.container {
+  -webkit-animation:  fadein 1s;
+  -moz-animation:     fadein 1s;
+  -o-animation:       fadein 1s;
+  animation:          fadein 1s;
+}
+@keyframes fadein {
+  from { opacity:0; }
+  to { opacity:1; }
+}
+@-moz-keyframes fadein {
+  from { opacity:0; }
+  to { opacity:1; }
+}
+@-webkit-keyframes fadein {
+  from { opacity:0; }
+  to { opacity:1; }
+}
+@-o-keyframes fadein {
+  from { opacity:0; }
+  to { opacity: 1; }
+}​
+/* ============================== END Fadein effect for page loading ============================== */
