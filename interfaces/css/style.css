@@ -1,3 +1,4 @@
+@import 'analog.css';
 /* ============================== Global ============================== */
 *,
 html,
@@ -122,13 +123,15 @@ form {
   height: 100%;
   text-align: center;
 }
-
+.body-container > div {
+  display: inline-block;
+  vertical-align: top;
+}
 /* ============================== Tool Bar ============================== */
 .tool-bar {
-  width: 22%;
+  width: 25%;
   max-width: 400px;
   min-width: 147px;
-  float: right;
   padding: 10px 1%;
 }
 .tool-bar > div {
@@ -145,7 +148,8 @@ form {
 .profile {
   overflow: hidden;
 }
-.profile .info {
+.profile .info,
+.clock .info {
   width: 100%;
   padding: 10px 0;
   background: rgba(176,165,153,0.5);
@@ -219,65 +223,151 @@ form {
 }
 /* -------------------- END Profile -------------------- */
 
+/* -------------------- Search -------------------- */
+.search {
+  overflow: hidden;
+  background: rgba(255,255,255,0.8);
+  color: rgba(148,135,122,1);
+  padding: 10px 0;
+}
+.search input {
+  width: 80%;
+  height: 35px;
+  padding: 0 30px 0 10px;
+  margin-top: 10px;
+  border: solid 1px #ccc;
+  -webkit-border-radius:  6px;
+  -moz-border-radius:     6px;
+  border-radius:          6px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,0.075);
+  -moz-box-shadow:    inset 0 1px 1px rgba(0,0,0,0.075);
+  box-shadow:         inset 0 1px 1px rgba(0,0,0,0.075);
+  outline: 0;
+  -webkit-transition: 0.4s;
+  -moz-transition:    0.4s;
+  -o-transition:      0.4s;
+  transition:         0.4s;
+  background: url(../images/icons/search.png) no-repeat 95% center;
+}
+.search input:focus {
+  border-color: #66afe9;
+  outline: 0;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6);
+  -moz-box-shadow:    inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6);
+  box-shadow:         inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6);
+}
+/* -------------------- END Search -------------------- */
+
 /* -------------------- Clock -------------------- */
-
-
-
+.clock {
+  background: rgba(255,255,255,0.8);
+  padding: 5px 0;
+}
+.clock > div {
+  height: 150px;
+  display: inline-block;
+  vertical-align: top;
+}
+.date-info {
+  width: auto;
+  margin: 0 15px;
+  padding-left: 10px;
+}
+.date-info span {
+  text-align: left;
+  font-size: 18px;
+  font-weight: bold;
+  display: block;
+  margin-top: 10px;
+}
+.date-info span:first-child {
+  margin-top: 40px;
+}
 /* -------------------- END Clock -------------------- */
 /* ============================== END Tool Bar ============================== */
 
 
 /* ============================== Body Content ============================== */
 .body-content {
-  width: 75%;
+  width: 67%;
   height: 400px;
-  float: left;
 }
 
 /* -------------------- Main Nav -------------------- */
 .main-nav {
-  padding: 20px 0 10px 0;
+  padding: 10px 0 0 0;
   margin-top: 10px;
+  margin-left: 10px;
+  background: rgba(255,255,255,0.8);
+  text-align: center;
+  -webkit-border-radius:  6px;
+  -moz-border-radius:     6px;
+  border-radius:          6px;
+  -webkit-box-shadow: 0 0 8px rgba(0,0,0,0.3);
+  -moz-box-shadow:    0 0 8px rgba(0,0,0,0.3);
+  box-shadow:         0 0 8px rgba(0,0,0,0.3);
+  color: rgba(141,128,114,1);
 }
 .nav-item {
   position: relative;
   width: 80px;
+  height: 80px;
   display: inline-block;
-  vertical-align: top;
-  margin-right: 20px;
-  margin-bottom: 10px;
+  vertical-align: bottom;
+  padding: 5px 20px 10px 20px;
+  border-bottom: solid 4px transparent;
+  -webkit-transition: 0.3s;
+  -moz-transition:    0.3s;
+  -o-transition:      0.3s;
+  transition:         0.3s;
   cursor: pointer;
 }
+.nav-item.current {
+  border-bottom: solid 4px rgba(81,174,124,1);
+}
+.nav-item:hover {
+  background: rgba(185,175,166,0.2);
+}
 .nav-item a {
-  width: 80px;
-  height: 80px;
+  width: 60px;
+  height: 60px;
   display: block;
-  -webkit-border-radius:  15px;
-  -moz-border-radius:     15px;
-  border-radius:          15px;
-  -webkit-box-shadow: 0 0 8px rgba(0,0,0,0.8);
-  -moz-box-shadow:    0 0 8px rgba(0,0,0,0.8);
-  box-shadow:         0 0 8px rgba(0,0,0,0.8);
+  margin: 0 auto;
 }
 .nav-item span {
-  display: block;
-  width: 80px;
-  margin-top: 5px;
+  width: 60px;
+  margin: 0 auto;
+  text-align: center;
   font-size: 12px;
-  color: #fff;
-  font-weight: bold;
-  -webkit-text-shadow:  0 1px 1px #000;
-  -moz-text-shadow:     0 1px 1px #000;
-  text-shadow:          0 1px 1px #000;
+  color: rgba(148,135,122,1);
 }
 .admin-home a {
-  background: rgba(255,255,255,0.8) url(../images/admin-home.png) no-repeat center center;
+  background: url(../images/admin-home.png) no-repeat center center;
+  background-size: 40px 40px;
 }
 .global-home a {
-  background: rgba(255,255,255,0.8) url(../images/global-home.png) no-repeat center center;
+  background: url(../images/global-home.png) no-repeat center center;
+  background-size: 40px 40px;
 }
 .archive-searches a {
-  background: rgba(255,255,255,0.8) url(../images/archive-searches.png) no-repeat center center;
+  background: url(../images/archive-searches.png) no-repeat center center;
+  background-size: 40px 40px;
+}
+.configuration a {
+  background: url(../images/configuration.png) no-repeat center center;
+  background-size: 40px 40px;
+}
+.reporter-home a {
+  background: url(../images/reporter-home.png) no-repeat center center;
+  background-size: 40px 40px;
+}
+.all-jobs a {
+  background: url(../images/all-jobs.png) no-repeat center center;
+  background-size: 40px 40px;
+}
+.client-home a {
+  background: url(../images/client-home.png) no-repeat center center;
+  background-size: 40px 40px;
 }
 /* -------------------- END Main Nav -------------------- */
 
@@ -286,12 +376,35 @@ form {
 
 /* ============================== Responsive Design ============================== */
 @media screen
-and (max-width: 650px) {
+and (max-width: 490px) {
   .body-content {
     width: 60%;
   }
 }
-
-
-
+/*
+@media screen
+and (min-width: 1500px) {
+  .body-content {
+    width: 70%;
+  }
+}
+@media screen
+and (min-width: 1700px) {
+  .body-content {
+    width: 74%;
+  }
+}
+@media screen
+and (min-width: 2000px) {
+  .body-content {
+    width: 78%;
+  }
+}
+@media screen
+and (min-width: 2300px) {
+  .body-content {
+    width: 80%;
+  }
+}
+*/
 /* ============================== END Responsive Design ============================== */

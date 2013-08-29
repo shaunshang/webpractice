@@ -32,4 +32,23 @@ $(function(){
 			open = true;
 		}
 	});
+	
+	
+	/*
+	 * JQuery Date
+	 * 
+	 * */
+	$('#analog-clock').clock({offset: '+8', type: 'analog'});
+	
+	
+	/*
+	 * Display Date
+	 * 
+	 * */
+	var d = new Date();
+	var year = d.getFullYear();
+	var month = d.getMonth();
+	var date = d.getDate();
+	
+	//alert(year);
 });
