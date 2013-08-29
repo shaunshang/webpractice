@@ -1,4 +1,5 @@
 /* ============================== Global ============================== */
+*,
 html,
 body {
   margin: 0;
@@ -13,6 +14,7 @@ body {
 a {
   text-decoration: none;
   display: block;
+  color: rgba(148,135,122,1);
 }
 ul {
   list-style: none;
@@ -43,31 +45,91 @@ form {
 .hide {
   display: none;
 }
-
 /* ============================== END Global ============================== */
 
-
+/* ============================== Banner ============================== */
 .banner {
   position: absolute;
   bottom: 0;
   width: 100%;
   height: 50px;
-  background: #fff;
-  border-top: solid 1px rgba(255,255,255,0.6);
+  background: rgba(255,255,255,0.7);
   -webkit-box-shadow: 0 0 8px rgba(0,0,0,0.3);
   -moz-box-shadow:    0 0 8px rgba(0,0,0,0.3);
   box-shadow:         0 0 8px rgba(0,0,0,0.3);
 }
+.start-btn {
+  height: 100%;
+  position: relative;
+  display: inline-block;
+}
+.start-btn > a {
+  line-height: 46px;
+  padding: 0 40px;
+  -webkit-transition: 0.4s;
+  -moz-transition:    0.4s;
+  -o-transition:      0.4s;
+  transition:         0.4s;
+  border-top: solid 4px transparent;
+  border-right: solid 1px #ccc;
+}
+.start-btn > a:hover {
+  background: rgba(185,175,166,0.2);
+}
+.start-btn > a.active {
+  background: rgba(185,175,166,0.5);
+  border-top: solid 4px rgba(81,174,124,1);
+}
+.start-menu {
+  position: absolute;
+  left: 1px;
+  bottom: 50px;
+  border: solid 1px #fff;
+  border-bottom: none;
+  -webkit-border-top-left-radius:   6px;
+  -webkit-border-top-right-radius:  6px;
+  -moz-border-radius-topleft:       6px;
+  -moz-border-radius-topright:      6px;
+  border-top-left-radius:           6px;
+  border-top-right-radius:          6px;
+  -webkit-box-shadow: 2px -2px 4px rgba(0,0,0,0.3);
+  -moz-box-shadow:    2px -2px 4px rgba(0,0,0,0.3);
+  box-shadow:         2px -2px 4px rgba(0,0,0,0.3);
+  overflow: hidden;
+  display: none;
+}
+.start-menu ul li {
+  height: 40px;
+}
+.start-menu ul li a {
+  font-size: 14px;
+  line-height: 40px;
+  padding: 0 20px;
+  color: #fff;
+  white-space: nowrap;
+  -webkit-text-shadow:  0 1px 1px #000;
+  -moz-text-shadow:     0 1px 1px #000;
+  text-shadow:          0 1px 1px #000;
+}
+.start-menu ul li a:hover {
+  background: rgba(185,175,166,0.4);
+}
+/* ============================== END Banner ============================== */
+
+
 .body-container {
   width: 100%;
   height: 100%;
+  text-align: center;
 }
-.body-container > div {
-  display: inline-block;
-  border: solid 1px red;
-}
+
+/* ============================== Tool Bar ============================== */
 .tool-bar {
-  padding: 10px 20px;
+  width: 22%;
+  max-width: 400px;
+  min-width: 147px;
+  float: right;
+  padding: 10px 1%;
 }
 .tool-bar > div {
   -webkit-border-radius:  6px;
@@ -78,27 +140,158 @@ form {
   box-shadow:         0 0 8px rgba(0,0,0,0.3);
   margin-bottom: 10px;
 }
+
+/* -------------------- Profile -------------------- */
 .profile {
-  width: 200px;
   overflow: hidden;
 }
 .profile .info {
   width: 100%;
-  height: 100px;
-  background: rgba(176,165,153,1);
+  padding: 10px 0;
+  background: rgba(176,165,153,0.5);
+  text-align: center;
+}
+.profile .info > div {
+  display: inline-block;
+  vertical-align: middle;
+}
+.profile-photo {
+  width: 90px;
+  height: 90px;
+  border-radius: 50px;
+  border: solid 2px rgba(146,135,124,1);
+  margin-right: 10px;
+  text-align: center;
+  overflow: hidden;
+}
+.profile-photo img {
+  width: 90%;
+  height: 90%;
+  margin: 0 auto;
+  margin-top: 5%;
+  border-radius: 50px;
+}
+.profile-title h2 {
+  color: #fff;
+  font-weight: bold;
+  font-size: 20px;
+  text-align: left;
+}
+.profile-title p {
+  font-size: 12px;
+  font-weight: bold;
+  color: rgba(118,107,95,1);
+  text-align: left;
 }
 .profile .list {
   width: 100%;
-  background: #fff;
+  background: rgba(255,255,255,0.9);
+}
+.profile .list ul li {
+  border-left: solid 4px transparent;
+}
+.profile .list ul li:hover {
+  background: rgba(185,175,166,0.2);
+  border-left: solid 4px rgba(81,174,124,1);
+}
+.profile .list ul li a {
+  height: 40px;
+  line-height: 40px;
+  text-align: left;
+  margin: 0 10px;
+  font-weight: normal;
+  font-size: 14px;
+}
+.profile .list ul li a[name="view"] {
+  background: url(../images/icons/view.png) no-repeat right center;
+}
+.profile .list ul li a[name="edit"] {
+  background: url(../images/icons/edit.png) no-repeat right center;
+}
+.profile .list ul li a[name="message"] {
+  background: url(../images/icons/message.png) no-repeat right center;
+}
+.profile .list ul li a[name="todos"] {
+  background: url(../images/icons/todos.png) no-repeat right center;
+}
+.profile .list ul li a[name="notes"] {
+  background: url(../images/icons/notes.png) no-repeat right center;
+}
+/* -------------------- END Profile -------------------- */
+
+/* -------------------- Clock -------------------- */
+
+
+
+/* -------------------- END Clock -------------------- */
+/* ============================== END Tool Bar ============================== */
+
+
+/* ============================== Body Content ============================== */
+.body-content {
+  width: 75%;
+  height: 400px;
+  float: left;
+}
+
+/* -------------------- Main Nav -------------------- */
+.main-nav {
+  padding: 20px 0 10px 0;
+  margin-top: 10px;
+}
+.nav-item {
+  position: relative;
+  width: 80px;
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 20px;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+.nav-item a {
+  width: 80px;
+  height: 80px;
+  display: block;
+  -webkit-border-radius:  15px;
+  -moz-border-radius:     15px;
+  border-radius:          15px;
+  -webkit-box-shadow: 0 0 8px rgba(0,0,0,0.8);
+  -moz-box-shadow:    0 0 8px rgba(0,0,0,0.8);
+  box-shadow:         0 0 8px rgba(0,0,0,0.8);
+}
+.nav-item span {
+  display: block;
+  width: 80px;
+  margin-top: 5px;
+  font-size: 12px;
+  color: #fff;
+  font-weight: bold;
+  -webkit-text-shadow:  0 1px 1px #000;
+  -moz-text-shadow:     0 1px 1px #000;
+  text-shadow:          0 1px 1px #000;
+}
+.admin-home a {
+  background: rgba(255,255,255,0.8) url(../images/admin-home.png) no-repeat center center;
+}
+.global-home a {
+  background: rgba(255,255,255,0.8) url(../images/global-home.png) no-repeat center center;
+}
+.archive-searches a {
+  background: rgba(255,255,255,0.8) url(../images/archive-searches.png) no-repeat center center;
+}
+/* -------------------- END Main Nav -------------------- */
+
+/* ============================== END Body Content ============================== */
+
+
+/* ============================== Responsive Design ============================== */
+@media screen
+and (max-width: 650px) {
+  .body-content {
+    width: 60%;
+  }
 }
 
 
 
-
-
-
-
-
-
-
-
+/* ============================== END Responsive Design ============================== */
