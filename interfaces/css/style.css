@@ -1,4 +1,3 @@
-@import 'analog.css';
 /* ============================== Global ============================== */
 *,
 html,
@@ -6,9 +5,12 @@ body {
   margin: 0;
   padding: 0;
 }
+html,
+body {
+  overflow: hidden;
+}
 body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  overflow: hidden;
   background: url(../images/main-bg.png) no-repeat;
   background-size: 100% 100%;
 }
@@ -46,14 +48,17 @@ form {
 .hide {
   display: none;
 }
+.container {
+  overflow: hidden;
+}
 /* ============================== END Global ============================== */
 
 /* ============================== Banner ============================== */
 .banner {
-  position: absolute;
-  bottom: 0;
   width: 100%;
   height: 50px;
+  position: absolute;
+  bottom: 0;
   background: rgba(255,255,255,0.7);
   -webkit-box-shadow: 0 0 8px rgba(0,0,0,0.3);
   -moz-box-shadow:    0 0 8px rgba(0,0,0,0.3);
@@ -120,8 +125,8 @@ form {
 
 .body-container {
   width: 100%;
-  height: 100%;
   text-align: center;
+  overflow: auto;
 }
 .body-container > div {
   display: inline-block;
@@ -289,7 +294,6 @@ form {
 /* ============================== Body Content ============================== */
 .body-content {
   width: 67%;
-  height: 400px;
 }
 .body-content > div {
   background: rgba(255,255,255,0.8);
@@ -374,13 +378,57 @@ form {
 
 /* -------------------- Account Status -------------------- */
 .account-status {
-  float: left;
-  padding: 10px;
+  display: inline-block;
+  vertical-align: top;
+  padding: 10px 0 0;
+  overflow: hidden;
+  width: 30%;
+  min-width: 220px;
+}
+.account-status canvas {
+  margin: 10px auto;
 }
 .account-status ul li {
   display: inline-block;
+  width: 70px;
+  height: 50px;
+  vertical-align: top;
+  background: rgba(185,175,166,0.2);
+}
+.account-status ul li + li {
+  border-left: solid 3px rgba(255,255,255,0.7);
+}
+.account-status ul li span {
+  font-size: 12px;
+  display: block;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+.account-status ul .active {
+  border-top: solid 4px rgba(81,174,124,1);
+}
+.account-status ul .backup {
+  border-top: solid 4px rgba(189,166,207,1);
+}
+.account-status ul .storage {
+  border-top: solid 4px rgba(225,96,65,1);
+}
+.account-status ul .destroying {
+  border-top: solid 4px rgba(233,199,101,1);
+}
+.account-status ul .destroyed {
+  border-top: solid 4px rgba(97,144,173,1);
+}
+.account-status ul .deleting {
+  border-top: solid 4px rgba(118,107,95,1);
 }
 /* -------------------- END Account Status -------------------- */
+
+
+/* -------------------- Stock Status -------------------- */
+
+
+/* -------------------- END Stock Status -------------------- */
 /* ============================== END Body Content ============================== */
 
 

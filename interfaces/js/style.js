@@ -1,4 +1,10 @@
 $(function(){
+	/* window height resize*/
+	resizeWindow();
+	
+	$(window).resize(function(){
+		resizeWindow();
+	})
 	/*
 	 * start up page
 	 * 
@@ -59,19 +65,47 @@ $(function(){
 	
 	
 	/*
-	 * Pie Chart for account status
+	 * Doughnut Chart for account status
 	 * 
 	 * */
-	var data = [19, 1, 1, 3, 5, 9];
-	var label = ["50%", "2%", "2%", "7%", "13%", "23%"];
-	var color = ["#51AE7C", "#F3EDE7", "#E16041", "#E9C765", "#6190AD", "#766B5F"];
-	var canvas = $("#peichart");
-	var context = canvas.getContext("2d");
-	//alert();
-	drawSegment(canvas, context, i);
+	var data = [
+	  {
+	  	value: 19,
+	  	color: "#51AE7C"
+	  },
+	  {
+	  	value: 1,
+	  	color: "#BDA6CF"
+	  },
+	  {
+	  	value: 1,
+	  	color: "#E16041"
+	  },
+	  {
+	  	value: 3,
+	  	color: "#E9C765"
+	  },
+	  {
+	  	value: 5,
+	  	color: "#6190AD"
+	  },
+	  {
+	  	value: 9,
+	  	color: "#766B5F"
+	  }
+	];
+	
+	var ctx = document.getElementById("myChart").getContext("2d");
+	var myNewChart = new Chart(ctx).Doughnut(
+			data,
+			{
+				animation: false
+			}
+	);
 });
 
-function drawSegment(canvas, context, i) {
-	//alert();
+function resizeWindow() {
+	var height = $(window).height() - 50;
+	
+	$(".body-container").css("height", height+"px");
 }
-
