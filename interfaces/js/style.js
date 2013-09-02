@@ -44,7 +44,7 @@ $(function(){
 	 * JQuery Date
 	 * 
 	 * */
-	//$('#analog-clock').clock({offset: '+8', type: 'analog'});
+	$('#analog-clock').clock({offset: '+8', type: 'analog'});
 	
 	
 	/*

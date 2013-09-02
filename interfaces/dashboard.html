@@ -91,9 +91,21 @@
   
   <div class="calendar">
     <div class="date-info">
-      <div class="day"></div>
-      <div class="month"></div>
-      <div class="date"></div>
+      <div class="date-container" style="display: inline-block;">
+        <div class="day"></div>
+        <div class="month"></div>
+        <div class="date"></div>
+      </div>
+      <div class="clock" style="display: inline-block;">
+        <div class="clock-info">
+          <ul id="analog-clock" class="analog">
+            <li class="hour"></li>
+            <li class="min"></li>
+            <li class="sec"></li>
+            <li class="meridiem"></li>
+          </ul>
+        </div>
+      </div>
     </div>
     <div id="calendar">
       <p>Please enable Javascript to view this calendar.</p>

@@ -4,6 +4,7 @@
 	width: 150px;
 	background: url(../images/clockface.png);
 	list-style: none;
+	text-align: center;
 }
 
 .analog,.analog .hour,.analog .min,.analog .sec {
