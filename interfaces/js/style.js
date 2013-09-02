@@ -51,7 +51,6 @@ $(function(){
 	 * Display Date
 	 * 
 	 * */
-	/*
 	var d = new Date();
 	var year = d.getFullYear();
 	var month = d.getMonth();
@@ -60,8 +59,15 @@ $(function(){
 	var days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
 	var months = ['Jan', 'Feb', 'Mar', 'Apr', "May", 'Jun', "Jul", "Aug", 'Sep', 'Oct', 'Nov', 'Dec'];
 	$(".day").html(days[today]);
-	$(".date").html(date + "th " + months[month] + " " + year);
-	*/
+	$(".month").html(months[month] + " / " + year);
+	$(".date").html(date);
+	
+	/*
+	 * Calendar
+	 * 
+	 * */
+	$("#calendar").calendarWidget({
+	});
 	
 	
 	/*
