@@ -1,60 +1,33 @@
 <div class="body-content">
   <div class="main-nav">
-    <h2>Main Navigation</h2>
-    <div class="nav-item admin-home current">
-      <a href="javascript:;"></a>
+    <div class="nav-item admin-home">
+      <a href="javascript:;" name="admin-home"></a>
       <span>Admin Home</span>
     </div>
     <div class="nav-item global-home">
-      <a href="javascript:;"></a>
+      <a href="javascript:;" name="global-home"></a>
       <span>Global Home</span>
     </div>
     <div class="nav-item archive-searches">
-      <a href="javascript:;"></a>
+      <a href="javascript:;" name="archive-searches"></a>
       <span>Archive Searches</span>
     </div>
     <div class="nav-item configuration">
-      <a href="javascript:;"></a>
+      <a href="javascript:;" name="configuration"></a>
       <span>Configuration</span>
     </div>
     <div class="nav-item reporter-home">
-      <a href="javascript:;"></a>
+      <a href="javascript:;" name="reporter-home"></a>
       <span>Reporter Home</span>
     </div>
     <div class="nav-item all-jobs">
-      <a href="javascript:;"></a>
+      <a href="javascript:;" name="all-jobs"></a>
       <span>All Jobs</span>
     </div>
     <div class="nav-item client-home">
-      <a href="javascript:;"></a>
+      <a href="javascript:;" name="client-home"></a>
       <span>Client Home</span>
     </div>
-  </div>
-  
-  <div class="account-status">
-    <h2>Account Status</h2>
-    <canvas id="myChart" width="200" height="200"></canvas>
-    <ul class="status-item">
-      <li class="active">
-        <span>Active</span>
-        19
-      </li><li class="backup">
-        <span>Backup</span>
-        1
-      </li><li class="storage">
-        <span>Storage</span>
-        1
-      </li><li class="destroying">
-        <span>Destroying</span>
-        3
-      </li><li class="destroyed">
-        <span>Destroyed</span>
-        5
-      </li><li class="deleting">
-        <span>Deleting</span>
-        9
-      </li>
-    </ul>
   </div>
   
   <div class="quick-actions">
@@ -84,19 +57,14 @@
     </div>
   </div>
   
-  <div class="search">
-    <h2>Search</h2>
-    <input type="text" name="search" placeholder="General search" />
-  </div>
-  
   <div class="calendar">
     <div class="date-info">
-      <div class="date-container" style="display: inline-block;">
+      <div class="date-container">
         <div class="day"></div>
         <div class="month"></div>
         <div class="date"></div>
       </div>
-      <div class="clock" style="display: inline-block;">
+      <div class="clock">
         <div class="clock-info">
           <ul id="analog-clock" class="analog">
             <li class="hour"></li>
@@ -112,16 +80,34 @@
     </div>
   </div>
   
-  <!--
-  <div class="clock">
-    <div class="clock-info">
-      <ul id="analog-clock" class="analog">
-        <li class="hour"></li>
-        <li class="min"></li>
-        <li class="sec"></li>
-        <li class="meridiem"></li>
-      </ul>
-    </div>
+  <div class="search">
+    <h2>Search</h2>
+    <input type="text" name="search" placeholder="General search" />
   </div>
-  -->
+  
+  <div class="account-status">
+    <h2>Account Status</h2>
+    <canvas id="myChart" width="200" height="200"></canvas>
+    <ul class="status-item">
+      <li class="active">
+        <span>Active</span>
+        19
+      </li><li class="backup">
+        <span>Backup</span>
+        1
+      </li><li class="storage">
+        <span>Storage</span>
+        1
+      </li><li class="destroying">
+        <span>Destroying</span>
+        3
+      </li><li class="destroyed">
+        <span>Destroyed</span>
+        5
+      </li><li class="deleting">
+        <span>Deleting</span>
+        9
+      </li>
+    </ul>
+  </div>
 </div>

@@ -1,10 +1,15 @@
 $(function(){
-	/* window height resize*/
+	/*
+	 * window height resize
+	 * 
+	 * */
 	resizeWindow();
 	
 	$(window).resize(function(){
 		resizeWindow();
-	})
+	});
+	
+	
 	/*
 	 * start up page
 	 * 
@@ -62,6 +67,7 @@ $(function(){
 	$(".month").html(months[month] + " / " + year);
 	$(".date").html(date);
 	
+	
 	/*
 	 * Calendar
 	 * 
@@ -108,10 +114,34 @@ $(function(){
 				animation: false
 			}
 	);
+	
+	/*
+	 * Main nav click
+	 * 
+	 * */
+	$(".nav-item").click(function(){
+		gotoPage($(this).find("a").attr("name"));
+	});
 });
 
 function resizeWindow() {
 	var height = $(window).height() - 50;
 	
 	$(".body-container").css("height", height+"px");
+}
+
+function gotoPage(target) {
+	$.ajax({
+		async: false,
+		cache: false,
+		type: "GET",
+		url: target + ".html",
+		error: function(xml){alert("Error request failed");},
+		timeout: 1000,
+		success: function(e) {
+			$(".page-container").empty().append(e);
+		}
+	});
+	
+	$(".page-container").show();
 }
