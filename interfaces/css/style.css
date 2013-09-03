@@ -498,22 +498,105 @@ form {
 
 .page-container {
   position: absolute;
-  width: 95%;
+  width: 98%;
+  max-height: 90%;
   margin: auto;
+  padding: 4px 0;
   top: 20px;
   left: 0;
   right: 0;
-  background: #fff;
   z-index: 900;
-  padding: 5px;
-  -webkit-border-radius:  8px;
-  -moz-border-radius:     8px;
-  border-radius:          8px;
-  -webkit-box-shadow: 0 0 8px rgba(0,0,0,0.8);
-  -moz-box-shadow:    0 0 8px rgba(0,0,0,0.8);
-  box-shadow:         0 0 8px rgba(0,0,0,0.8);
-  display: none;
+  display: block;
+  overflow: auto;
 }
+/* ============================== Admin Home ============================== */
+.tab-container {
+  width: 97%;
+  margin: 0 auto;
+  position: relative;
+}
+.tab-container .tab-item {
+  display: inline-block;
+  vertical-align: bottom;
+  height: 40px;
+  padding: 0 10px;
+  line-height: 40px;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 500;
+  text-shadow: 0 1px 1px #000;
+  -webkit-border-top-left-radius:   4px;
+  -webkit-border-top-right-radius:  4px;
+  -moz-border-radius-topleft:       4px;
+  -moz-border-radius-topright:      4px;
+  border-top-left-radius:           4px;
+  border-top-right-radius:          4px;
+  -webkit-box-shadow: 0 -2px 4px rgba(0,0,0,0.3);
+  -moz-box-shadow:    0 -2px 4px rgba(0,0,0,0.3);
+  box-shadow:         0 -2px 4px rgba(0,0,0,0.3);
+  border: solid 1px #fff;
+  cursor: pointer;
+}
+.tab-container .tab-item.current {
+  color: rgba(141,128,114,1);
+  background: rgba(255,255,255,1);
+  text-shadow: none;
+}
+.tab-container .tab-item:first-child {
+  margin-left: 1px;
+}
+.tab-container .close-window {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  height: 25px;
+  line-height: 25px;
+  background: red;
+  border: none;
+}
+.data-table {
+  width: 97%;
+  margin: 0 auto;
+  background: rgba(255,255,255,1);
+  -webkit-border-bottom-right-radius: 4px;
+  -webkit-border-bottom-left-radius:  4px;
+  -moz-border-radius-bottomright:     4px;
+  -moz-border-radius-bottomleft:      4px;
+  border-bottom-right-radius:         4px;
+  border-bottom-left-radius:          4px;
+  -webkit-box-shadow: 0 4px 4px rgba(0,0,0,0.3);
+  -moz-box-shadow:    0 4px 4px rgba(0,0,0,0.3);
+  box-shadow:         0 4px 4px rgba(0,0,0,0.3);
+  overflow: hidden;
+}
+.data-table thead tr th {
+  height: 30px;
+  text-align: left;
+}
+.data-table thead tr + tr th {
+  height: 50px;
+  text-shadow: 0 2px 1px #fff;
+  background: rgba(240,240,240,1);
+  font-size: 16px;
+  font-weight: 300;
+  text-align: center;
+}
+.data-table tbody tr td {
+  height: 40px;
+  font-size: 12px;
+  text-align: center;
+  border-bottom: solid 1px rgba(233,233,233,1);
+}
+.data-table tbody tr:hover td {
+  background: rgba(185,175,166,0.2);
+}
+/* ============================== END Admin Home ============================== */
+
+
+
+
+
+
 /* ============================== Responsive Design ============================== */
 /*
 @media screen

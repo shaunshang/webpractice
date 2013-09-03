@@ -19,7 +19,9 @@ $(function(){
 		cache: false,
 		type: "GET",
 		url: "dashboard.html",
-		error: function(xml){alert("Error request failed");},
+		error: function(xml){
+			alert("Error request failed");
+		},
 		timeout: 1000,
 		success: function(e) {
 			$(".body-container").empty().append(e);
@@ -131,17 +133,29 @@ function resizeWindow() {
 }
 
 function gotoPage(target) {
+	$(".page-container").show();
+	
 	$.ajax({
 		async: false,
 		cache: false,
 		type: "GET",
 		url: target + ".html",
-		error: function(xml){alert("Error request failed");},
+		error: function(xml){
+			alert("Error request failed");
+		},
 		timeout: 1000,
 		success: function(e) {
 			$(".page-container").empty().append(e);
 		}
 	});
-	
-	$(".page-container").show();
+}
+
+function gotoTab(obj) {
+	$(".tab-item").removeClass("current");
+	obj.className += " current";
+}
+
+function closeWindow(obj) {
+	var target = obj.parentNode.parentNode;
+	target.style.display = "none";
 }
