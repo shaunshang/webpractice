@@ -547,7 +547,6 @@ input[readonly]:focus {
 
 .tab-container,
 .tab-content {
-  width: 97%;
   margin: 0 auto;
   position: relative;
 }

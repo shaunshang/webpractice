@@ -130,6 +130,12 @@ $(function(){
 			gotoPage($(this).find("a").attr("name"));
 		}
 	});
+	
+	/*
+	 * Resizable page
+	 * 
+	 * */
+	
 });
 
 function resetPageHeight() {
@@ -172,6 +178,9 @@ function gotoPage(target) {
 	
 	resetPageHeight();
 	resizeWindow();
+	
+	$( "#resizable" ).resizable();
+	$( "#resizable" ).draggable();
 }
 
 function gotoTab(target) {
@@ -197,6 +206,9 @@ function gotoTab(target) {
 }
 
 function closeWindow(obj) {
+	$('#resizable').resizable('destroy');
+	$('#resizable').draggable('destroy');
+	
 	var target = obj.parentNode.parentNode;
 	target.style.display = "none";
 }
