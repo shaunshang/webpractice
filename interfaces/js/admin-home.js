@@ -1,3 +1,3 @@
 $(function(){
-	gotoTab("table");
+	gotoTab("form");
 });
