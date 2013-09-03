@@ -126,7 +126,9 @@ $(function(){
 	 * 
 	 * */
 	$(".nav-item").click(function(){
-		gotoPage($(this).find("a").attr("name"));
+		if($(this).find("a").attr("name") == "admin-home") {
+			gotoPage($(this).find("a").attr("name"));
+		}
 	});
 });
 
