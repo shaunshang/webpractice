@@ -752,6 +752,7 @@ input[readonly]:focus {
 }
 .form-body .dropdown2 {
   position: absolute;
+  width: 168px;
   left: 65%;
   background: #fff;
   border: solid 1px rgba(204,204,204,1);
