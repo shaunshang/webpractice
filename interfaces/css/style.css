@@ -84,6 +84,7 @@ input[readonly]:focus {
 }
 /* ============================== END Global ============================== */
 
+
 /* ============================== Banner ============================== */
 .banner {
   width: 100%;
@@ -678,7 +679,14 @@ input[readonly]:focus {
   text-shadow: 0 2px 1px #fff;
   background: rgba(240,240,240,1);
   font-size: 16px;
-  font-weight: 300;
+  font-weight: 400;
+  color: rgba(141,128,114,1);
+}
+.form-banner span {
+  display: inline-block;
+  height: 100%;
+  line-height: 50px;
+  padding: 0 10px;
 }
 .form-body .dropdown2 .add-new {
   background: url(../images/icons/add-new.png) no-repeat 15px center;
@@ -945,10 +953,6 @@ input[readonly]:focus {
 }
 /* -------------------- END Form -------------------- */
 /* ============================== END Admin Home ============================== */
-
-
-
-
 
 
 /* ============================== Responsive Design ============================== */
