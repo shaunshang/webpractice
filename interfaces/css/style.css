@@ -751,9 +751,18 @@ input[readonly]:focus {
   background: #fcfcfc;
 }
 .form-body .dropdown2 {
-  margin-top:1px;
-  right: 235px;
+  position: absolute;
+  left: 65%;
+  background: #fff;
+  border: solid 1px rgba(204,204,204,1);
+  -webkit-box-shadow: 0 1px 5px #ccc;
+  -moz-box-shadow:    0 1px 5px #ccc;
+  box-shadow:         0 1px 5px #ccc;
+  margin-top: 1px;
   z-index: 10000;
+}
+.form-body .dropdown2 li {
+  padding: 10px;
 }
 .form-body .tags-container {
   width: 65%;
