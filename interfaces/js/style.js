@@ -154,9 +154,23 @@ function gotoPage(target) {
 	});
 }
 
-function gotoTab(obj) {
+function gotoTab(target) {
 	$(".tab-item").removeClass("current");
-	obj.className += " current";
+	$(".tab-item[name='" + target + "']").addClass("current");
+	
+	$.ajax({
+		async: false,
+		cache: false,
+		type: "GET",
+		url: target + ".html",
+		error: function(xml){
+			alert("Error request failed");
+		},
+		timeout: 1000,
+		success: function(e) {
+			$(".tab-content").empty().append(e);
+		}
+	});
 }
 
 function closeWindow(obj) {
