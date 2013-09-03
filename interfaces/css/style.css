@@ -534,7 +534,6 @@ input[readonly]:focus {
 .page-container {
   position: absolute;
   width: 98%;
-  max-height: 90%;
   margin: auto;
   padding: 4px 0;
   top: 20px;
