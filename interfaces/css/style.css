@@ -135,6 +135,8 @@ form {
 .banner-tools {
   height: 100%;
   vertical-align: top;
+  padding-left: 30px;
+  border-left: solid 1px #ccc;
 }
 /* ============================== END Banner ============================== */
 
@@ -258,6 +260,7 @@ form {
   padding: 10px 0;
   overflow: hidden;
   min-width: 220px;
+  color: rgba(148,135,122,1);
 }
 .account-status canvas {
   margin: 10px auto;

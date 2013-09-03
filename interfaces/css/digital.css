@@ -1,0 +1,10 @@
+#digital-clock {
+  display: inline-block;
+  width: 100px;
+}
+#digital-clock > li {
+  height: 50px;
+  line-height: 50px;
+  color: rgba(148,135,122,1);
+  display: inline-block;
+}

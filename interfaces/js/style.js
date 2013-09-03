@@ -6,7 +6,10 @@ $(function(){
 	resizeWindow();
 	
 	$(window).resize(function(){
-		resizeWindow();
+		
+		setTimeout(function(){
+			resizeWindow();
+		},400);
 	});
 	
 	
@@ -52,6 +55,7 @@ $(function(){
 	 * 
 	 * */
 	$('#analog-clock').clock({offset: '+8', type: 'analog'});
+	$('#digital-clock').clock({offset: '+8', type: 'digital'});
 	
 	
 	/*

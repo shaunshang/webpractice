@@ -7,10 +7,8 @@
  * Requires: jQuery 1.2+
  */
 
-(function(jQuery)
-{
-  jQuery.fn.clock = function(options)
-  {
+(function(jQuery) {
+  jQuery.fn.clock = function(options) {
     var defaults = {
       offset: '+0',
       type: 'analog'
@@ -20,14 +18,11 @@
 
     setInterval( function() {
       var seconds = jQuery.calcTime(opts.offset).getSeconds();
-      if(opts.type=='analog')
-      {
+      if(opts.type=='analog') {
         var sdegree = seconds * 6;
         var srotate = "rotate(" + sdegree + "deg)";
         jQuery(_this).find(".sec").css({"-moz-transform" : srotate, "-webkit-transform" : srotate});
-      }
-      else
-      {
+      } else {
         jQuery(_this).find(".sec").html(seconds);
       }
     }, 1000 );
@@ -35,14 +30,11 @@
     setInterval( function() {
       var hours = jQuery.calcTime(opts.offset).getHours();
       var mins = jQuery.calcTime(opts.offset).getMinutes();
-      if(opts.type=='analog')
-      {
+      if(opts.type=='analog') {
         var hdegree = hours * 30 + (mins / 2);
         var hrotate = "rotate(" + hdegree + "deg)";
         jQuery(_this).find(".hour").css({"-moz-transform" : hrotate, "-webkit-transform" : hrotate});
-      }
-      else
-      {
+      } else {
         jQuery(_this).find(".hour").html(hours+':');
       }
       var meridiem = hours<12?'AM':'PM';
@@ -51,15 +43,16 @@
 
     setInterval( function() {
       var mins = jQuery.calcTime(opts.offset).getMinutes();
-      if(opts.type=='analog')
-      {
+      if(opts.type=='analog') {
         var mdegree = mins * 6;
         var mrotate = "rotate(" + mdegree + "deg)";        
         jQuery(_this).find(".min").css({"-moz-transform" : mrotate, "-webkit-transform" : mrotate});                
-      }
-      else
-      {
-        jQuery(_this).find(".min").html(mins+':');
+      } else {
+      	if(mins.toString().length > 1) {
+      		jQuery(_this).find(".min").html(mins);
+      	} else {
+      		jQuery(_this).find(".min").html("0" + mins);
+      	}
       }
     }, 1000 );
   }
