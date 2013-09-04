@@ -146,9 +146,11 @@ $(function(){
 	 * */
 	$(".sub-menu li a").click(function(){
 		if($(this).attr("name") == "default") {
-			$("link#themefile").attr("href", "css/style.css");
+			//$("link#themefile").attr("href", "css/style.css");
+			changestyle('style');
 		} else {
-			$("link#themefile").attr("href", "css/style2.css");
+			//$("link#themefile").attr("href", "css/style2.css");
+			changestyle('style2');
 		}
 	});
 });
@@ -233,7 +235,7 @@ var cookie_name = "style";
 var cookie_duration = 30;
 
 function changestyle(css_title) {
-	$("#theme").attr("href", css_title);
+	$("#themefile").attr("href", css_title);
 	
 	setCookie(cookie_name, css_title, cookie_duration);
 }
