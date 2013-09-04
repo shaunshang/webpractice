@@ -42,9 +42,11 @@ $(function(){
 		$(".start-menu").fadeToggle("fast");
 		if(open) {
 			$(this).removeClass("active");
+			$(".banner").css("z-index", "800");
 			open = false;
 		} else {
 			$(this).addClass("active");
+			$(".banner").css("z-index", "4000");
 			open = true;
 		}
 	});
@@ -130,6 +132,7 @@ $(function(){
 			}
 	);
 	
+	
 	/*
 	 * Main nav click
 	 * 
@@ -140,6 +143,7 @@ $(function(){
 		}
 	});
 	
+	
 	/*
 	 * Change theme
 	 * 
@@ -148,10 +152,17 @@ $(function(){
 		if($(this).attr("name") == "default") {
 			changestyle('css/style.css');
 		} else {
-			$(".profile-photo img").attr("src", "images/theme1/profile-photo.png")
 			changestyle('css/style2.css');
 		}
 	});
+	
+	
+	/*
+	 * Widget sortable
+	 * 
+	 * */
+	$( ".tool-bar" ).sortable({ cursor: 'move' });
+  $( ".tool-bar" ).disableSelection();
 });
 
 function resetPageHeight() {
@@ -177,6 +188,7 @@ function resizeWindow() {
 
 function gotoPage(target) {
 	$(".page-container").show();
+	$(".page-container").css("z-index", "3000");
 	
 	$.ajax({
 		async: false,

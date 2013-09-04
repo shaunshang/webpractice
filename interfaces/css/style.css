@@ -241,12 +241,17 @@ input[readonly]:focus {
   text-align: center;
   overflow: hidden;
 }
-.profile-photo img {
+.profile-photo span {
   width: 90%;
   height: 90%;
   margin: 0 auto;
-  margin-top: 5%;
-  border-radius: 50px;
+  margin-top: 4%;
+  -webkit-border-radius:  50px;
+  -moz-border-radius:     50px;
+  border-radius:          50px;
+  display: block;
+  background: url(../images/default/profile-photo.png) no-repeat center center;
+  background-size: 100%;
 }
 .profile-title h2 {
   color: #fff;
@@ -260,7 +265,7 @@ input[readonly]:focus {
 .profile-title p {
   font-size: 12px;
   font-weight: bold;
-  color: rgba(118,107,95,1);
+  color: #fff;
   text-align: left;
 }
 .profile .list {
@@ -965,7 +970,31 @@ input[readonly]:focus {
 /* -------------------- END Form -------------------- */
 /* ============================== END Admin Home ============================== */
 
-
+.help1 {
+  position: absolute;
+  top: 30px;
+  left: 100px;
+  padding: 17px 5px 20px 30px;
+  font-size: 12px;
+  font-weight: 500;
+  color: #fff;
+  background: url(../images/icons/arrow-left.png) no-repeat left center;
+  background-size: 100% 100%;
+}
+.help2 {
+  position: absolute;
+  bottom: 70px;
+  left: 110px;
+  padding: 17px 5px 20px 30px;
+  font-size: 12px;
+  font-weight: 500;
+  color: #fff;
+  background: url(../images/icons/arrow-left.png) no-repeat left center;
+  background-size: 100% 100%;
+  -webkit-transform:  rotate(-45deg);
+  -ms-transform:      rotate(-45deg);
+  transform:          rotate(-45deg);
+}
 /* ============================== Responsive Design ============================== */
 /*
 @media screen
