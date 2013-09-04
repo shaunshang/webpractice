@@ -970,31 +970,7 @@ input[readonly]:focus {
 /* -------------------- END Form -------------------- */
 /* ============================== END Admin Home ============================== */
 
-.help1 {
-  position: absolute;
-  top: 30px;
-  left: 100px;
-  padding: 17px 5px 20px 30px;
-  font-size: 12px;
-  font-weight: 500;
-  color: #fff;
-  background: url(../images/icons/arrow-left.png) no-repeat left center;
-  background-size: 100% 100%;
-}
-.help2 {
-  position: absolute;
-  bottom: 70px;
-  left: 110px;
-  padding: 17px 5px 20px 30px;
-  font-size: 12px;
-  font-weight: 500;
-  color: #fff;
-  background: url(../images/icons/arrow-left.png) no-repeat left center;
-  background-size: 100% 100%;
-  -webkit-transform:  rotate(-45deg);
-  -ms-transform:      rotate(-45deg);
-  transform:          rotate(-45deg);
-}
+
 /* ============================== Responsive Design ============================== */
 /*
 @media screen
