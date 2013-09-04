@@ -227,3 +227,46 @@ function closeWindow(obj) {
 	var target = obj.parentNode.parentNode;
 	target.style.display = "none";
 }
+
+
+var cookie_name = "style";
+var cookie_duration = 30;
+
+function changestyle(css_title) {
+	$("#theme").attr("href", css_title);
+	
+	setCookie(cookie_name, css_title, cookie_duration);
+}
+
+function setCookie(cName, cTitle, cDuration, cDomain) {
+	document.cookie = cName + "=" + encodeURIComponent(cTitle) + "; max-age=" + 60 * 60 * 24 * cDuration;	
+}
+
+function getCookie(cName) {
+	var c_value = document.cookie;
+	var c_start = c_value.indexOf(" " + cName + "=");
+	
+	if(c_start == -1) {
+		c_start = c_value.indexOf(cName + "=");
+	}
+	
+	if(c_start == -1) {
+		c_value = null;
+	} else {
+		c_start = c_value.indexOf("=", c_start) + 1;
+		var c_end = c_value.indexOf(";", c_start);
+		if(c_end == -1) {
+			c_end = c_value.length;
+		}
+		c_value = unescape(c_value.substring(c_start, c_end));
+	}
+	
+	return c_value;
+}
+
+function setStyleFromCookie() {
+	var c_title = getCookie(cookie_name);
+	if(c_title.length) {
+		changestyle(c_title);
+	}
+}
