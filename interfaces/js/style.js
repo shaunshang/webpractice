@@ -49,6 +49,15 @@ $(function(){
 		}
 	});
 	
+	/*
+	 * submenu
+	 * 
+	 * */
+	$(".start-menu li").hover(function(){
+		$(this).find(".sub-menu").show();
+	}, function(){
+		$(this).find(".sub-menu").hide();
+	});
 	
 	/*
 	 * JQuery Date
@@ -179,7 +188,7 @@ function gotoPage(target) {
 	resetPageHeight();
 	resizeWindow();
 	
-	$( "#resizable" ).resizable();
+	$( "#resizable" ).resizable({handles: 'e, w'});
 	$( "#resizable" ).draggable();
 }
 

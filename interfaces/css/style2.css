@@ -11,7 +11,7 @@ body {
 }
 body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  background: url(../images/default/main-bg.png) no-repeat;
+  background: url(../images/theme1/main-bg.png) no-repeat;
   background-size: 100% 100%;
 }
 a {
@@ -225,7 +225,7 @@ input[readonly]:focus {
 .profile .info {
   width: 100%;
   padding: 10px 0;
-  background: rgba(176,165,153,0.5);
+  background: rgba(81,174,124,1);
   text-align: center;
 }
 .profile .info > div {
@@ -236,7 +236,7 @@ input[readonly]:focus {
   width: 90px;
   height: 90px;
   border-radius: 50px;
-  border: solid 2px rgba(146,135,124,1);
+  border: solid 2px rgba(255,255,255,0.8);
   margin-right: 10px;
   text-align: center;
   overflow: hidden;
@@ -260,7 +260,7 @@ input[readonly]:focus {
 .profile-title p {
   font-size: 12px;
   font-weight: bold;
-  color: rgba(118,107,95,1);
+  color: #fff;
   text-align: left;
 }
 .profile .list {
@@ -355,7 +355,7 @@ input[readonly]:focus {
   background: none!important;
 }
 .calendar .date-info {
-  background: rgba(176,165,153,0.5);
+  background: rgba(81,174,124,1);
   width: 100%;
   display: block;
   text-align: left;
@@ -409,7 +409,7 @@ input[readonly]:focus {
   background: #eee;
 }
 .calendar-month .today span {
-  background: rgba(171,147,235,1);
+  background: rgba(81,174,124,1);
   border-radius: 20px;
   color: #fff;
   font-weight: bold;
@@ -509,36 +509,36 @@ input[readonly]:focus {
   margin: 0 auto;
   text-align: center;
   font-size: 12px;
-  color: #fff;
-  font-weight: 400;
-  text-shadow: 0 1px 1px #000;
+  color: #000;
+  font-weight: 500;
+  text-shadow: 0 1px 1px #fff;
 }
 .admin-home a {
-  background: rgba(255,255,255,0.6) url(../images/default/admin-home.png) no-repeat center center;
+  background: rgba(255,255,255,0.6) url(../images/theme1/admin-home.png) no-repeat center center;
   background-size: 40px 40px;
 }
 .global-home a {
-  background: rgba(255,255,255,0.6) url(../images/default/global-home.png) no-repeat center center;
+  background: rgba(255,255,255,0.6) url(../images/theme1/global-home.png) no-repeat center center;
   background-size: 40px 40px;
 }
 .archive-searches a {
-  background: rgba(255,255,255,0.6) url(../images/default/archive-searches.png) no-repeat center center;
+  background: rgba(255,255,255,0.6) url(../images/theme1/archive-searches.png) no-repeat center center;
   background-size: 40px 40px;
 }
 .configuration a {
-  background: rgba(255,255,255,0.6) url(../images/default/configuration.png) no-repeat center center;
+  background: rgba(255,255,255,0.6) url(../images/theme1/configuration.png) no-repeat center center;
   background-size: 40px 40px;
 }
 .reporter-home a {
-  background: rgba(255,255,255,0.6) url(../images/default/reporter-home.png) no-repeat center center;
+  background: rgba(255,255,255,0.6) url(../images/theme1/reporter-home.png) no-repeat center center;
   background-size: 40px 40px;
 }
 .all-jobs a {
-  background: rgba(255,255,255,0.6) url(../images/default/all-jobs.png) no-repeat center center;
+  background: rgba(255,255,255,0.6) url(../images/theme1/all-jobs.png) no-repeat center center;
   background-size: 40px 40px;
 }
 .client-home a {
-  background: rgba(255,255,255,0.6) url(../images/default/client-home.png) no-repeat center center;
+  background: rgba(255,255,255,0.6) url(../images/theme1/client-home.png) no-repeat center center;
   background-size: 40px 40px;
 }
 /* -------------------- END Main Nav -------------------- */

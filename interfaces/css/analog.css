@@ -2,7 +2,7 @@
 .analog {
 	position: relative;
 	width: 150px;
-	background: url(../images/clockface.png);
+	background: url(../images/default/clockface.png);
 	list-style: none;
 	text-align: center;
 }
@@ -20,17 +20,17 @@
 }
 
 .analog .sec {
-	background: url(../images/sechand.png);
+	background: url(../images/default/sechand.png);
 	z-index: 3;
 }
 
 .analog .min {
-	background: url(../images/minhand.png);
+	background: url(../images/default/minhand.png);
 	z-index: 2;
 }
 
 .analog .hour {
-	background: url(../images/hourhand.png);
+	background: url(../images/default/hourhand.png);
 	z-index: 1;
 }
 
