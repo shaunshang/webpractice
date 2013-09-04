@@ -141,10 +141,16 @@ $(function(){
 	});
 	
 	/*
-	 * Resizable page
+	 * Change theme
 	 * 
 	 * */
-	
+	$(".sub-menu li a").click(function(){
+		if($(this).attr("name") == "default") {
+			$("link#themefile").attr("href", "css/style.css");
+		} else {
+			$("link#themefile").attr("href", "css/style2.css");
+		}
+	});
 });
 
 function resetPageHeight() {
