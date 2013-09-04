@@ -146,11 +146,10 @@ $(function(){
 	 * */
 	$(".sub-menu li a").click(function(){
 		if($(this).attr("name") == "default") {
-			//$("link#themefile").attr("href", "css/style.css");
-			changestyle('style');
+			changestyle('css/style.css');
 		} else {
-			//$("link#themefile").attr("href", "css/style2.css");
-			changestyle('style2');
+			$(".profile-photo img").attr("src", "images/theme1/profile-photo.png")
+			changestyle('css/style2.css');
 		}
 	});
 });
