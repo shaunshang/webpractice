@@ -1,3 +1,4 @@
+/* ==================== General ==================== */
 html,
 body {
   padding: 0;
@@ -7,17 +8,30 @@ body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   background: rgba(248,248,248,1);
 }
+a {
+  text-decoration: none;
+}
+.btn {
+  -webkit-border-radius:  6px;
+  -moz-border-radius:     6px;
+  border-radius:          6px;
+  padding: 5px 10px;
+}
 .container {
   width: 100%;
   height: 100%;
   position: relative;
   overflow: auto;
 }
+/* ==================== END General ==================== */
+
+
+/* ==================== Login ==================== */
 .login-form {
   position: absolute;
-  width: 360px;
-  height: 360px;
-  padding: 20px;
+  width: 300px;
+  height: 250px;
+  padding: 30px;
   margin: 0 auto;
   top: 20%;
   bottom: 0;
@@ -33,12 +47,75 @@ body {
   box-shadow:         0 0 6px rgba(0,0,0,0.075);
 }
 .login-form p {
-  border-bottom: solid 4px rgba(238,238,238,1);
+  border-bottom: solid 6px rgba(238,238,238,1);
+  padding-bottom: 4px;
+  margin: 5px 0 10px;
 }
 .login-form p span {
   font-size: 16px;
   font-weight: 500;
   margin: 0;
   text-transform: uppercase;
-  border-bottom: solid 4px rgba(55,166,205,1);
+  border-bottom: solid 6px rgba(55,166,205,1);
+  padding-bottom: 4px;
 }
+.login-form > span {
+  display: block;
+  font-size: 30px;
+  font-weight: 600;
+  margin: 20px 0;
+  color: rgba(87,86,85,1);
+}
+.login-form > span .login-icon {
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  vertical-align: top;
+  margin-right: 10px;
+  background: url(../images/login.png) no-repeat;
+}
+.login-form > input {
+  display: block;
+  width: 100%;
+  height: 35px;
+  outline: 0;
+  font-size: 14px;
+  margin-bottom: 10px;
+  border: solid 1px #ccc;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,0.075);
+  -moz-box-shadow:    inset 0 1px 1px rgba(0,0,0,0.075);
+  box-shadow:         inset 0 1px 1px rgba(0,0,0,0.075);
+}
+.login-form label {
+  color: #333;
+  font-size: 14px;
+  line-height: 18px;
+  cursor: pointer;
+  display: block;
+  margin-bottom: 15px;
+}
+.login-form label span {
+  display: inline-block;
+  vertical-align: top;
+  width: 16px;
+  height: 16px;
+  padding: 0;
+  margin: 0 5px 0 0;
+  border: solid 1px rgba(185,185,185,1);
+  -webkit-border-radius:  4px;
+  -moz-border-radius:     4px;
+  border-radius:          4px;
+}
+.login-form label span input {
+  margin: 0;
+  opacity: 0;
+}
+.login-form .login {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 600;
+  background: rgba(55,166,205,1);
+  border: solid 1px rgba(42,135,167,1);
+  text-shadow: 0 1px 1px rgba(42,114,128,1);
+}
+/* ==================== END Login ==================== */
