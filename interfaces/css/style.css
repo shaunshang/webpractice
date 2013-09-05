@@ -55,7 +55,7 @@ ul {
 
 /* ==================== Banner ==================== */
 .banner {
-  position: absolute;
+  position: relative;
   display: block;
   width: 100%;
   height: 45px;
@@ -63,7 +63,7 @@ ul {
   background: rgba(39,39,41,1);
 }
 .banner > div {
-  display: table-cell;
+  display: inline-block;
   height: 45px;
   vertical-align: top;
 }
@@ -83,15 +83,11 @@ ul {
   text-transform: uppercase;
   padding-left: 10px;
 }
-.banner-control {
-  width: 100%;
-  position: relative;
-  border-left: solid 1px rgba(66,66,67,1);
-}
 .expand {
-  position: absolute;
-  left: 10px;
+  position: relative;
   height: 100%;
+  padding-left: 30px;
+  border-left: solid 1px rgba(66,66,67,1);
 }
 .expand a {
   width: 30px;
@@ -102,23 +98,24 @@ ul {
   border: solid 1px rgba(59,59,60,1);
   box-shadow: inset 0 0 5px #888;
 }
-.banner-control > ul {
+.banner-control {
   float: right;
+  position: relative;
   border-left: solid 1px rgba(0,0,0,1);
 }
-.banner-control > ul > li {
+.banner-control > li {
   display: inline-block;
   height: 45px;
   vertical-align: top;
   border-left: solid 1px rgba(66,66,67,1);
   border-right: solid 1px rgba(0,0,0,1);
-  padding: 0 20px;
+  padding: 0 26px;
   position: relative;
 }
-.banner-control > ul > li:last-child {
+.banner-control > li:last-child {
   border-right: none;
 }
-.banner-control > ul > li > a {
+.banner-control > li > a {
   height: 100%;
   line-height: 45px;
   display: block;
@@ -173,9 +170,40 @@ ul {
 }
 /* ==================== END Banner ==================== */
 
+
+/* ==================== Body Container ==================== */
+.body-container {
+  width: 100%;
+  display: block;
+  white-space: nowrap;
+  overflow: auto;
+  position: relative;
+}
+.body-container > div {
+  height: 100%;
+}
+.sidebar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 210px;
+  background: red;
+}
+.body {
+  background: blue;
+  padding-left: 210px;
+}
+.body-content {
+  width: 100%;
+  height: 200px;
+  background: yellow;
+}
+/* ==================== END Body Container ==================== */
+
+
 /* ==================== Footer ==================== */
 .footer {
-  position: absolute;
+  position: relative;
   display: block;
   width: 100%;
   height: 45px;
@@ -184,3 +212,15 @@ ul {
 }
 
 /* ==================== END Footer ==================== */
+
+
+
+/* ==================== Responsive Design ==================== */
+@media screen
+and (max-width: 672px) {
+  .banner {
+    height: 90px;
+    min-width: 408px;
+  }
+}
+/* ==================== END Responsive Design ==================== */
