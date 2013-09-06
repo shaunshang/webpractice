@@ -13,6 +13,15 @@ $(function(){
 	
 	$(".expand a").click(function(){
 		$(".banner-title").toggle();
+		$(".sidebar").toggle();
+		
+		if(expand == false) {
+			$(".body").css("padding-left", "0");
+			expand = true;
+		} else {
+			$(".body").css("padding-left", "210px");
+			expand = false;
+		}
 	});
 });
 
