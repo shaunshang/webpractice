@@ -196,7 +196,7 @@ input[type="password"]:focus {
   width: 100%;
   display: block;
   white-space: nowrap;
-  overflow: auto;
+  overflow: hidden;
   position: relative;
 }
 .body-container > div {
@@ -288,12 +288,14 @@ input[type="password"]:focus {
 .body {
   background: rgba(245,245,245,1);
   padding-left: 218px;
+  overflow: hidden;
 }
 .body-content {
   width: 100%;
   height: 100%;
   background: rgba(255,255,255,1);
   border-left: solid 1px rgba(221,221,221,1);
+  overflow: auto;
 }
 .current-position {
   height: 30px;
@@ -313,6 +315,99 @@ input[type="password"]:focus {
 }
 .current-position a i {
   margin-top: -3px;
+}
+.page-banner {
+  min-width: 133px;
+  height: 60px;
+  line-height: 60px;
+}
+.dashboard-icon {
+  background: url(../images/dashboard.png) no-repeat center center;
+}
+.control-area {
+  height: 35px;
+  background: rgba(245,245,245,1);
+  border-top:     solid 1px rgba(221,221,221,1);
+  border-bottom:  solid 1px rgba(221,221,221,1);
+}
+.control-area > a {
+  display: inline-block;
+  height: 100%;
+  line-height: 35px;
+  padding: 0 10px;
+  color: #4b4b4b;
+  font-size: 13px;
+  font-weight: 500;
+  text-shadow: 0 1px 1px #fff;
+}
+.control-area > a:hover {
+  text-decoration: underline;
+}
+.control-area > a + a {
+  border-left: solid 1px rgba(221,221,221,1);
+  -webkit-box-shadow: inset 1px 0 1px #fff;
+  -moz-box-shadow:    inset 1px 0 1px #fff;
+  box-shadow:         inset 1px 0 1px #fff;
+}
+.account-status {
+  height: 100px;
+}
+.account-status > div {
+  display: inline-block;
+  vertical-align: top;
+  height: 100%;
+}
+.account-summary {
+  width: 25%;
+}
+.account-summary > span,
+.account-summary a {
+  display: inline-block;
+  border-bottom: solid 4px rgba(238,238,238,1);
+  padding-bottom: 5px;
+}
+.account-summary > span {
+  margin: 20px 0 0 10px;
+  width: 30%;
+  border-bottom: solid 4px rgba(55,166,205,1);
+}
+.account-summary a {
+  width: 60%;
+  text-align: right;
+  color: #37a6cd;
+  font-size: 12px;
+  font-weight: 300;
+}
+.account-summary p {
+  width: 90%;
+  margin: 10px 0 0 10px;
+  color: #575655;
+  font-size: 13px;
+  font-weight: 300;
+}
+.account-summary b {
+  float: right;
+  font-size: 18px;
+  font-weight: 400;
+}
+.account-detail {
+  width: 75%;
+}
+.detail-item {
+  display: inline-block;
+  vertical-align: top;
+  height: 80px;
+  background: rgba(245,245,245,1);
+  padding: 0 30px;
+  margin: 10px 0 10px 10px;
+}
+.detail-item > * {
+  display: inline-block;
+  vertical-align: middle;
+  height: 64px;
+}
+.detail-item h4 {
+  margin-top: 10px;
 }
 /* ---------- END Body ---------- */
 /* ==================== END Body Container ==================== */
