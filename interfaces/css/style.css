@@ -195,7 +195,6 @@ input[type="password"]:focus {
 .body-container {
   width: 100%;
   display: block;
-  white-space: nowrap;
   overflow: hidden;
   position: relative;
 }
@@ -325,14 +324,13 @@ input[type="password"]:focus {
   background: url(../images/dashboard.png) no-repeat center center;
 }
 .control-area {
-  height: 35px;
   background: rgba(245,245,245,1);
   border-top:     solid 1px rgba(221,221,221,1);
   border-bottom:  solid 1px rgba(221,221,221,1);
+  
 }
 .control-area > a {
   display: inline-block;
-  height: 100%;
   line-height: 35px;
   padding: 0 10px;
   color: #4b4b4b;
@@ -359,6 +357,7 @@ input[type="password"]:focus {
 }
 .account-summary {
   width: 25%;
+  min-width: 116px;
 }
 .account-summary > span,
 .account-summary a {
@@ -398,8 +397,9 @@ input[type="password"]:focus {
   vertical-align: top;
   height: 80px;
   background: rgba(245,245,245,1);
-  padding: 0 30px;
+  padding: 0 20px;
   margin: 10px 0 10px 10px;
+  white-space: nowrap;
 }
 .detail-item > * {
   display: inline-block;
@@ -408,6 +408,18 @@ input[type="password"]:focus {
 }
 .detail-item h4 {
   margin-top: 10px;
+}
+.active-icon {
+  background: url(../images/active.png) no-repeat center center;
+}
+.backup-icon {
+  background: url(../images/backup.png) no-repeat center center;
+}
+.storage-icon {
+  background: url(../images/storage.png) no-repeat center center;
+}
+.destroyed-icon {
+  background: url(../images/destroyed.png) no-repeat center center;
 }
 /* ---------- END Body ---------- */
 /* ==================== END Body Container ==================== */
