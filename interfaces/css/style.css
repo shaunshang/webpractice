@@ -283,7 +283,7 @@ input[type="password"]:focus {
 }
 /* ---------- END Sidebar ---------- */
 
-/* ---------- Body ---------- */
+
 .body {
   background: rgba(245,245,245,1);
   padding-left: 218px;
@@ -296,6 +296,7 @@ input[type="password"]:focus {
   border-left: solid 1px rgba(221,221,221,1);
   overflow: auto;
 }
+/* ---------- Current Position ---------- */
 .current-position {
   height: 30px;
   padding-left: 10px;
@@ -315,6 +316,10 @@ input[type="password"]:focus {
 .current-position a i {
   margin-top: -3px;
 }
+/* ---------- END Current Position ---------- */
+
+
+/* ---------- Page Banner ---------- */
 .page-banner {
   min-width: 133px;
   height: 60px;
@@ -323,6 +328,10 @@ input[type="password"]:focus {
 .dashboard-icon {
   background: url(../images/dashboard.png) no-repeat center center;
 }
+/* ---------- END Page Banner ---------- */
+
+
+/* ---------- Control Area ---------- */
 .control-area {
   background: rgba(245,245,245,1);
   border-top:     solid 1px rgba(221,221,221,1);
@@ -347,13 +356,13 @@ input[type="password"]:focus {
   -moz-box-shadow:    inset 1px 0 1px #fff;
   box-shadow:         inset 1px 0 1px #fff;
 }
-.account-status {
-  height: 100px;
-}
+/* ---------- END Control Area ---------- */
+
+
+/* ---------- Account Status ---------- */
 .account-status > div {
   display: inline-block;
   vertical-align: top;
-  height: 100%;
 }
 .account-summary {
   width: 25%;
@@ -396,18 +405,20 @@ input[type="password"]:focus {
   display: inline-block;
   vertical-align: top;
   height: 80px;
-  background: rgba(245,245,245,1);
   padding: 0 20px;
   margin: 10px 0 10px 10px;
+  background: rgba(245,245,245,1);
   white-space: nowrap;
 }
 .detail-item > * {
   display: inline-block;
   vertical-align: middle;
   height: 64px;
+  color: #222;
 }
 .detail-item h4 {
   margin-top: 10px;
+  color: #37a6cd;
 }
 .active-icon {
   background: url(../images/active.png) no-repeat center center;
@@ -421,7 +432,125 @@ input[type="password"]:focus {
 .destroyed-icon {
   background: url(../images/destroyed.png) no-repeat center center;
 }
-/* ---------- END Body ---------- */
+/* ---------- END Account Status ---------- */
+
+
+/* ---------- Tab Container ---------- */
+.tab-container {
+  border-bottom: solid 1px rgba(229,229,229,1);
+  padding: 0 10px;
+  white-space: nowrap;
+}
+.tab-container > div + div {
+  border-left: none;
+}
+.tab-item {
+  display: inline-block;
+  padding: 8px 20px;
+  border: solid 1px rgba(229,229,229,1);
+  border-bottom: none;
+  font-size: 13px;
+  font-weight: 400;
+  text-transform: uppercase;
+  cursor: pointer;
+  margin-bottom: -1px;
+}
+.tab-item:hover {
+  text-decoration: underline;
+}
+.tab-item.active {
+  background-color: #f7f7f7;
+  background-image: -moz-linear-gradient(top, #f7f7f7, #ffffff);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#f7f7f7), to(#ffffff));
+  background-image: -webkit-linear-gradient(top, #f7f7f7, #ffffff);
+  background-image: -o-linear-gradient(top, #f7f7f7, #ffffff);
+  background-image: linear-gradient(to bottom, #f7f7f7, #ffffff);
+  background-repeat: repeat-x;
+}
+.chart {
+  padding: 10px 0;
+}
+.chart > span {
+  display: block;
+  position: relative;
+  margin: 0 15px;
+  padding-bottom: 5px;
+  border-bottom: solid 4px rgba(238,238,238,1);
+}
+.chart > span b {
+  color: #222222;
+  font-size: 13px;
+  font-weight: 500;
+  text-transform: uppercase;
+  margin-bottom: -4px;
+  padding-bottom: 5px;
+  border-bottom: solid 4px rgba(55,166,205,1);
+}
+.line-chart {
+  clear: both;
+}
+#line-chart {
+  margin: 0 auto;
+  margin-top: 10px;
+}
+.pie-chart {
+  float: left;
+}
+#pie-chart {
+  margin-top: 10px;
+}
+.bar-chart {
+  float: right;
+}
+#bar-chart {
+  margin-top: 10px;
+}
+/* ---------- END Tab Container ---------- */
+
+
+/* ---------- Recent Activity ---------- */
+.recent-activity {
+  clear: both;
+  border-top:     solid 1px rgba(229,229,229,1);
+  border-bottom:  solid 1px rgba(229,229,229,1);
+  padding: 15px 0;
+  background: rgba(250,250,250,1);
+}
+.recent-activity h4 {
+  color: #575655;
+  font-size: 13px;
+  font-weight: 500;
+  margin-left: 15px;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+.activity-item {
+  width: 90%;
+  padding: 10px 15px;
+  margin: 5px auto;
+  background: #fff;
+  border: solid 1px rgba(221,221,221,1);
+  -webkit-border-radius:  4px;
+  -moz-border-radius:     4px;
+  border-radius:          4px;
+}
+.activity-item.most-recent {
+  border: solid 1px rgba(202,228,236,1);
+  background: rgba(230,246,251,1);
+}
+.activity-item > span {
+  font-size: 12px;
+}
+.activity-item > span a {
+  color: #37a6cd;
+}
+.activity-item > span a:hover {
+  text-decoration: underline;
+}
+.activity-icon {
+  background: url(../images/activity.png) no-repeat center center;
+}
+/* ---------- END Recent Activity ---------- */
 /* ==================== END Body Container ==================== */
 
 

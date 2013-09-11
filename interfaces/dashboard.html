@@ -5,6 +5,7 @@
 <title>TBWA</title>
 <link href="css/style.css" rel="stylesheet" />
 <script src="js/jquery-1.9.1.js"></script>
+<script src="js/chart.js"></script>
 <script src="js/style.js"></script>
 </head>
 <body>
@@ -48,7 +49,9 @@
           <div class="current-position">
             <a href="dashboard.html"><i class="icon-16 home-icon"></i>Dashboard</a>
           </div>
+          
           <div class="page-banner"><i class="icon-32 dashboard-icon"></i>Dashboard</div>
+          
           <div class="control-area">
             <a href="javascript:;">
               Button 1
@@ -58,6 +61,8 @@
               Button 3
             </a>
           </div>
+          
+          <!-- ========== Account Status ========== -->
           <div class="account-status">
             <div class="account-summary">
               <span>
@@ -100,14 +105,49 @@
               </div>
             </div>
           </div>
+          <!-- ========== END Account Status ========== -->
+          
+          <!-- ========== Tab container ========== -->
           <div class="tab-container">
-            <div class="tab-item"></div>
-          </div>
-          <div class="tab-content">
-            <div class="chats">
-              
+            <div class="tab-item active">
+              First Tab
+            </div><div class="tab-item">
+              Second Tab
             </div>
           </div>
+          <div class="tab-content">
+            <div class="chart line-chart">
+              <span><b>Line chart</b></span>
+              <canvas id="line-chart" width="990" height="200"></canvas>
+            </div>
+            <div class="chart pie-chart">
+              <span><b>Pie chart</b></span>
+              <canvas id="pie-chart" width="490" height="200"></canvas>
+            </div>
+            <div class="chart bar-chart">
+              <span><b>Bar chart</b></span>
+              <canvas id="bar-chart" width="490" height="200"></canvas>
+            </div>
+          </div>
+          <!-- ========== END Tab container ========== -->
+          
+          <!-- ========== Recent Activity ========== -->
+          <div class="recent-activity">
+            <h4>Recent Activity</h4>
+            <div class="activity-item most-recent">
+              <i class="icon-16 activity-icon"></i>
+              <span><a href="javascript:;">Client name</a> bought 10 times worth of $50 ( <a href="javascript:;">order #2301</a> )</span>
+            </div>
+            <div class="activity-item">
+              <i class="icon-16 activity-icon"></i>
+              <span><a href="javascript:;">Client name</a> bought 10 times worth of $50 ( <a href="javascript:;">order #2302</a> )</span>
+            </div>
+            <div class="activity-item">
+              <i class="icon-16 activity-icon"></i>
+              <span><a href="javascript:;">Client name</a> bought 10 times worth of $50 ( <a href="javascript:;">order #2303</a> )</span>
+            </div>
+          </div>
+          <!-- ========== END Recent Activity ========== -->
         </div>
       </div>
     </div>
