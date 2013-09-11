@@ -26,6 +26,16 @@ $(function(){
 	
 	
 	/*
+	 * Check box
+	 * 
+	 * */
+	$(".input-controls > div label").click(function(){
+		alert($(this).find("input[type='checkbox']").check);
+	});
+	
+	
+	
+	/*
 	 * Line chart
 	 * 
 	 * */
