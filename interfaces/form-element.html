@@ -40,14 +40,21 @@
         <div class="nav">
           <div class="nav-title"><span>Main Nav</span></div>
           <div class="nav-item"><a href="dashboard.html"><i class="icon-16 home-icon"></i>Dashboard</a></div>
-          <div class="nav-item active"><a href="form.html"><i class="icon-16 form-icon"></i>Forms</a></div>
+          <div class="nav-item active">
+            <a href="javascript:;" data-toggle="submenu"><i class="icon-16 form-icon"></i>Forms</a>
+            <ul class="sub-menu">
+              <li class="active"><a href="form-element.html">Form element</a></li>
+              <li><a href="form-wizards.html">Form wizards</a></li>
+            </ul>
+          </div>
           <div class="nav-item"><a href="table.html"><i class="icon-16 table-icon"></i>Tables</a></div>
         </div>
       </div>
       <div class="body">
         <div class="body-content">
           <div class="current-position">
-            <a href="dashboard.html"><i class="icon-16 home-icon"></i>Form</a>
+            <a><i class="icon-16 home-icon"></i>Form</a>
+            <a href="form-element.html">Form element</a>
           </div>
           
           <article class="page-description">
@@ -89,16 +96,17 @@
             </div>
             <div>
               <span><b>Checkbox</b></span>
-              <label><span><input type="checkbox" /></span> Option 1 - Unchecked</label><br/>
-              <label><span class="checked"><input type="checkbox" /></span> Option 2 - Checked</label><br/>
-              <label><span><input type="checkbox" /></span> Option 3 - Disabled checkbox</label>
+              <label name="checkbox"><span><input type="checkbox" /></span> Option 1 - Unchecked</label><br/>
+              <label name="checkbox"><span class="checked"><input type="checkbox" checked="true"/></span> Option 2 - Checked</label><br/>
+              <label name="checkbox"><span><input type="checkbox" /></span> Option 3 - Disabled checkbox</label>
             </div>
             <div>
               <span><b>Radio</b></span>
+              <label name="radio"><span><input name="radio" type="radio" /></span> Option 1 - Unchecked</label><br/>
+              <label name="radio"><span class="checked"><input name="radio" type="radio" checked="true"/></span> Option 2 - Checked</label><br/>
+              <label name="radio"><span><input name="radio" type="radio" /></span> Option 3 - Disabled radio</label>
             </div>
           </div>
-          
-          <div class="section-seperator">File controls</div>
         </div>
       </div>
     </div>

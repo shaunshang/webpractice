@@ -1,0 +1,143 @@
+<!DOCTYPE HTML/>
+
+<html>
+<head>
+<title>TBWA</title>
+<link href="css/style.css" rel="stylesheet" />
+<script src="js/jquery-1.9.1.js"></script>
+<script src="js/style.js"></script>
+</head>
+<body>
+  <div class="container">
+    <div class="banner">
+      <div class="banner-title">
+        <h2>TBWA</h2>
+        <p>System interface demo</p>
+      </div><div class="expand">
+        <a href="javascript:;"></a>
+      </div><ul class="banner-control">
+        <li>
+          <a href="javascript:;"><i class="icon-32 theme-icon"></i>Change Theme</a>
+        </li><li>
+          <a href="javascript:;" data-toggle="dropdown">
+            <i class="icon-32 profile-icon"></i>Shaun Shang<i class="caret-down"></i>
+          </a>
+          <ul class="dropdown">
+            <li><a href="javascript:;">Settings<i class="icon-16 settings-icon"></i></a></li>
+            <li><a href="javascript:;">View Profile<i class="icon-16 profile-icon"></i></a></li>
+            <li><a href="index.html">Sign Out<i class="icon-16 logout-icon"></i></a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    
+    <div class="body-container">
+      <div class="sidebar">
+        <div class="quick-search">
+          <input type="text" name="quick-search" placeholder="Quick Search ..." />
+        </div>
+        <div class="nav">
+          <div class="nav-title"><span>Main Nav</span></div>
+          <div class="nav-item"><a href="dashboard.html"><i class="icon-16 home-icon"></i>Dashboard</a></div>
+          <div class="nav-item active">
+            <a href="javascript:;" data-toggle="submenu"><i class="icon-16 form-icon"></i>Forms</a>
+            <ul class="sub-menu">
+              <li><a href="form-element.html">Form element</a></li>
+              <li class="active"><a href="form-wizards.html">Form wizards</a></li>
+            </ul>
+          </div>
+          <div class="nav-item"><a href="table.html"><i class="icon-16 table-icon"></i>Tables</a></div>
+        </div>
+      </div>
+      <div class="body">
+        <div class="body-content">
+          <div class="current-position">
+            <a><i class="icon-16 home-icon"></i>Form</a>
+            <a href="form-element.html">Form wizards</a>
+          </div>
+          
+          <div class="page-banner"><i class="icon-32 wizards-icon"></i>Form Wizards</div>
+          
+          <div class="section-seperator">Vertical wizard</div>
+          
+          <div class="vertical-wizards">
+            <div class="wizards-steps">
+              <div class="active">
+                <i class="icon-16 profile-icon"></i>
+                <div>
+                  <h4>Step 1</h4>
+                  Personal details
+                </div>
+              </div>
+              <div>
+                <i class="icon-16 billing-icon"></i>
+                <div>
+                  <h4>Step 2</h4>
+                  Billing details
+                </div>
+              </div>
+              <div>
+                <i class="icon-16 payment-icon"></i>
+                <div>
+                  <h4>Step 3</h4>
+                  Payment
+                </div>
+              </div>
+              <div>
+                <i class="icon-16 confirm-icon"></i>
+                <div>
+                  <h4>Step 4</h4>
+                  Confirmation
+                </div>
+              </div>
+            </div><div class="wizards-content">
+              <div class="content-title">
+                <h4>Content Title</h4>
+                <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
+              </div><div class="content-body">
+                <span>Title</span>
+                <input type="text" placeholder="Enter something here ..." />
+              </div>
+            </div>
+          </div>
+          
+          <div class="section-seperator">Horizontal wizard</div>
+          
+          <div class="horizontal-wizards">
+            <div class="wizards-steps">
+              <div class="active">Step <span>1</span></div>
+              <div>Step <span>2</span></div>
+              <div>Step <span>3</span></div>
+              <div>Step <span>4</span></div>
+              <div>Step <span>5</span></div>
+              <div>Step <span>6</span></div>
+              <input type="hidden" value="6" />
+            </div>
+            <div class="wizards-progress">
+              <div>
+                Step
+                <span name="count"></span>
+                of
+                <span name="total"></span>
+                -
+                <span name="percentage"></span>
+              </div>
+            </div>
+            <div class="wizards-content">
+              <div class="content-title">
+                <h4>Content Title</h4>
+                <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
+              </div><div class="content-body">
+                <span>Title</span>
+                <input type="text" placeholder="Enter something here ..." />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="footer"></div>
+  </div>
+</body>
+</html>

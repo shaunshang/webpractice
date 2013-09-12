@@ -1,10 +1,8 @@
 $(function(){
-	resizeWindow();
-	
-	$(window).resize(function(){
-		resizeWindow();
-	})
-	
+	/*
+	 * Dropdown menu
+	 * 
+	 * */
 	$("a[data-toggle='dropdown']").click(function(){
 		$(this).next().toggle();
 	});
@@ -26,92 +24,99 @@ $(function(){
 	
 	
 	/*
-	 * Check box
+	 * Sub menu
 	 * 
 	 * */
-	$(".input-controls > div label").click(function(){
-		alert($(this).find("input[type='checkbox']").check);
+	$("a[data-toggle='submenu']").click(function(){
+		$(this).next().slideToggle();
 	});
 	
 	
 	
 	/*
-	 * Line chart
+	 * Check box
 	 * 
 	 * */
-	var data = {
-			labels : ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
-			datasets : [
-	      {
-	      	fillColor : "rgba(220,220,220,0.5)",
-	  			strokeColor : "rgba(220,220,220,1)",
-	  			pointColor : "rgba(220,220,220,1)",
-	  			pointStrokeColor : "#fff",
-	  			data : [65,59,90,81,56,55,40,50,90,70,22,40]
-	      },
-	      {
-	      	fillColor : "rgba(151,187,205,0.5)",
-	  			strokeColor : "rgba(151,187,205,1)",
-	  			pointColor : "rgba(151,187,205,1)",
-	  			pointStrokeColor : "#fff",
-	  			data : [28,48,40,19,96,27,100,80,70,40,55,60]
-	      }
-			]
-	}
-	var lc = document.getElementById("line-chart").getContext("2d");
-	var myNewChart = new Chart(lc).Line(data, {animation : false});
-	
-	/*
-	 * Pie chart
-	 * 
-	 * */
-	var data = [
-		{
-			value: 30,
-			color: "#F38630"
-		},
-		{
-			value : 50,
-			color : "rgba(220,220,220,1)"
-		},
-		{
-			value : 100,
-			color : "rgba(151,187,205,1)"
-		}			
-	]
-	var pc = document.getElementById("pie-chart").getContext("2d");
-	var myNewChart = new Chart(pc).Pie(data, {animation : false});
+	$(".input-controls > div label[name='checkbox']").click(function(){
+		if($(this).find("input[type='checkbox']").is(":checked")) {
+			$(this).find("span").addClass("checked");
+		} else {
+			$(this).find("span").removeClass("checked");
+		}
+	});
 	
 	
 	/*
-	 * Bar chart
+	 * Radio button
 	 * 
 	 * */
-	var data = {
-		labels : ["Jan","Feb","Mar","Apr","May","Jun","Jul"],
-		datasets : [
-			{
-				fillColor : "rgba(220,220,220,0.5)",
-				strokeColor : "rgba(220,220,220,1)",
-				data : [65,59,90,81,56,55,40]
-			},
-			{
-				fillColor : "rgba(151,187,205,0.5)",
-				strokeColor : "rgba(151,187,205,1)",
-				data : [28,48,40,19,96,27,100]
-			}
-		]
-	}
-	var bc = document.getElementById("bar-chart").getContext("2d");
-	var myNewChart = new Chart(bc).Bar(data, {animation : false});
+	$(".input-controls > div label[name='radio']").click(function(){
+		$(".input-controls > div label[name='radio']").find("span").removeClass("checked");
+		if($(this).find("input[type='radio']").is(":checked")) {
+			$(this).find("span").addClass("checked");
+		} else {
+			$(this).find("span").removeClass("checked");
+		}
+	});
+	
+	
+	/*
+	 * Progress bar
+	 * 
+	 * */
+	calculateProgress(false);
+	
+	$(".horizontal-wizards .wizards-steps > div").click(function(){
+		$(".horizontal-wizards .wizards-steps > div").removeClass("active");
+		$(this).addClass("active");
+		
+		calculateProgress(true);
+	});
+	
+	
+	resizeWindow();
+	
+	$(window).resize(function(){
+		setTimeout(function(){
+			resizeWindow();
+		}, 1000);
+	});
 });
 
+function calculateProgress(bvalue) {
+	var currentStep = $(".horizontal-wizards .wizards-steps > div.active span").html();
+	var totalStep = $("input[type='hidden']").val();
+	var percentage = (currentStep / totalStep).toFixed(2) * 100 + "%";
+	
+	$(".wizards-progress span[name='count']").html(currentStep);
+	$(".wizards-progress span[name='total']").html(totalStep);
+	$(".wizards-progress span[name='percentage']").html(percentage);
+	
+	if(bvalue == false) {
+		$(".wizards-progress > div").css("width", percentage);
+	} else {
+		$(".wizards-progress > div").animate({"width" : percentage}, 1000, "swing");
+	}
+}
+
 function resizeWindow() {
-	var window = $(Window).height();
+	var wheight = $(Window).height();
+	var wwidth = $(Window).width() - 220;
 	var banner = $(".banner").height();
 	var footer = $(".footer").height();
-	
 	var height = window - banner - footer; 
+	//alert(wwidth);
 	
 	$(".body-container").css("height", height);
+	$("#line-chart").attr("width", wwidth);
+	$("#pie-chart").attr("width", wwidth / 2);
+	$("#bar-chart").attr("width", wwidth / 2);
+	
+	drawCharts();
+}
+
+function drawCharts() {
+	drawLine();
+	drawPie();
+	drawBar();
 }

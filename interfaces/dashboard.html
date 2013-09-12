@@ -6,6 +6,7 @@
 <link href="css/style.css" rel="stylesheet" />
 <script src="js/jquery-1.9.1.js"></script>
 <script src="js/chart.js"></script>
+<script src="js/dashboard.js"></script>
 <script src="js/style.js"></script>
 </head>
 <body>
@@ -40,7 +41,13 @@
         <div class="nav">
           <div class="nav-title"><span>Main Nav</span></div>
           <div class="nav-item active"><a href="dashboard.html"><i class="icon-16 home-icon"></i>Dashboard</a></div>
-          <div class="nav-item"><a href="form-element.html"><i class="icon-16 form-icon"></i>Forms</a></div>
+          <div class="nav-item">
+            <a href="javascript:;" data-toggle="submenu"><i class="icon-16 form-icon"></i>Forms</a>
+            <ul class="sub-menu hide">
+              <li><a href="form-element.html">Form element</a></li>
+              <li><a href="form-wizards.html">Form wizards</a></li>
+            </ul>
+          </div>
           <div class="nav-item"><a href="table.html"><i class="icon-16 table-icon"></i>Tables</a></div>
         </div>
       </div>

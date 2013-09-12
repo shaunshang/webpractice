@@ -44,6 +44,9 @@ ul {
   border-bottom: 0 dotted;
   content: "";
 }
+.hide {
+  display: none;
+}
 input[type="text"],
 input[type="password"] {
   outline: 0;
@@ -227,10 +230,8 @@ input[type="password"]:focus {
   background-size: 16px 16px;
 }
 .nav > div {
-  height: 38px;
   line-height: 38px;
   border-bottom: solid 1px #ddd;
-  padding-left: 20px;
 }
 .nav-title {
   text-transform: uppercase;
@@ -239,6 +240,7 @@ input[type="password"]:focus {
   font-weight: 400;
   background: rgba(236,236,236,1);
   border-top: solid 1px #ddd;
+  padding-left: 20px;
 }
 .nav-item {
   position: relative;
@@ -266,6 +268,7 @@ input[type="password"]:focus {
   display: block;
   font-size: 13px;
   color: #222222;
+  margin-left: 20px;
 }
 .nav-item a i {
   margin-top: -4px;
@@ -281,6 +284,24 @@ input[type="password"]:focus {
 }
 .nav-item:hover {
   background: rgba(239,239,239,1)
+}
+.nav-item.active .sub-menu li {
+  border-top: none;
+}
+.sub-menu li:first-child {
+  border-top: solid 1px #ddd;
+}
+.sub-menu li {
+  background: #fff;
+}
+.sub-menu li a {
+  line-height: 28px;
+}
+.sub-menu li:hover {
+  background: rgba(250,250,250,1);
+}
+.sub-menu li.active {
+  background: rgba(250,250,250,1);
 }
 /* ---------- END Sidebar ---------- */
 
@@ -328,6 +349,9 @@ input[type="password"]:focus {
 }
 .dashboard-icon {
   background: url(../images/dashboard.png) no-repeat center center;
+}
+.wizards-icon {
+  background: url(../images/wizards.png) no-repeat center center;
 }
 /* ---------- END Page Banner ---------- */
 
@@ -501,7 +525,7 @@ input[type="password"]:focus {
   margin-top: 10px;
 }
 .bar-chart {
-  float: right;
+  float: left;
 }
 #bar-chart {
   margin-top: 10px;
@@ -581,7 +605,7 @@ input[type="password"]:focus {
 /* ---------- END Page Description ---------- */
 
 
-/* ---------- Input controls ---------- */
+/* ---------- Input Controls ---------- */
 .input-controls {
   width: 95%;
   margin: 1% auto;
@@ -703,34 +727,206 @@ input[type="password"]:focus {
   font-size: 13px;
   color: #222;
 }
-.input-controls > div label {
+label[name="checkbox"],
+label[name="radio"] {
   line-height: 25px;
   font-size: 13px;
   cursor: pointer;
 }
-.input-controls > div label span {
+label[name="checkbox"] span,
+label[name="radio"] span {
   width: 15px;
   height: 15px;
   display: inline-block;
   vertical-align: middle;
-  background: url(../images/checkbox.png) no-repeat;
   background-position: 0 0;
   cursor: pointer;
 }
-.input-controls > div label span:hover {
+label[name="checkbox"] span {
+  background: url(../images/checkbox.png) no-repeat;
+}
+label[name="radio"] span {
+  background: url(../images/radio.png) no-repeat;
+}
+label[name="checkbox"] span:hover {
   background-position: -19px 0;
 }
-.input-controls > div label span.checked {
+label[name="checkbox"] span.checked {
   background-position: -76px 0;
 }
-.input-controls > div label span.checked:hover {
+label[name="checkbox"] span.checked:hover {
   background-position: -95px 0;
 }
-.input-controls > div label input[type="checkbox"] {
+label[name="checkbox"] input,
+label[name="radio"] input {
   opacity: 0;
   cursor: pointer;
 }
-/* ---------- END Input controls ---------- */
+label[name="radio"] span:hover {
+  background-position: -18px 0;
+}
+label[name="radio"] span.checked {
+  background-position: -72px 0;
+}
+label[name="radio"] span.checked:hover {
+  background-position: -90px 0;
+}
+/* ---------- END Input Controls ---------- */
+
+
+/* ---------- Vertical Wizards ---------- */
+.vertical-wizards,
+.horizontal-wizards {
+  width: 95%;
+  margin: 1% auto;
+  border: solid 1px rgba(229,229,229,1);
+}
+.vertical-wizards > div {
+  display: inline-block;
+  vertical-align: top;
+}
+.vertical-wizards .wizards-steps {
+  width: 30%;
+  border-right: solid 1px rgba(209,210,211,1);
+}
+.vertical-wizards .wizards-steps > div {
+  padding: 5px 10px;
+  background: rgba(225,225,227,1);
+  cursor: pointer;
+}
+.vertical-wizards .wizards-steps > div.active {
+  background: rgba(245,245,245,1);
+}
+.vertical-wizards .wizards-steps > div + div {
+  border-top: solid 1px rgba(209,210,211,1);
+  -webkit-box-shadow: inset 0 1px 1px #fff;
+  -moz-box-shadow:    inset 0 1px 1px #fff;
+  box-shadow:         inset 0 1px 1px #fff;
+}
+.vertical-wizards .wizards-steps > div > * {
+  display: inline-block;
+  vertical-align: top;
+  font-size: 12px;
+  font-weight: 400;
+  color: #939393;
+  text-shadow: 0 1px 1px #fff;
+}
+.vertical-wizards .wizards-steps > div:hover > * {
+  text-decoration: underline;
+}
+.vertical-wizards .wizards-steps h4 {
+  font-size: 14px;
+  font-weight: 500;
+}
+.billing-icon {
+  background: url(../images/billing.png) no-repeat center center;
+}
+.payment-icon {
+  background: url(../images/payment.png) no-repeat center center;
+}
+.confirm-icon {
+  background: url(../images/confirm.png) no-repeat center center;
+}
+.wizards-content {
+  width: 69%;
+}
+.wizards-content > div {
+  display: inline-block;
+  vertical-align: top;
+  margin-top: 10px;
+  margin-left: 2%;
+}
+.content-title {
+  width: 36%;
+  font-size: 12px;
+  font-weight: 400;
+  color: #999;
+}
+.content-body {
+  width: 60%;
+}
+.content-title h4,
+.content-body span {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  color: #000;
+}
+.content-body input {
+  width: 80%;
+  height: 30px;
+}
+/* ---------- END Vertical Wizards ---------- */
+
+
+/* ---------- Horizontal Wizards ---------- */
+.horizontal-wizards .wizards-steps > div {
+  position: relative;
+  display: inline-block;
+  line-height: 40px;
+  padding: 0 5px 0 25px;
+  font-size: 14px;
+  font-weight: 300;
+  color: #37A6B2;
+  background: rgba(250,250,250,1);
+  cursor: pointer;
+}
+.horizontal-wizards .wizards-steps > div.active {
+  background: rgba(55,166,205,1);
+  color: #fff;
+}
+.horizontal-wizards .wizards-steps > div:after,
+.horizontal-wizards .wizards-steps > div.active:after,
+.horizontal-wizards .wizards-steps > div:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: -20px;
+  margin: auto;
+  width: 0;
+  height: 0;
+  border-top: solid 20px transparent;
+  border-bottom: solid 20px transparent;
+  border-right: none;
+  z-index: 2000;
+}
+.horizontal-wizards .wizards-steps > div:after {
+  border-left: solid 20px rgba(250,250,250,1);
+}
+.horizontal-wizards .wizards-steps > div.active:after {
+  border-left: solid 20px rgba(55,166,205,1);
+}
+.horizontal-wizards .wizards-steps > div:before {
+  right: -24px;
+  border-left: solid 20px #fff;
+}
+.horizontal-wizards .wizards-progress {
+  display: block;
+  line-height: 40px;
+  background: rgba(226,226,228,1);
+  border-top: solid 1px rgba(209,210,211,1);
+  border-bottom: solid 1px rgba(209,210,211,1);
+  -webkit-box-shadow: inset 0 1px 1px #fff;
+  -moz-box-shadow:    inset 0 1px 1px #fff;
+  box-shadow:         inset 0 1px 1px #fff;
+}
+.horizontal-wizards .wizards-progress > div {
+  width: 0%;
+  height: 40px;
+  color: #fff;
+  font-size: 13px;
+  text-align: center;
+  font-weight: 300;
+  background: rgba(55,166,205,1);
+  box-shadow: 1px 0 2px #fff;
+}
+.horizontal-wizards .wizards-content {
+  width: 100%;
+  height: 200px;
+  background: rgba(245,245,245,1);
+}
+/* ---------- END Horizontal Wizards ---------- */
 
 
 /* ---------- Section Seperator ---------- */
