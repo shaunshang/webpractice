@@ -5,8 +5,7 @@
 <title>TBWA</title>
 <link id="themefile" href="css/style.css" rel="stylesheet" />
 <script src="js/jquery-1.9.1.js"></script>
-<script src="js/chart.js"></script>
-<script src="js/style.js"></script>
+<script src="js/style2.js"></script>
 </head>
 <body onload="setStyleFromCookie()">
   <div class="container">
@@ -18,7 +17,13 @@
         <a href="javascript:;"></a>
       </div><ul class="banner-control">
         <li>
-          <a href="javascript:;"><i class="icon-32 theme-icon"></i>Change Theme</a>
+          <a href="javascript:;" data-toggle="dropdown">
+            <i class="icon-32 theme-icon"></i>Change Theme<i class="caret-down"></i>
+          </a>
+          <ul class="change-theme dropdown">
+            <li><a href="javascript:;" name="default">Default</a></li>
+            <li><a href="javascript:;" name="heineken">Heineken</a></li>
+          </ul>
         </li><li>
           <a href="javascript:;" data-toggle="dropdown">
             <i class="icon-32 profile-icon"></i>Shaun Shang<i class="caret-down"></i>

@@ -1,4 +1,4 @@
-function drawLine() {
+function drawLine(fill, stroke) {
   var data = {
       labels : ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
       datasets : [
@@ -10,8 +10,8 @@ function drawLine() {
           data : [65,59,90,81,56,55,40,50,90,70,22,40]
         },
         {
-          fillColor : "rgba(151,187,205,0.5)",
-          strokeColor : "rgba(151,187,205,1)",
+          fillColor : fill,
+          strokeColor : stroke,
           pointColor : "rgba(151,187,205,1)",
           pointStrokeColor : "#fff",
           data : [28,48,40,19,96,27,100,80,70,40,55,60]
@@ -22,11 +22,11 @@ function drawLine() {
   var myNewChart = new Chart(lc).Line(data, {animation : false});
 }  
 
-function drawPie() {
+function drawPie(fill) {
   var data = [
     {
       value: 30,
-      color: "#F38630"
+      color: "rgba(240,133,59,1)"
     },
     {
       value : 50,
@@ -34,14 +34,14 @@ function drawPie() {
     },
     {
       value : 100,
-      color : "rgba(151,187,205,1)"
+      color : fill
     }     
   ]
   var pc = document.getElementById("pie-chart").getContext("2d");
   var myNewChart = new Chart(pc).Pie(data, {animation : false});
 }
 
-function drawBar() {
+function drawBar(fill, stroke) {
   var data = {
     labels : ["Jan","Feb","Mar","Apr","May","Jun","Jul"],
     datasets : [
@@ -51,8 +51,8 @@ function drawBar() {
         data : [65,59,90,81,56,55,40]
       },
       {
-        fillColor : "rgba(151,187,205,0.5)",
-        strokeColor : "rgba(151,187,205,1)",
+        fillColor : fill,
+        strokeColor : stroke,
         data : [28,48,40,19,96,27,100]
       }
     ]

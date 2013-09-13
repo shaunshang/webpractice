@@ -121,12 +121,6 @@ var cookie_duration = 30;
 function changestyle(css_title) {
 	$("#themefile").attr("href", css_title);
 	
-	if(css_title == "css/style2.css") {
-		drawCharts2();
-	} else {
-		drawCharts();
-	}
-	
 	setCookie(cookie_name, css_title, cookie_duration);
 }
 
@@ -172,25 +166,4 @@ function resizeWindow() {
 	var height = window - banner - footer; 
 	
 	$(".body-container").css("height", height);
-	$("#line-chart").attr("width", wwidth);
-	$("#pie-chart").attr("width", wwidth / 2);
-	$("#bar-chart").attr("width", wwidth / 2);
-	
-	if($("#themefile").attr("href") == "css/style.css") {
-		drawCharts();
-	} else {
-		drawCharts2();
-	}
-}
-
-function drawCharts() {
-	drawLine("rgba(151,187,205,0.5)", "rgba(151,187,205,1)");
-	drawPie("rgba(151,187,205,1)");
-	drawBar("rgba(151,187,205,0.5)", "rgba(151,187,205,1)");
-}
-
-function drawCharts2() {
-	drawLine("rgba(24,200,40,0.1)", "rgba(24,152,40,1)");
-	drawPie("rgba(24,152,40,1)");
-	drawBar("rgba(24,200,40,0.1)", "rgba(24,152,40,1)");
 }

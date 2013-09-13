@@ -89,7 +89,7 @@ table {
   background: rgba(39,39,41,1);
 }
 .banner > div {
-  display: inline-block;
+  float: left;
   height: 45px;
   vertical-align: top;
 }
