@@ -1,53 +1,12 @@
 <html>
 <head>
-  <title>Welcome to TBWA</title>
-  <link href="css/login.css" rel="stylesheet"></link>
+  <title>Create Plan</title>
   <link href="css/style.css" rel="stylesheet"></link>
   <script src="js/jquery-1.9.1.js"></script>
-  <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
-  <script>
-    $(function(){
-      $(".user-selection img").hover(function(){
-        $(".change-user").fadeIn();
-        $(".forget-password").fadeIn();
-      });
-      
-      $(".user-selection ul li a *").mouseout(function(){
-        $(".change-user").fadeOut();
-        $(".forget-password").fadeOut();
-      });
-    });
-  </script>
 </head>
 <body>
   <div class="container">
-    <div class="login-form">
-      <div class="user-selection">
-        <ul>
-          <li>
-            <a class="btn-bg change-user" href="javascript:;" title="Change user"><span></span></a>
-          </li><li>
-            <img src="images/profile-photo.png" />
-          </li><li>
-            <a class="btn-bg forget-password" href="javascript:;" title="Forget password"><span></span></a>
-          </li>
-        </ul>
-      </div>
-      
-      <form>
-        <ul>
-          <li><input type="text" placeholder="Enter your email"/></li>
-          <li><input type="password" placeholder="Password"/></li>
-          <li>
-            <label for="remember">
-              <span class="checkbox-container"><input id="remember" type="checkbox" /></span>
-              Remember me
-            </label>
-            <a class="login" href="home.html">Login</a>
-          </li>
-        </ul>
-      </form>
-    </div>
+    
   </div>
 </body>
 </html>
