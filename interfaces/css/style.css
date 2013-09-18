@@ -1,3 +1,5 @@
+/* ==================== Global ==================== */
+*,
 html,
 body {
   margin: 0;
@@ -6,7 +8,7 @@ body {
 body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   overflow: hidden;
-  background: url(../images/wrapper-bg.png) repeat;
+  /*background: url(../images/wood_pattern.png) repeat;*/
 }
 a {
   text-decoration: none;
@@ -84,3 +86,83 @@ input[type="password"]:focus {
   position: relative;
   overflow: hidden;
 }
+/* ==================== END Global ==================== */
+
+
+/* ==================== Banner ==================== */
+.banner {
+  padding: 20px 30px;
+  background: rgba(255,255,255,0.8);
+  box-shadow: 0 1px 5px rgba(0,0,0,0.7);
+}
+.banner .logo {
+  display: inline-block;
+  vertical-align: middle;
+  width: 150px;
+  height: 75px;
+  background: url(../images/logo.png) no-repeat center center;
+  background-size: 150px 75px;
+}
+.banner h1 {
+  display: inline-block;
+  vertical-align: middle;
+  font-weight: 600;
+  color: rgba(83,83,83,1);
+  margin-left: 10px;
+  text-transform: uppercase;
+}
+.banner h1 span {
+  display: block;
+  font-size: 20px;
+  font-weight: 500;
+  text-transform: none;
+}
+/* ==================== END Banner ==================== */
+
+
+/* ==================== Body ==================== */
+.question-container {
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+.question-container > .question > div + div {
+  display: none;
+}
+.question {
+  width: 100%;
+  border: solid 1px #ccc;
+}
+.qtitle {
+  height: 30px;
+  line-height: 30px;
+  padding-left: 10px;
+  background: #ccc;
+  border-bottom: solid 1px #8d8d8d;
+  cursor: pointer;
+}
+.qcontent p {
+  width: 80%;
+  margin: 10px auto;
+  padding: 10px;
+  color: #fff;
+  border: solid 1px #0480BE;
+  background: #149BDF;
+}
+textarea {
+  position: relative;
+  display: block;
+  width: 80%;
+  height: 200px;
+  margin: 10px auto;
+  padding: 5px;
+  outline: 0;
+  resize: none;
+}
+/* ==================== END Body ==================== */
+
+
+/* ==================== Footer ==================== */
+
+
+/* ==================== END Footer ==================== */
