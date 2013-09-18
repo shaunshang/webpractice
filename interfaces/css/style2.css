@@ -1,0 +1,186 @@
+/* ==================== Global ==================== */
+*,
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  overflow: hidden;
+  /*background: url(../images/wood_pattern.png) repeat;*/
+}
+a {
+  text-decoration: none;
+  display: block;
+}
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+table {
+  border-collapse: collapse;
+}
+h2 {
+  font-size: 16px;
+  font-weight: normal;
+}
+form {
+  margin: 0;
+}
+input[type="text"],
+input[type="password"] {
+  outline: 0;
+  background: none;
+  border: solid 1px rgba(213,213,213,1);
+  -webkit-transition: border linear 0.2s, box-shadow linear 0.2s;
+  -moz-transition:    border linear 0.2s, box-shadow linear 0.2s;
+  -o-transition:      border linear 0.2s, box-shadow linear 0.2s;
+  transition:         border linear 0.2s, box-shadow linear 0.2s;
+  -webkit-box-shadow: inset 0 0 3px rgba(238,238,238,1);
+  -moz-box-shadow:    inset 0 0 3px rgba(238,238,238,1);
+  box-shadow:         inset 0 0 3px rgba(238,238,238,1);
+}
+input[type="text"]:focus,
+input[type="password"]:focus {
+  border: solid 1px rgba(82, 168, 236, 0.8);
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6);
+  -moz-box-shadow:    inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6);
+  box-shadow:         inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6);
+}
+.btn-bg {
+  position: relative;
+  background: rgb(236,236,236);
+  background: -moz-linear-gradient(top,  rgba(236,236,236,1) 0%, rgba(255,255,255,1) 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(236,236,236,1)), color-stop(100%,rgba(255,255,255,1)));
+  background: -webkit-linear-gradient(top,  rgba(236,236,236,1) 0%,rgba(255,255,255,1) 100%);
+  background: -o-linear-gradient(top,  rgba(236,236,236,1) 0%,rgba(255,255,255,1) 100%);
+  background: -ms-linear-gradient(top,  rgba(236,236,236,1) 0%,rgba(255,255,255,1) 100%);
+  background: linear-gradient(to bottom,  rgba(236,236,236,1) 0%,rgba(255,255,255,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ececec', endColorstr='#ffffff',GradientType=0 );
+  border: solid 1px #dbdbdb;
+  -webkit-border-radius:  40px;
+  -moz-border-radius:     40px;
+  border-radius:          40px;
+}
+.btn-inner {
+  position: relative;
+  background: url(../images/banner-bg.png) repeat-x;
+}
+.caret {
+  width: 0;
+  height: 0;
+  display: inline-block;
+  vertical-align: top;
+  margin-top: 12px;
+  margin-left: 4px;
+  border-top: solid 4px rgba(0,0,0,1);
+  border-left: solid 4px transparent;
+  border-right: solid 4px transparent;
+}
+.hide {
+  display: none;
+}
+.container {
+  position: relative;
+}
+/* ==================== END Global ==================== */
+
+
+/* ==================== Banner ==================== */
+.banner {
+  position: relative;
+  display: block;
+  padding: 20px 30px;
+  background: rgba(255,255,255,0.8);
+  box-shadow: 0 1px 5px rgba(0,0,0,0.7);
+}
+.banner .logo {
+  display: inline-block;
+  vertical-align: middle;
+  width: 150px;
+  height: 75px;
+  background: url(../images/logo.png) no-repeat center center;
+  background-size: 150px 75px;
+}
+.banner h1 {
+  display: inline-block;
+  vertical-align: middle;
+  font-weight: 600;
+  color: rgba(83,83,83,1);
+  margin-left: 10px;
+  text-transform: uppercase;
+}
+.banner h1 span {
+  display: block;
+  font-size: 20px;
+  font-weight: 500;
+  text-transform: none;
+}
+/* ==================== END Banner ==================== */
+
+
+/* ==================== Body ==================== */
+.tab-container {
+  width: 90%;
+  margin: 2px auto;
+  margin-top: 20px;
+}
+.tab-container > div {
+  height: 30px;
+  line-height: 30px;
+  display: inline-block;
+  vertical-align: top;
+  padding: 0 10px;
+  border: solid 1px #8d8d8d;
+  cursor: pointer;
+}
+.question-container {
+  width: 90%;
+  margin: 0 auto;
+  position: relative;
+}
+.question-container > div {
+  position: absolute;
+}
+.question-container > div + div {
+  display: none;
+}
+.question {
+  width: 100%;
+  border: solid 1px #ccc;
+}
+.qtitle {
+  height: 30px;
+  line-height: 30px;
+  padding-left: 10px;
+  background: #ccc;
+  border-bottom: solid 1px #8d8d8d;
+  cursor: pointer;
+}
+.qcontent p {
+  width: 80%;
+  margin: 10px auto;
+  padding: 10px;
+  color: #fff;
+  border: solid 1px #0480BE;
+  background: #149BDF;
+}
+textarea {
+  position: relative;
+  display: block;
+  width: 80%;
+  height: 200px;
+  margin: 10px auto;
+  padding: 5px;
+  outline: 0;
+  resize: none;
+}
+/* ==================== END Body ==================== */
+
+
+/* ==================== Footer ==================== */
+
+
+/* ==================== END Footer ==================== */
