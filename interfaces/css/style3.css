@@ -84,14 +84,13 @@ input[type="password"]:focus {
 }
 .container {
   position: relative;
+  overflow: hidden;
 }
 /* ==================== END Global ==================== */
 
 
 /* ==================== Banner ==================== */
 .banner {
-  position: relative;
-  display: block;
   padding: 20px 30px;
   background: rgba(255,255,255,0.8);
   box-shadow: 0 1px 5px rgba(0,0,0,0.7);
@@ -128,37 +127,51 @@ input[type="password"]:focus {
 
 
 /* ==================== Body ==================== */
-.tab-container {
-  width: 90%;
-  margin: 2px auto;
-  margin-top: 20px;
+.body {
+  position: relative;
 }
-.tab-container > div {
-  height: 30px;
-  line-height: 30px;
-  display: inline-block;
-  vertical-align: top;
-  padding: 0 10px;
-  border: solid 1px #8d8d8d;
+#prev,
+#next {
+  position: absolute;
+  width: 60px;
+  height: 100%;
   cursor: pointer;
+  transition: 0.4s;
+  z-index: 1000;
 }
-.tab-container > div.active {
+#prev > span,
+#next > span {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  top: 49%;
+}
+#prev {
+  left: 0;
+}
+#next {
+  right: 0;
+}
+#prev:hover,
+#next:hover {
   background: #ddd;
 }
 .question-container {
-  width: 90%;
-  margin: 0 auto;
   position: relative;
-}
-.question-container > div {
-  position: absolute;
-}
-.question-container > div + div {
-  display: none;
+  vertical-align: top;
+  width: 100%;
+  margin-top: 20px;
+  overflow: hidden;
+  white-space: nowrap;
 }
 .question {
-  width: 100%;
+  position: relative;
+  display: inline-block;
+  width: 70%;
+  margin-left: 15%;
+  margin-right: 15%;
   border: solid 1px #ccc;
+  white-space: normal;
 }
 .qtitle {
   height: 30px;

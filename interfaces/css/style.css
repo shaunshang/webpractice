@@ -94,6 +94,7 @@ input[type="password"]:focus {
   padding: 20px 30px;
   background: rgba(255,255,255,0.8);
   box-shadow: 0 1px 5px rgba(0,0,0,0.7);
+  position: relative;
 }
 .banner .logo {
   display: inline-block;
@@ -116,6 +117,11 @@ input[type="password"]:focus {
   font-size: 20px;
   font-weight: 500;
   text-transform: none;
+}
+.banner > a {
+  position: absolute;
+  top: 0;
+  right: 0;
 }
 /* ==================== END Banner ==================== */
 
