@@ -209,6 +209,7 @@ table.create-plan tbody tr td a:hover {
   -o-transition:      0.4s;
   transition:         0.4s;
   z-index: 1000;
+  background: rgba(255,255,255,0.3);
 }
 #prev > span,
 #next > span {
@@ -234,7 +235,7 @@ table.create-plan tbody tr td a:hover {
 }
 #prev:hover,
 #next:hover {
-  background: #fff;
+  background: rgba(255,255,255,0.6);
   -webkit-box-shadow: 0 0 1px #aaa;
   -moz-box-shadow:    0 0 1px #aaa;
   box-shadow:         0 0 1px #aaa;
@@ -243,9 +244,27 @@ table.create-plan tbody tr td a:hover {
   position: relative;
   vertical-align: top;
   width: 100%;
+  height: 80%;
   margin-top: 60px;
   padding: 0 0 10px 0;
   white-space: nowrap;
+  -webkit-box-shadow: 0 1px 5px rgba(0,0,0,0.1);
+  -moz-box-shadow:    0 1px 5px rgba(0,0,0,0.1);
+  box-shadow:         0 1px 5px rgba(0,0,0,0.1);
+  overflow: hidden;
+}
+.background {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.background > div {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
 }
 .error_content {
   position: absolute;
@@ -258,20 +277,67 @@ table.create-plan tbody tr td a:hover {
   padding: 5px 10px;
   margin-left: 10px;
 }
-.question {
+.instruction-banner {
+  width: 70%;
+  margin: 30px auto 20px; 
+  padding: 10px 0 20px 0;
+  border-bottom: solid 1px #ccc;
+}
+.instruction-banner .logo {
+  display: inline-block;
+  vertical-align: middle;
+  width: 170px;
+  height: 90px;
+  background: url(../images/logo.png) no-repeat center center;
+  background-size: 170px 90px;
+  border: solid 1px #ccc;
+  -webkit-border-radius:  10px;
+  -moz-border-radius:     10px;
+  border-radius:          10px;
+  -webkit-box-shadow: inset 0 0 4px #ccc;
+  -moz-box-shadow:    inset 0 0 4px #ccc;
+  box-shadow:         inset 0 0 4px #ccc;
+}
+.instruction-banner > h1 {
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 10px;
+  font-size: 50px;
+  font-weight: 600;
+  color: rgba(83,83,83,1);
+  text-transform: uppercase;
+}
+.instruction-banner > h1 span {
+  display: block;
+  font-size: 20px;
+  margin-left: 7px;
+}
+.question,
+.instruction {
   position: relative;
   display: inline-block;
   vertical-align: top;
   width: 70%;
   margin: 0 15%;
   border: solid 1px rgba(201,201,201,1);
+  -webkit-border-radius:  10px;
+  -moz-border-radius:     10px;
+  border-radius:          10px;
   white-space: normal;
   background: #fff;
   -webkit-box-shadow: 0 1px 4px rgba(0,0,0,0.3);
   -moz-box-shadow:    0 1px 4px rgba(0,0,0,0.3);
   box-shadow:         0 1px 4px rgba(0,0,0,0.3);
+  overflow: hidden;
 }
-.qtitle {
+.question {
+  margin-top: 10px;
+}
+.instruction {
+  margin-top: 20px;
+}
+.qtitle,
+.instruction > h1 {
   position: relative;
   height: 40px;
   line-height: 40px;
@@ -284,23 +350,53 @@ table.create-plan tbody tr td a:hover {
   -moz-box-shadow:    0 1px 2px #ccc;
   box-shadow:         0 1px 2px #ccc;
 }
-.qtitle input[type="button"] {
-  position: absolute;
-  top: 7px;
-  right: 20px;
-  width: 60px;
-  height: 25px;
-  line-height: 26px;
-  font-size: 12px;
-  color: rgba(152,156,159,1);
-  background: #fff;
-  border: solid 1px rgba(152,156,159,1);
-  -webkit-border-radius:  15px;
-  -moz-border-radius:     15px;
-  border-radius:          15px;
-  cursor: pointer;
+.instruction > h1 {
+  font-size: 20px;
+  text-align: left;
 }
-.qbody {
+.instruction-body {
+  padding: 20px;
+}
+.instruction-body > p {
+  margin: 10px 0;
+  padding: 5px 0;
+  font-size: 16px;
+  text-align: justify;
+  text-indent: 25px;
+  line-height: 22px;
+  text-shadow: 0 1px 1px #fff;
+  color: rgba(95,95,95,1);
+}
+.instruction-body > p > a {
+  display: inline;
+}
+.instruction-body > ol {
+  margin-left: 50px;
+}
+.instruction-body > ol li {
+  line-height: 22px;
+  color: rgba(95,95,95,1);
+}
+input[name="action-btn"] {
+  display: block;
+  margin: auto;
+  margin-top: 20px;
+  -webkit-appearance: button;
+  appearance: button;
+  border: solid 1px rgba(53,126,189,1);
+  background: rgba(66,139,202,0.9);
+  height: 40px;
+  padding: 0 50px;
+  cursor: pointer;
+  font-size: 16px;
+  color: #fff;
+  position: relative;
+}
+input[name="action-btn"]:hover {
+  background: rgba(50,118,177,1);
+}
+.qbody,
+.instruction-body {
   background: url(../images/qbody-bg.png) repeat-y center center;
   background-size: 100%;
   overflow: hidden;
@@ -309,7 +405,7 @@ table.create-plan tbody tr td a:hover {
   width: 80%;
   margin: 0 auto;
   margin-top: 20px;
-  padding: 10px;
+  padding: 5px;
   background: #fff;
   color: rgba(152,156,159,1);
   font-size: 14px;
@@ -320,6 +416,11 @@ table.create-plan tbody tr td a:hover {
   -moz-box-shadow:    0 1px 4px #aaa;
   box-shadow:         0 1px 4px #aaa;
   position: relative;
+  /*
+  background: url(../images/create1.png) repeat-x;
+  color: #000;
+  text-shadow: 0 1px 1px #fff;
+  */
 }
 .qcontent p:before {
   content: "";
@@ -340,6 +441,10 @@ table.create-plan tbody tr td a:hover {
   padding: 5px;
   outline: 0;
   resize: none;
+  border: solid 1px #aaa;
+  -webkit-border-radius:  10px;
+  -moz-border-radius:     10px;
+  border-radius:          10px;
   -webkit-transition: 0.4s;
   -moz-transition:    0.4s;
   -o-transition:      0.4s;
@@ -349,11 +454,30 @@ table.create-plan tbody tr td a:hover {
   border: solid 1px rgba(223,181,180,1);
   background: rgba(252,242,242,1);
 }
-.qfooter {
+.qfooter,
+.instruction-footer {
   height: 40px;
   -webkit-box-shadow: 0 -1px 2px #ccc;
   -moz-box-shadow:    0 -1px 2px #ccc;
   box-shadow:         0 -1px 2px #ccc;
+}
+.qfooter {
+  height: 40px;
+  text-align: center;
+}
+.qfooter input[type="button"] {
+  width: 120px;
+  height: 30px;
+  line-height: 26px;
+  margin-top: 5px;
+  font-size: 14px;
+  color: rgba(152,156,159,1);
+  background: #fff;
+  border: solid 1px rgba(152,156,159,1);
+  -webkit-border-radius:  15px;
+  -moz-border-radius:     15px;
+  border-radius:          15px;
+  cursor: pointer;
 }
 .statistics {
   height: 100%;
