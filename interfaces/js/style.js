@@ -97,40 +97,40 @@ $(function(){
 	 * Doughnut Chart for account status
 	 * 
 	 * */
-	var data = [
-	  {
-	  	value: 19,
-	  	color: "#51AE7C"
-	  },
-	  {
-	  	value: 1,
-	  	color: "#BDA6CF"
-	  },
-	  {
-	  	value: 1,
-	  	color: "#E16041"
-	  },
-	  {
-	  	value: 3,
-	  	color: "#E9C765"
-	  },
-	  {
-	  	value: 5,
-	  	color: "#6190AD"
-	  },
-	  {
-	  	value: 9,
-	  	color: "#766B5F"
-	  }
-	];
-	
-	var ctx = document.getElementById("myChart").getContext("2d");
-	var myNewChart = new Chart(ctx).Doughnut(
-			data,
-			{
-				animation: false
-			}
-	);
+//	var data = [
+//	  {
+//	  	value: 19,
+//	  	color: "#51AE7C"
+//	  },
+//	  {
+//	  	value: 1,
+//	  	color: "#BDA6CF"
+//	  },
+//	  {
+//	  	value: 1,
+//	  	color: "#E16041"
+//	  },
+//	  {
+//	  	value: 3,
+//	  	color: "#E9C765"
+//	  },
+//	  {
+//	  	value: 5,
+//	  	color: "#6190AD"
+//	  },
+//	  {
+//	  	value: 9,
+//	  	color: "#766B5F"
+//	  }
+//	];
+//	
+//	var ctx = document.getElementById("myChart").getContext("2d");
+//	var myNewChart = new Chart(ctx).Doughnut(
+//			data,
+//			{
+//				animation: false
+//			}
+//	);
 	
 	
 	/*
@@ -162,7 +162,7 @@ $(function(){
 	 * 
 	 * */
 	$( ".tool-bar" ).sortable({ cursor: 'move' });
-  $( ".tool-bar" ).disableSelection();
+	$( ".tool-bar" ).disableSelection();
 });
 
 function resetPageHeight() {
