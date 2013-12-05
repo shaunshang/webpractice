@@ -73,24 +73,23 @@ $(function(){
 	 * Display Date
 	 * 
 	 * */
-	var d = new Date();
-	var year = d.getFullYear();
-	var month = d.getMonth();
-	var date = d.getDate();
-	var today = d.getDay();
-	var days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
-	var months = ['Jan', 'Feb', 'Mar', 'Apr', "May", 'Jun', "Jul", "Aug", 'Sep', 'Oct', 'Nov', 'Dec'];
-	$(".day").html(days[today]);
-	$(".month").html(months[month] + " / " + year);
-	$(".date").html(date);
+//	var d = new Date();
+//	var year = d.getFullYear();
+//	var month = d.getMonth();
+//	var date = d.getDate();
+//	var today = d.getDay();
+//	var days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+//	var months = ['Jan', 'Feb', 'Mar', 'Apr', "May", 'Jun', "Jul", "Aug", 'Sep', 'Oct', 'Nov', 'Dec'];
+//	$(".day").html(days[today]);
+//	$(".month").html(months[month] + " / " + year);
+//	$(".date").html(date);
 	
 	
 	/*
 	 * Calendar
 	 * 
 	 * */
-	$("#calendar").calendarWidget({
-	});
+	//$("#calendar").calendarWidget();
 	
 	
 	/*
@@ -134,15 +133,32 @@ $(function(){
 	
 	
 	/*
-	 * Main nav click
+	 * Main nav double click
 	 * 
 	 * */
 	$(".nav-item").click(function(){
+		clickNav(this);
+	});
+	
+	/*
+	 * Main nav double click
+	 * 
+	 * */
+	$(".nav-item").dblclick(function(){
 		if($(this).find("a").attr("name") == "admin-home") {
 			gotoPage($(this).find("a").attr("name"));
 		}
 	});
 	
+	/*
+	 * Main nav draggable
+	 * 
+	 * */
+//	$(".main-nav .nav-item").draggable({
+//      stop: function(event, ui){
+//        clickNav(this);
+//      }
+//    });
 	
 	/*
 	 * Change theme
@@ -241,6 +257,13 @@ function closeWindow(obj) {
 	target.style.display = "none";
 }
 
+function clickNav(obj) {
+	$(".nav-item").removeClass("singleClick");
+	$(obj).addClass("singleClick");
+}
+
+
+/* =========================== Put everything above this line ============================ */
 
 var cookie_name = "style";
 var cookie_duration = 30;

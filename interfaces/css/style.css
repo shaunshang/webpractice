@@ -478,9 +478,9 @@ input[readonly]:focus {
 }
 .nav-item {
   position: relative;
-  width: 70px;
   vertical-align: bottom;
-  padding: 5px 20px;
+  padding: 5px 0;
+  margin: 0 20px;
   cursor: pointer;
 }
 .nav-item a {
@@ -504,13 +504,29 @@ input[readonly]:focus {
   box-shadow: none;
 }
 .nav-item span {
-  width: 60px;
+  display: block;
   margin: 0 auto;
-  text-align: center;
   font-size: 12px;
-  color: #fff;
   font-weight: 400;
+  text-align: center;
+  color: #fff;
+  padding: 2px 3px;
+  margin-top: 5px;
+  /*
+  width: 80px;
+  height: 20px;
+  line-height: 20px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  */
   text-shadow: 0 1px 1px #000;
+}
+.nav-item.singleClick span {
+  -webkit-border-radius:  6px;
+  -moz-border-radius:     6px;
+  border-radius:          6px;
+  background: #4077D4;
 }
 .admin-home a {
   background: rgba(255,255,255,0.6) url(../images/default/admin-home.png) no-repeat center center;

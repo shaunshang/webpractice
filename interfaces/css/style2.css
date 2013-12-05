@@ -480,7 +480,8 @@ input[readonly]:focus {
   position: relative;
   width: 70px;
   vertical-align: bottom;
-  padding: 5px 20px;
+  padding: 5px 0;
+  margin: 0 20px;
   cursor: pointer;
 }
 .nav-item a {
