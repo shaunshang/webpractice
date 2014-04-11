@@ -6,7 +6,6 @@ $(function(){
 	resizeWindow();
 	
 	$(window).resize(function(){
-		
 		setTimeout(function(){
 			resizeWindow();
 		},200);
