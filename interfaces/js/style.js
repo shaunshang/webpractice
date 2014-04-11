@@ -179,6 +179,21 @@ $(function(){
 	 * */
 	$( ".tool-bar" ).sortable({ cursor: 'move' });
 	$( ".tool-bar" ).disableSelection();
+
+	$(document).click(function(e){
+		var container = $(".start-btn, .main-nav");
+
+		if(!container.is(e.target) && container.has(e.target).length === 0) {
+      container.find(".nav-item").removeClass("singleClick");
+      container.find("a").removeClass("active");
+      container.find(".start-menu").hide();
+      open = false;
+    } else if($(e.target).parents("div").hasClass("main-nav") == true) {
+    	container.find("a").removeClass("active");
+    	container.find(".start-menu").hide();
+    	open = false;
+    }
+	});
 });
 
 function resetPageHeight() {
@@ -224,7 +239,7 @@ function gotoPage(target) {
 	resizeWindow();
 	
 	$( "#resizable" ).resizable({handles: 'e, w'});
-	$( "#resizable" ).draggable();
+	$( "#resizable" ).draggable({appendTo: ".form-banner"});
 }
 
 function gotoTab(target) {

@@ -11,8 +11,11 @@ body {
 }
 body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  background: url(../images/default/main-bg.png) no-repeat;
-  background-size: 100% 100%;
+  background: url(../images/default/main-bg.png) no-repeat center center fixed;
+  -webkit-background-size:  cover;
+  -moz-background-size:     cover;
+  -o-background-size:       cover;
+  background-size:          cover;
 }
 a {
   text-decoration: none;
@@ -88,7 +91,7 @@ input[readonly]:focus {
 /* ============================== Banner ============================== */
 .banner {
   width: 100%;
-  height: 50px;
+  height: 40px;
   background: rgba(255,255,255,0.7);
   -webkit-box-shadow: 0 0 8px rgba(0,0,0,0.3);
   -moz-box-shadow:    0 0 8px rgba(0,0,0,0.3);
@@ -104,14 +107,14 @@ input[readonly]:focus {
   vertical-align: top;
 }
 .start-btn > a {
-  line-height: 46px;
-  padding: 0 40px;
+  line-height: 36px;
+  padding: 0 30px;
+  border-top: solid 4px transparent;
+  border-right: solid 1px #ccc;
   -webkit-transition: 0.4s;
   -moz-transition:    0.4s;
   -o-transition:      0.4s;
   transition:         0.4s;
-  border-top: solid 4px transparent;
-  border-right: solid 1px #ccc;
   cursor: pointer;
 }
 .start-btn > a:hover {
@@ -174,8 +177,13 @@ input[readonly]:focus {
 .banner-tools {
   height: 100%;
   vertical-align: top;
-  padding-left: 30px;
+  padding-left: 10px;
   border-left: solid 1px #ccc;
+  -webkit-user-select:  none;
+  -moz-user-select:     none;
+  -ms-user-select:      none;
+  -o-user-select:       none;
+  cursor: default;
 }
 /* ============================== END Banner ============================== */
 
@@ -474,7 +482,10 @@ input[readonly]:focus {
   text-align: center;
   background: none!important;
   box-shadow: none!important;
-  display: inline-block;
+  -webkit-user-select:  none;
+  -moz-user-select:     none;
+  -ms-user-select:      none;
+  -o-user-select:       none;
 }
 .nav-item {
   position: relative;
@@ -554,6 +565,38 @@ input[readonly]:focus {
 }
 .client-home a {
   background: rgba(255,255,255,0.6) url(../images/default/client-home.png) no-repeat center center;
+  background-size: 40px 40px;
+}
+.activity a {
+  background: rgba(255,255,255,0.6) url(../images/default/activity.png) no-repeat center center;
+  background-size: 40px 40px;
+}
+.beacon a {
+  background: rgba(255,255,255,0.6) url(../images/default/beacon.png) no-repeat center center;
+  background-size: 40px 40px;
+}
+.library a {
+  background: rgba(255,255,255,0.6) url(../images/default/library.png) no-repeat center center;
+  background-size: 40px 40px;
+}
+.rounds a {
+  background: rgba(255,255,255,0.6) url(../images/default/rounds.png) no-repeat center center;
+  background-size: 40px 40px;
+}
+.scopes a {
+  background: rgba(255,255,255,0.6) url(../images/default/scopes.png) no-repeat center center;
+  background-size: 40px 40px;
+}
+.showcase a {
+  background: rgba(255,255,255,0.6) url(../images/default/showcase.png) no-repeat center center;
+  background-size: 40px 40px;
+}
+.slingshot a {
+  background: rgba(255,255,255,0.6) url(../images/default/slingshot.png) no-repeat center center;
+  background-size: 40px 40px;
+}
+.spotlites a {
+  background: rgba(255,255,255,0.6) url(../images/default/spotlites.png) no-repeat center center;
   background-size: 40px 40px;
 }
 /* -------------------- END Main Nav -------------------- */
@@ -847,6 +890,7 @@ input[readonly]:focus {
   vertical-align: middle;
   font-size: 12px;
   border: solid 1px rgba(165,210,74,1);
+  white-space: nowrap;
 }
 .form-body .tags-container .tag a {
   display: inline-block;
