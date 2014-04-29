@@ -678,6 +678,7 @@ input[readonly]:focus {
 /* -------------------- Table -------------------- */
 .data-table {
   width: 100%;
+  display: none;
 }
 .data-table thead tr th {
   height: 30px;
@@ -750,6 +751,7 @@ input[readonly]:focus {
   font-size: 16px;
   font-weight: 400;
   color: rgba(141,128,114,1);
+  display: none;
 }
 .form-banner span {
   display: inline-block;
@@ -769,6 +771,7 @@ input[readonly]:focus {
 .form-body {
   width: 100%;
   position: relative;
+  display: none;
 }
 .form-body table {
   width: 100%;

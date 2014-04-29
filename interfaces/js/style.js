@@ -16,19 +16,19 @@ $(function(){
 	 * start up page
 	 * 
 	 * */
-	$.ajax({
-		async: false,
-		cache: false,
-		type: "GET",
-		url: "dashboard.html",
-		error: function(xml){
-			alert("Error request failed");
-		},
-		timeout: 1000,
-		success: function(e) {
-			$(".body-container").empty().append(e);
-		}
-	});
+	// $.ajax({
+	// 	async: false,
+	// 	cache: false,
+	// 	type: "GET",
+	// 	url: "dashboard.html",
+	// 	error: function(xml){
+	// 		alert("Error request failed");
+	// 	},
+	// 	timeout: 1000,
+	// 	success: function(e) {
+	// 		$(".body-container").empty().append(e);
+	// 	}
+	// });
 	
 	
 	/*
@@ -146,6 +146,7 @@ $(function(){
 	$(".nav-item").dblclick(function(){
 		if($(this).find("a").attr("name") == "admin-home") {
 			gotoPage($(this).find("a").attr("name"));
+			gotoTab("table");
 		}
 	});
 	
@@ -193,6 +194,61 @@ $(function(){
     	open = false;
     }
 	});
+
+	$(".form-options").click(function(){
+		//alert();
+		var target = $(this).attr("data-trigger");
+		$("."+target).fadeToggle("fast");
+	});
+	
+	
+	/*
+	 * Add Tag
+	 * 
+	 * */
+	$("input[name='add-tag']").focusout(function(){
+		if($(this).val() == "" || $(this).val() == " ") {
+			//doing nothing
+		} else {
+			$(this).before("<span class='tag'><span>" + $(this).val() + "</span><a href='javascript:;' class='remove-tag' onclick='removeTag(this)'>x</a></span>");
+		}
+		
+		$(this).val("");
+	});
+	
+	
+	/*
+	 * Tooltips on textfield
+	 * 
+	 * */
+	$(".form-body input[name='tooltips']").focus(function(){
+		$(this).prev().offset({top: -20, left: 0});
+		$(this).prev().fadeIn("fast");
+	});
+	
+	$(".form-body input[name='tooltips']").focusout(function(){
+		$(this).prev().offset({top: 20, left: 0});
+		$(this).prev().hide();
+	});
+	
+	
+	/*
+	 * Close Error Message
+	 * 
+	 * */
+	$(".remove-error").click(function(){
+		var obj = $(this);
+		
+		$(this).parent().fadeOut("fast");
+		
+		setTimeout(function(){
+			obj.parent().remove();
+		}, 300);
+		
+		setTimeout(function(){
+			checkempty();
+		}, 300)
+	});
 });
 
 function resetPageHeight() {
@@ -219,20 +275,19 @@ function resizeWindow() {
 function gotoPage(target) {
 	$(".page-container").show();
 	$(".page-container").css("z-index", "3000");
-	
-	$.ajax({
-		async: false,
-		cache: false,
-		type: "GET",
-		url: target + ".html",
-		error: function(xml){
-			alert("Error request failed");
-		},
-		timeout: 1000,
-		success: function(e) {
-			$(".page-container").empty().append(e);
-		}
-	});
+	// $.ajax({
+	// 	async: false,
+	// 	cache: false,
+	// 	type: "GET",
+	// 	url: target + ".html",
+	// 	error: function(xml){
+	// 		alert("Error request failed");
+	// 	},
+	// 	timeout: 1000,
+	// 	success: function(e) {
+	// 		$(".page-container").empty().append(e);
+	// 	}
+	// });
 	
 	resetPageHeight();
 	resizeWindow();
@@ -244,20 +299,26 @@ function gotoPage(target) {
 function gotoTab(target) {
 	$(".tab-item").removeClass("current");
 	$(".tab-item[name='" + target + "']").addClass("current");
-	
-	$.ajax({
-		async: false,
-		cache: false,
-		type: "GET",
-		url: target + ".html",
-		error: function(xml){
-			alert("Error request failed");
-		},
-		timeout: 1000,
-		success: function(e) {
-			$(".tab-content").empty().append(e);
-		}
-	});
+	if(target == 'table') {
+		$(".form-banner, .form-body").hide();
+		$(".data-table").show();
+	} else {
+		$(".form-banner, .form-body").show();
+		$(".data-table").hide();
+	}
+	// $.ajax({
+	// 	async: false,
+	// 	cache: false,
+	// 	type: "GET",
+	// 	url: target + ".html",
+	// 	error: function(xml){
+	// 		alert("Error request failed");
+	// 	},
+	// 	timeout: 1000,
+	// 	success: function(e) {
+	// 		$(".tab-content").empty().append(e);
+	// 	}
+	// });
 	
 	resetPageHeight();
 	resizeWindow();
@@ -276,7 +337,20 @@ function clickNav(obj) {
 	$(obj).addClass("singleClick");
 }
 
+function removeTag(obj) {
+	$(obj).parent().fadeOut("fast");
+	
+	setTimeout(function(){
+		$(obj).parent().remove();
+	}, 1000)
+}
 
+function checkempty() {
+	var isempty = $(".form-body thead td").find(".error-message").html();
+	if(isempty == null) {
+		$(".form-body thead td").slideUp();
+	}
+}
 /* =========================== Put everything above this line ============================ */
 
 var cookie_name = "style";
@@ -315,8 +389,8 @@ function getCookie(cName) {
 }
 
 function setStyleFromCookie() {
-	var c_title = getCookie(cookie_name);
-	if(c_title.length) {
-		changestyle(c_title);
-	}
+	// var c_title = getCookie(cookie_name);
+	// if(c_title.length) {
+		// changestyle(c_title);
+	// }
 }

@@ -87,6 +87,7 @@ body {
   display: inline-block;
   margin-right: 50px;
   vertical-align: middle;
+  opacity: 0;
 }
 .login-form form input[type='checkbox'] {
   width: 16px;
