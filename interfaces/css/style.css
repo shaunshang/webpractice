@@ -965,6 +965,7 @@ label[name="radio"] span.checked:hover {
 }
 .table-tools .tools > * {
   display: inline-block;
+  vertical-align: middle;
   position: relative;
   top: 7px;
 }
