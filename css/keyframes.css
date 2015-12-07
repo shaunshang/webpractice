@@ -2,24 +2,24 @@
 /* ---------- Horizon Ball ---------- */
 @-webkit-keyframes horizon-ball {
 	0%, 80% {
-		opacity: 1
+		opacity: 1;
 		-webkit-transform: scale(1);
 						transform: scale(1);
 	}
 	40% {
-		opacity: .7
+		opacity: .7;
 		-webkit-transform: scale(0.1);
 						transform: scale(0.1);
 	}
 }
 @keyframes horizon-ball {
 	0%, 80% {
-		opacity: 1
+		opacity: 1;
 		-webkit-transform: scale(1);
 						transform: scale(1);
 	}
 	40% {
-		opacity: .7
+		opacity: .7;
 		-webkit-transform: scale(0.1);
 						transform: scale(0.1);
 	}
@@ -53,8 +53,8 @@
 }
 /* ---------- END Grid Ball ---------- */
 
-/* ---------- Rotate Ball ---------- */
-@-webkit-keyframes rotate-ball {
+/* ---------- Rotate Circle ---------- */
+@-webkit-keyframes rotate-circle {
 	0% {
 		-webkit-transform: scale(1) rotate(0deg);
 						transform: scale(1) rotate(0deg);
@@ -68,7 +68,7 @@
 						transform: scale(1) rotate(360deg);
 	}
 }
-@keyframes rotate-ball {
+@keyframes rotate-circle {
 	0% {
 		-webkit-transform: scale(1) rotate(0deg);
 						transform: scale(1) rotate(0deg);
@@ -82,7 +82,7 @@
 						transform: scale(1) rotate(360deg);
 	}
 }
-/* ---------- END Rotate Ball ---------- */
+/* ---------- END Rotate Circle ---------- */
 
 /* ---------- Rotate Clip Ball ---------- */
 @-webkit-keyframes rotate-clip-ball {
@@ -259,6 +259,233 @@
 	}
 }
 /* ---------- END Rise Ball ---------- */
+
+/* ---------- Rotate Ball ---------- */
+@-webkit-keyframes rotate-ball {
+	0% {
+		-webkit-transform: rotate(0deg) scale(1);
+						transform: rotate(0deg) scale(1);
+	}
+	50% {
+		-webkit-transform: rotate(180deg) scale(.6);
+						transform: rotate(180deg) scale(.6);
+	}
+	100% {
+		-webkit-transform: rotate(360deg) scale(1);
+						transform: rotate(360deg) scale(1);
+	}
+}
+@keyframes rotate-ball {
+	0% {
+		-webkit-transform: rotate(0deg) scale(1);
+						transform: rotate(0deg) scale(1);
+	}
+	50% {
+		-webkit-transform: rotate(180deg) scale(.6);
+						transform: rotate(180deg) scale(.6);
+	}
+	100% {
+		-webkit-transform: rotate(360deg) scale(1);
+						transform: rotate(360deg) scale(1);
+	}
+}
+/* ---------- END Rotate Ball ---------- */
+
+/* ---------- Transition Cube ---------- */
+@-webkit-keyframes transition-cube {
+	0% {
+		-webkit-transform: translate(0, 0) rotate(0deg) scale(1);
+						transform: translate(0, 0) rotate(0deg) scale(1);
+	}
+	25% {
+		-webkit-transform: translate(50px, 0) rotate(-90deg) scale(.3);
+						transform: translate(50px, 0) rotate(-90deg) scale(.3);
+	}
+	50% {
+		-webkit-transform: translate(50px, 50px) rotate(180deg) scale(1);
+						transform: translate(50px, 50px) rotate(180deg) scale(1);
+	}
+	75% {
+		-webkit-transform: translate(0, 50px) rotate(90deg) scale(.3);
+						transform: translate(0, 50px) rotate(90deg) scale(.3);
+	}
+}
+@keyframes transition-cube {
+	0% {
+		-webkit-transform: translate(0, 0) rotate(0deg) scale(1);
+						transform: translate(0, 0) rotate(0deg) scale(1);
+	}
+	25% {
+		-webkit-transform: translate(50px, 0) rotate(-90deg) scale(.3);
+						transform: translate(50px, 0) rotate(-90deg) scale(.3);
+	}
+	50% {
+		-webkit-transform: translate(50px, 50px) rotate(180deg) scale(1);
+						transform: translate(50px, 50px) rotate(180deg) scale(1);
+	}
+	75% {
+		-webkit-transform: translate(0, 50px) rotate(90deg) scale(.3);
+						transform: translate(0, 50px) rotate(90deg) scale(.3);
+	}
+}
+/* ---------- END Transition Cube ---------- */
+
+/* ---------- Transition Ball ---------- */
+@-webkit-keyframes transition-ball {
+	0% {
+		-webkit-transform: translate(0, 0);
+						transform: translate(0, 0);
+	}
+	33% {
+		-webkit-transform: translate(-15px, -30px);
+						transform: translate(-15px, -30px);
+	}
+	66% {
+		-webkit-transform: translate(15px, -30px);
+						transform: translate(15px, -30px);
+	}
+}
+@keyframes transition-ball {
+	0% {
+		-webkit-transform: translate(0, 0);
+						transform: translate(0, 0);
+	}
+	33% {
+		-webkit-transform: translate(-15px, -30px);
+						transform: translate(-15px, -30px);
+	}
+	66% {
+		-webkit-transform: translate(15px, -30px);
+						transform: translate(15px, -30px);
+	}
+}
+
+@-webkit-keyframes transition-ball-opposite {
+	0% {
+		-webkit-transform: translate(0, 0);
+						transform: translate(0, 0);
+	}
+	33% {
+		-webkit-transform: translate(15px, 30px);
+						transform: translate(15px, 30px);
+	}
+	66% {
+		-webkit-transform: translate(-15px, 30px);
+						transform: translate(-15px, 30px);
+	}
+}
+@keyframes transition-ball-opposite {
+	0% {
+		-webkit-transform: translate(0, 0);
+						transform: translate(0, 0);
+	}
+	33% {
+		-webkit-transform: translate(15px, 30px);
+						transform: translate(15px, 30px);
+	}
+	66% {
+		-webkit-transform: translate(-15px, 30px);
+						transform: translate(-15px, 30px);
+	}
+}
+/* ---------- END Transition Ball ---------- */
+
+/* ---------- Transition Ball Reflect ---------- */
+@-webkit-keyframes transition-ball-reflect {
+	0% {
+		-webkit-transform: translate(0, 0);
+						transform: translate(0, 0);
+	}
+	17%, 84% {
+		-webkit-transform: translate(-15px, -30px);
+						transform: translate(-15px, -30px);
+	}
+	34%, 67% {
+		-webkit-transform: translate(15px, -30px);
+						transform: translate(15px, -30px);
+	}
+	50% {
+		-webkit-transform: translate(0, 0);
+						transform: translate(0, 0);
+	}
+}
+@keyframes transition-ball-reflect {
+	0% {
+		-webkit-transform: translate(0, 0);
+						transform: translate(0, 0);
+	}
+	17%, 84% {
+		-webkit-transform: translate(-15px, -30px);
+						transform: translate(-15px, -30px);
+	}
+	34%, 67% {
+		-webkit-transform: translate(15px, -30px);
+						transform: translate(15px, -30px);
+	}
+	50% {
+		-webkit-transform: translate(0, 0);
+						transform: translate(0, 0);
+	}
+}
+
+@-webkit-keyframes transition-ball-reflect-opposite {
+	
+}
+@keyframes transition-ball-reflect-opposite {
+	0% {
+		-webkit-transform: translate(0, 0);
+						transform: translate(0, 0);
+	}
+	17%, 84% {
+		-webkit-transform: translate(15px, 30px);
+						transform: translate(15px, 30px);
+	}
+	34%, 67% {
+		-webkit-transform: translate(-15px, 30px);
+						transform: translate(-15px, 30px);
+	}
+	50% {
+		-webkit-transform: translate(0, 0);
+						transform: translate(0, 0);
+	}
+}
+/* ---------- END Transition Ball Reflect ---------- */
+
+/* ---------- Transition Ball Triangle ---------- */
+@keyframes transition-ball-triangle-path1 {
+	0% {
+		transform: translate(0, 0);
+	}
+	33% {
+		transform: translate(40px, 60px);
+	}
+	66% {
+		transform: translate(-40px, 60px);
+	}
+}
+@keyframes transition-ball-triangle-path2 {
+	0% {
+		transform: translate(0, 0);
+	}
+	33% {
+		transform: translate(40px, -60px);
+	}
+	66% {
+		transform: translate(80px, 0);
+	}
+}
+@keyframes transition-ball-triangle-path3 {
+	0% {
+		transform: translate(0, 0);
+	}
+	33% {
+		transform: translate(-80px, 0);
+	}
+	66% {
+		transform: translate(-40px, -60px);
+	}
+}
+/* ---------- END Transition Ball Triangle ---------- */
 /* ==================== END Keyframes ==================== */
 
 

@@ -11,77 +11,93 @@ body {
 	width: 50%;
 	margin: 50px auto;
 }
+.loaders.debug .loader {
+	border: solid 1px #000000;
+}
 .loader {
 	display: inline-block;
 	vertical-align: middle;
-	height: 120px;
+	width: 140px;
+	height: 140px;
 }
 .loader > div {
-	width: 100px;
-	margin: 10px 20px;
+	position: relative;
+	width: 100%;
+	height: 100%;
+	padding: 1px 0 0;
 	text-align: center;
+	-webkit-box-sizing: border-box;
+		 -moz-box-sizing: border-box;
+					box-sizing: border-box;
 }
-.loader .ball > div {
+.loader .circle > div,
+.loader .ball > div,
+.loader .cube > div {
 	display: inline-block;
 	vertical-align: middle;
 	width: 20px;
 	height: 20px;
+}
+.loader .circle > div,
+.loader .ball > div {
 	-webkit-border-radius: 100%;
 		 -moz-border-radius: 100%;
 					border-radius: 100%;
 }
+.loader .circle > div {
+	border: solid 2px #FFFFFF;
+}
+.loader .cube > div,
+.loader .ball > div {
+	background: #FFFFFF;
+}
 /* ==================== Horizontal Ball ==================== */
-.horizon-ball > div {
-	margin: 40px 2px;
+.loader .horizon-ball > div {
+	margin: 60px 2px;
 	background: #FFFFFF;
 	animation-name: horizon-ball;
 	animation-duration: .75s;
 	animation-iteration-count: infinite;
 }
-.horizon-ball > div:nth-child(1) { animation-delay: .12s; }
-.horizon-ball > div:nth-child(2) { animation-delay: .24s; }
-.horizon-ball > div:nth-child(3) { animation-delay: .36s; }
+.loader .horizon-ball > div:nth-child(1) { animation-delay: .12s; }
+.loader .horizon-ball > div:nth-child(2) { animation-delay: .24s; }
+.loader .horizon-ball > div:nth-child(3) { animation-delay: .36s; }
 /* ==================== END Horizontal Ball ==================== */
 
 /* ==================== Grid Ball ==================== */
-.grid-ball > div {
-	margin: 5px 2px;
+.loader .grid-ball { padding-top: 20px; }
+.loader .grid-ball > div {
+	margin: 6px;
 	background: #FFFFFF;
 	animation-name: grid-ball;
 	animation-duration: .72s;
 	animation-iteration-count: infinite;
 }
-.grid-ball > div:nth-child(1) { animation-delay: .12s; }
-.grid-ball > div:nth-child(2) { animation-delay: .35s; }
-.grid-ball > div:nth-child(3) { animation-delay: .27s; }
-.grid-ball > div:nth-child(4) { animation-delay: .42s; }
-.grid-ball > div:nth-child(5) { animation-delay: .45s; }
-.grid-ball > div:nth-child(6) { animation-delay: .18s; }
-.grid-ball > div:nth-child(7) { animation-delay: .87s; }
-.grid-ball > div:nth-child(8) { animation-delay: .45s; }
-.grid-ball > div:nth-child(9) { animation-delay: .06s; }
+.loader .grid-ball > div:nth-child(1) { animation-delay: .12s; }
+.loader .grid-ball > div:nth-child(2) { animation-delay: .35s; }
+.loader .grid-ball > div:nth-child(3) { animation-delay: .27s; }
+.loader .grid-ball > div:nth-child(4) { animation-delay: .42s; }
+.loader .grid-ball > div:nth-child(5) { animation-delay: .45s; }
+.loader .grid-ball > div:nth-child(6) { animation-delay: .18s; }
+.loader .grid-ball > div:nth-child(7) { animation-delay: .87s; }
+.loader .grid-ball > div:nth-child(8) { animation-delay: .45s; }
+.loader .grid-ball > div:nth-child(9) { animation-delay: .06s; }
 /* ==================== END Grid Ball ==================== */
 
-/* ==================== Rotate Ball ==================== */
-.rotate-ball > div {
-	margin: 40px auto;
-	border: solid 2px #FFFFFF;
+/* ==================== Rotate Circle ==================== */
+.loader .rotate-circle > div {
+	margin: 56px auto;
 	border-top-color: transparent;
 	background: #EF5362;
-	animation-name: rotate-ball;
+	animation-name: rotate-circle;
 	animation-duration: .80s;
 	animation-iteration-count: infinite;
 	animation-timing-function: linear;
 }
-/* ==================== END Rotate Ball ==================== */
+/* ==================== END Rotate Circle ==================== */
 
 /* ==================== Rotate Clip Ball ==================== */
-.rotate-clip-ball {
-	position: relative;
-	width: 100%;
-	height: 100px;
-}
-.rotate-clip-ball > div {
+.loader .rotate-clip-ball > div {
 	position: absolute;
 	display: block;
 	top: 0;
@@ -92,14 +108,14 @@ body {
 	animation-duration: 1s;
 	animation-iteration-count: infinite;
 }
-.rotate-clip-ball > div:nth-child(1) {
+.loader .rotate-clip-ball > div:nth-child(1) {
 	border: solid 2px #FFFFFF;
 	border-left-color: transparent;
 	border-right-color: transparent;
-	animation-name: rotate-ball;
+	animation-name: rotate-circle;
 	animation-timing-function: ease;
 }
-.rotate-clip-ball > div:nth-child(2) {
+.loader .rotate-clip-ball > div:nth-child(2) {
 	width: 12px;
 	height: 12px;
 	background: #FFFFFF;
@@ -110,11 +126,15 @@ body {
 /* ==================== END Rotate Clip Ball ==================== */
 
 /* ==================== Square Spin ==================== */
-.square-spin > div {
+.loader .square-spin > div {
+	position: absolute;
 	width: 40px;
 	height: 40px;
-	margin: 30px auto;
-	background: #FFFFFF;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: auto;
 	animation-name: square-spin;
 	animation-duration: 3s;
 	animation-iteration-count: infinite;
@@ -123,11 +143,7 @@ body {
 /* ==================== END Square Spin ==================== */
 
 /* ==================== Rotate Clip Circle ==================== */
-.rotate-clip-circle {
-	position: relative;
-	height: 100px;
-}
-.rotate-clip-circle > div {
+.loader .rotate-clip-circle > div {
 	position: absolute;
 	display: block;
 	top: 0;
@@ -139,14 +155,14 @@ body {
 	animation-name: rotate-clip-circle;
 	animation-iteration-count: infinite;
 }
-.rotate-clip-circle > div:nth-child(1) {
+.loader .rotate-clip-circle > div:nth-child(1) {
 	width: 24px;
 	height: 24px;
 	border-top-color: transparent;
 	border-bottom-color: transparent;
 	animation-duration: 1s;
 }
-.rotate-clip-circle > div:nth-child(2) {
+.loader .rotate-clip-circle > div:nth-child(2) {
 	width: 12px;
 	height: 12px;
 	border-left-color: transparent;
@@ -157,11 +173,10 @@ body {
 /* ==================== END Rotate Clip Circle ==================== */
 
 /* ==================== Rise Ball ==================== */
-.rise-ball { height: 100%; }
 .loader .rise-ball > div {
 	width: 16px;
 	height: 16px;
-	margin: 40px 0;
+	margin: 60px 0;
 	background: #FFFFFF;
 	animation-duration: 1s;
 	animation-iteration-count: infinite;
@@ -175,8 +190,116 @@ body {
 }
 /* ==================== END Rise Ball ==================== */
 
+/* ==================== Rotate Ball ==================== */
+.loader .rotate-ball > div,
+.loader .rotate-ball > div:before,
+.loader .rotate-ball > div:after {
+	position: absolute;
+	display: block;
+	width: 16px;
+	height: 16px;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: auto;
+}
+.loader .rotate-ball > div {
+	animation-name: rotate-ball;
+	animation-duration: 1s;
+	animation-iteration-count: infinite;
+	animation-timing-function: ease;
+}
+.loader .rotate-ball > div:before,
+.loader .rotate-ball > div:after {
+	content: "";
+	background: #FFFFFF;
+	-webkit-border-radius: 100%;
+		 -moz-border-radius: 100%;
+					border-radius: 100%;
+	opacity: .8;
+}
+.loader .rotate-ball > div:before { left: -50px; }
+.loader .rotate-ball > div:after { right: -50px; }
+/* ==================== END Rotate Ball ==================== */
 
+/* ==================== Transition Cube ==================== */
+.loader .transition-cube > div {
+	position: absolute;
+	width: 12px;
+	height: 12px;
+	top: 30px;
+	left: 30px;
+	animation-name: transition-cube;
+	animation-duration: 1.6s;
+	animation-iteration-count: infinite;
+	animation-timing-function: ease-in-out;
+}
+.loader .transition-cube > div:nth-child(2) { animation-delay: -0.8s; }
+/* ==================== END Transition Cube ==================== */
 
+/* ==================== Transition Ball ==================== */
+.loader .transition-ball > div {
+	position: absolute;
+	width: 14px;
+	height: 14px;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: auto;
+	animation-name: transition-ball;
+	animation-duration: 1s;
+	animation-iteration-count: infinite;
+	animation-timing-function: ease-in-out;
+}
+.loader .transition-ball > div:nth-child(2) {
+	animation-name: transition-ball-opposite;
+}
+/* ==================== END Transition Ball ==================== */
 
+/* ==================== Transition Ball Reflect ==================== */
+.loader .transition-ball-reflect > div {
+	position: absolute;
+	width: 14px;
+	height: 14px;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: auto;
+	animation-name: transition-ball-reflect;
+	animation-duration: 1.5s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+}
+.loader .transition-ball-reflect > div:nth-child(2) {
+	animation-name: transition-ball-reflect-opposite;
+}
+/* ==================== END Transition Ball Reflect ==================== */
 
-
+/* ==================== Transition Ball Triangle ==================== */
+.loader .transition-ball-triangle > div {
+	position: absolute;
+	width: 16px;
+	height: 16px;
+	animation-duration: 2s;
+	animation-iteration-count: infinite;
+	animation-timing-function: ease-in-out;
+}
+.loader .transition-ball-triangle > div:nth-child(1) {
+	top: 30px;
+	left: 60px;
+	animation-name: transition-ball-triangle-path1;
+}
+.loader .transition-ball-triangle > div:nth-child(2) {
+	top: 90px;
+	left: 20px;
+	animation-name: transition-ball-triangle-path2;
+}
+.loader .transition-ball-triangle > div:nth-child(3) {
+	top: 90px;
+	left: 100px;
+	animation-name: transition-ball-triangle-path3;
+}
+/* ==================== END Transition Ball Triangle ==================== */
