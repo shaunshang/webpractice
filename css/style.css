@@ -24,7 +24,7 @@ body {
 	position: relative;
 	width: 100%;
 	height: 100%;
-	padding: 1px 0 0;
+	/*padding: 1px 0 0;*/
 	text-align: center;
 	-webkit-box-sizing: border-box;
 		 -moz-box-sizing: border-box;
@@ -64,10 +64,7 @@ body {
 /* ==================== Horizontal Ball ==================== */
 .loader .horizon-ball > div {
 	margin: 60px 2px;
-	background: #FFFFFF;
-	animation-name: horizon-ball;
-	animation-duration: .75s;
-	animation-iteration-count: infinite;
+	animation: horizon-ball .75s infinite;
 }
 .loader .horizon-ball > div:nth-child(1) { animation-delay: .12s; }
 .loader .horizon-ball > div:nth-child(2) { animation-delay: .24s; }
@@ -78,10 +75,7 @@ body {
 .loader .grid-ball { padding-top: 20px; }
 .loader .grid-ball > div {
 	margin: 6px;
-	background: #FFFFFF;
-	animation-name: grid-ball;
-	animation-duration: .72s;
-	animation-iteration-count: infinite;
+	animation: grid-ball .72s infinite;
 }
 .loader .grid-ball > div:nth-child(1) { animation-delay: .12s; }
 .loader .grid-ball > div:nth-child(2) { animation-delay: .35s; }
@@ -99,10 +93,7 @@ body {
 	margin: 56px auto;
 	border-top-color: transparent;
 	background: #EF5362;
-	animation-name: rotate-circle;
-	animation-duration: .80s;
-	animation-iteration-count: infinite;
-	animation-timing-function: linear;
+	animation: rotate-circle .80s infinite linear;
 }
 /* ==================== END Rotate Circle ==================== */
 
