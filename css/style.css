@@ -1,6 +1,7 @@
 html,
 body {
-	background: #EF5362; /*demo*/
+	/*demo*/
+	background: #EF5362;
   margin: 0;
   padding: 0;
 }
@@ -12,9 +13,16 @@ body {
 	margin: 50px auto;
 }
 .loaders.debug .loader {
-	border: solid 1px #000000;/*debug*/
+	/*debug*/
+	border: solid 1px #000000;
 }
 .loader {
+	/*position: absolute;*/
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: auto;
 	display: inline-block;
 	vertical-align: middle;
 	width: 140px;
@@ -46,12 +54,14 @@ body {
 .loader .ball > div,
 .loader .cube > div,
 .loader .line > div {
-	background: #FFFFFF;/*demo*/
+	/*demo*/
+	background: #FFFFFF;
 }
 .loader .circle > div {
 	border-style: solid;
 	border-width: 2px;
-	border-color: #FFFFFF; /*demo*/
+	/*demo*/
+	border-color: #FFFFFF;
 }
 .loader .line > div {
 	display: inline-block;
@@ -443,3 +453,10 @@ body {
 	animation-delay: .7s;
 }
 /* ==================== END Spin Line ==================== */
+
+.layermask {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	background: rgba(255,255,255,.2);
+}

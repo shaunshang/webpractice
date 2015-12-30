@@ -28,7 +28,8 @@
 		type: 1,
 		background: "#FFFFFF",
 		thrink: 1,
-		template: ""
+		template: "",
+		mask: false
 	}
 
 	var divs = [
@@ -61,7 +62,10 @@
 				$element.append(options.template);
 			}
 		});
+
 		that.addEffect(element, options);
+
+		if(options.mask) { that.addMask(element); }
 	}
 
 	Simpleloader.prototype.buildStructure = function(obj, options) {
@@ -101,6 +105,13 @@
 				"background": options.background
 			});
 		}
+	}
+
+	Simpleloader.prototype.addMask = function(element) {
+		var template = '<div class="layermask"></div>';
+		var $element = $(element);
+
+		$element.before(template);
 	}
 
 	function Plugin(option) {
