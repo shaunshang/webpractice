@@ -21,187 +21,91 @@
 	'use strict';
 
 	var Simpleloader = function(element, options) {
-		this.buildStructure(element, options);
+		this.init(element, options);
 	}
 
 	Simpleloader.DEFAULTS = {
-		type: 1
+		type: 1,
+		background: "#FFFFFF",
+		thrink: 1,
+		template: ""
 	}
 
-	Simpleloader.prototype.buildStructure = function(element, options) {
+	var divs = [
+		{type: 1, css_class: "horizon-ball ball", num: 3},
+		{type: 2, css_class: "grid-ball ball", num: 9},
+		{type: 3, css_class: "rotate-circle circle", num: 1},
+		{type: 4, css_class: "rotate-clip-ball circle", num: 2},
+		{type: 5, css_class: "square-spin cube", num: 1},
+		{type: 6, css_class: "rotate-clip-circle circle", num: 2},
+		{type: 7, css_class: "rise-ball ball", num: 5},
+		{type: 8, css_class: "rotate-ball ball", num: 3},
+		{type: 9, css_class: "transition-cube cube", num: 2},
+		{type: 10, css_class: "transition-ball ball", num: 2},
+		{type: 11, css_class: "transition-ball-reflect ball", num: 2},
+		{type: 12, css_class: "transition-ball-triangle ball", num: 3},
+		{type: 13, css_class: "scale-ball ball", num: 1},
+		{type: 14, css_class: "scale-ball-multiple ball", num: 3},
+		{type: 15, css_class: "spin-ball ball", num: 8},
+		{type: 16, css_class: "spin-line line", num: 8},
+	]
+
+	Simpleloader.prototype.init = function(element, options) {
 		var $element = $(element);
+		var that = this;
 
-		if(options.type == 1) {
-			var css_class = "horizon-ball ball";
-			$element.append(this.horizonBall(css_class));
-		} else if(options.type == 2) {
-			var css_class = "grid-ball ball";
-			$element.append(this.gridBall(css_class));
-		} else if(options.type == 3) {
-			var css_class = "rotate-circle circle";
-			$element.append(this.rotateCircle(css_class));
-		} else if(options.type == 4) {
-			var css_class = "rotate-clip-ball circle";
-			$element.append(this.rotateClipBall(css_class));
-		} else if(options.type == 5) {
-			var css_class = "square-spin cube";
-			$element.append(this.squareSpin(css_class));
-		} else if(options.type == 6) {
-			var css_class = "rotate-clip-circle circle";
-			$element.append(this.rotateClipCircle(css_class));
-		} else if(options.type == 7) {
-			var css_class = "rise-ball ball";
-			$element.append(this.riseBall(css_class));
-		} else if(options.type == 8) {
-			var css_class = "rotate-ball ball";
-			$element.append(this.rotateBall(css_class));
-		} else if(options.type == 9) {
-			var css_class = "transition-cube cube";
-			$element.append(this.transitionCube(css_class));
-		} else if(options.type == 10) {
-			var css_class = "transition-ball ball";
-			$element.append(this.transitionBall(css_class));
-		} else if(options.type == 11) {
-			var css_class = "transition-ball-reflect ball";
-			$element.append(this.transitionBallReflect(css_class));
-		} else if(options.type == 12) {
-			var css_class = "transition-ball-triangle ball";
-			$element.append(this.transitionBallTriangle(css_class));
-		} else if(options.type == 13) {
-			var css_class = "scale-ball ball";
-			$element.append(this.scaleBall(css_class));
-		} else if(options.type == 14) {
-			var css_class = "scale-ball-multiple ball";
-			$element.append(this.scaleBallMultiple(css_class));
-		} else if(options.type == 15) {
-			var css_class = "spin-ball ball";
-			$element.append(this.spinBall(css_class));
-		} else if(options.type == 16) {
-			var css_class = "spin-line line";
-			$element.append(this.spinLine(css_class));
+		$.each(divs, function(key, value) {
+			if(options.type == this.type) {
+				options.template = '<div class="'+this.css_class+'">';
+				options.template += that.buildStructure(this, options) + '</div>';
+				$element.append(options.template);
+			}
+		});
+		that.addEffect(element, options);
+	}
+
+	Simpleloader.prototype.buildStructure = function(obj, options) {
+		var template = "";
+		for(var i=0; i<obj.num; i++) {
+			template += '<div></div>';
 		}
-	}
-
-	Simpleloader.prototype.horizonBall = function(css_class) {
-		var template = '<div class="' + css_class + '">' +
-									 '<div></div><div></div><div></div>' +
-									 '</div>';
 		return template;
 	}
 
-	Simpleloader.prototype.gridBall = function(css_class) {
-		var template = '<div class="' + css_class + '">' +
-									 '<div></div><div></div><div></div>' +
-									 '<div></div><div></div><div></div>' +
-				           '<div></div><div></div><div></div>' +
-				           '</div>';
-		return template;
-	}
+	Simpleloader.prototype.addEffect = function(element, options) {
+		var $element = $(element);
+		var targets = $element.find("div:not([class])");
 
-	Simpleloader.prototype.rotateCircle = function(css_class) {
-		var template = '<div class="' + css_class + '">' +
-									 '<div></div>' +
-				           '</div>';
-		return template;
-	}
+		$element.css({
+			"-webkit-transform": "scale("+options.thrink+")",
+			"transform": "scale("+options.thrink+")",
+		});
 
-	Simpleloader.prototype.rotateClipBall = function(css_class) {
-		var template = '<div class="' + css_class + '">' +
-									 '<div></div><div></div>' +
-				           '</div>';
-		return template;
-	}
-
-	Simpleloader.prototype.squareSpin = function(css_class) {
-		var template = '<div class="' + css_class + '">' +
-									 '<div></div>' +
-				           '</div>';
-		return template;
-	}
-
-	Simpleloader.prototype.rotateClipCircle = function(css_class) {
-		var template = '<div class="' + css_class + '">' +
-									 '<div></div><div></div>' +
-				           '</div>';
-		return template;
-	}
-
-	Simpleloader.prototype.riseBall = function(css_class) {
-		var template = '<div class="' + css_class + '">' +
-									 '<div></div><div></div><div></div><div></div><div></div>' +
-				           '</div>';
-		return template;
-	}
-
-	Simpleloader.prototype.rotateBall = function(css_class) {
-		var template = '<div class="' + css_class + '">' +
-									 '<div></div>' +
-				           '</div>';
-		return template;
-	}
-
-	Simpleloader.prototype.transitionCube = function(css_class) {
-		var template = '<div class="' + css_class + '">' +
-									 '<div></div><div></div>' +
-				           '</div>';
-		return template;
-	}
-
-	Simpleloader.prototype.transitionBall = function(css_class) {
-		var template = '<div class="' + css_class + '">' +
-									 '<div></div><div></div>' +
-				           '</div>';
-		return template;
-	}
-
-	Simpleloader.prototype.transitionBallReflect = function(css_class) {
-		var template = '<div class="' + css_class + '">' +
-									 '<div></div><div></div>' +
-				           '</div>';
-		return template;
-	}
-
-	Simpleloader.prototype.transitionBallTriangle = function(css_class) {
-		var template = '<div class="' + css_class + '">' +
-									 '<div></div><div></div><div></div>' +
-				           '</div>';
-		return template;
-	}
-
-	Simpleloader.prototype.scaleBall = function(css_class) {
-		var template = '<div class="' + css_class + '">' +
-									 '<div></div>' +
-				           '</div>';
-		return template;
-	}
-
-	Simpleloader.prototype.scaleBallMultiple = function(css_class) {
-		var template = '<div class="' + css_class + '">' +
-									 '<div></div><div></div><div></div>' +
-				           '</div>';
-		return template;
-	}
-
-	Simpleloader.prototype.spinBall = function(css_class) {
-		var template = '<div class="' + css_class + '">' +
-									 '<div></div><div></div><div></div><div></div>' +
-				           '<div></div><div></div><div></div><div></div>' +
-				           '</div>';
-		return template;
-	}
-
-	Simpleloader.prototype.spinLine = function(css_class) {
-		var template = '<div class="' + css_class + '">' +
-									 '<div></div><div></div><div></div><div></div>' +
-				           '<div></div><div></div><div></div><div></div>' +
-				           '</div>';
-		return template;
+		if(options.type == 3) {
+			targets.css({
+				"border-color": options.background
+			});
+		} else if(options.type == 4) {
+			$element.find("div:not([class]):nth-child(1)").css({
+				"border-color": options.background
+			});
+			$element.find("div:not([class]):nth-child(2)").css({
+				"background": options.background
+			})
+		} else if(options.type == 6) {
+			targets.css({
+				"border-color": options.background
+			});
+		} else {
+			targets.css({
+				"background": options.background
+			});
+		}
 	}
 
 	function Plugin(option) {
     return this.each(function () {
       var options = $.extend({}, Simpleloader.DEFAULTS, option);
-      console.info(options);
       new Simpleloader(this, options);
     });
   }

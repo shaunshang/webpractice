@@ -1,6 +1,6 @@
 html,
 body {
-	background: #EF5362;
+	background: #EF5362; /*demo*/
   margin: 0;
   padding: 0;
 }
@@ -12,7 +12,7 @@ body {
 	margin: 50px auto;
 }
 .loaders.debug .loader {
-	border: solid 1px #000000;
+	border: solid 1px #000000;/*debug*/
 }
 .loader {
 	display: inline-block;
@@ -43,13 +43,15 @@ body {
 		 -moz-border-radius: 100%;
 					border-radius: 100%;
 }
-.loader .circle > div {
-	border: solid 2px #FFFFFF;
-}
-.loader .cube > div,
 .loader .ball > div,
+.loader .cube > div,
 .loader .line > div {
-	background: #FFFFFF;
+	background: #FFFFFF;/*demo*/
+}
+.loader .circle > div {
+	border-style: solid;
+	border-width: 2px;
+	border-color: #FFFFFF; /*demo*/
 }
 .loader .line > div {
 	display: inline-block;
@@ -73,7 +75,7 @@ body {
 /* ==================== Grid Ball ==================== */
 .loader .grid-ball { padding-top: 20px; }
 .loader .grid-ball > div {
-	margin: 6px;
+	margin: 8px;
 	animation: grid-ball .72s infinite;
 }
 .loader .grid-ball > div:nth-child(1) { animation-delay: .12s; }
@@ -90,8 +92,7 @@ body {
 /* ==================== Rotate Circle ==================== */
 .loader .rotate-circle > div {
 	margin: 56px auto;
-	border-top-color: transparent;
-	background: #EF5362;
+	border-top-color: transparent!important;
 	animation: rotate-circle .80s infinite linear;
 }
 /* ==================== END Rotate Circle ==================== */
@@ -109,17 +110,16 @@ body {
 	animation-iteration-count: infinite;
 }
 .loader .rotate-clip-ball > div:nth-child(1) {
-	border: solid 2px #FFFFFF;
-	border-left-color: transparent;
-	border-right-color: transparent;
+	border-left-color: transparent!important;
+	border-right-color: transparent!important;
 	animation-name: rotate-circle;
 	animation-timing-function: ease;
 }
 .loader .rotate-clip-ball > div:nth-child(2) {
 	width: 12px;
 	height: 12px;
-	background: #FFFFFF;
-	border: solid 3px #EF5362;
+	border-width: 3px;
+	border-color: transparent!important;
 	animation-name: rotate-clip-ball;
 	animation-timing-function: cubic-bezier(.09,.57,.49,.9);
 }
@@ -151,22 +151,21 @@ body {
 	left: 0;
 	right: 0;
 	margin: auto;
-	border: solid 2px #FFFFFF;
 	animation-name: rotate-clip-circle;
 	animation-iteration-count: infinite;
 }
 .loader .rotate-clip-circle > div:nth-child(1) {
 	width: 24px;
 	height: 24px;
-	border-top-color: transparent;
-	border-bottom-color: transparent;
+	border-top-color: transparent!important;
+	border-bottom-color: transparent!important;
 	animation-duration: 1s;
 }
 .loader .rotate-clip-circle > div:nth-child(2) {
 	width: 12px;
 	height: 12px;
-	border-left-color: transparent;
-	border-right-color: transparent;
+	border-left-color: transparent!important;
+	border-right-color: transparent!important;
 	animation-duration: .5s;
 	animation-direction: reverse;
 }
@@ -177,7 +176,6 @@ body {
 	width: 16px;
 	height: 16px;
 	margin: 60px 0;
-	background: #FFFFFF;
 	animation-duration: 1s;
 	animation-iteration-count: infinite;
 	animation-timing-function: linear;
@@ -191,9 +189,7 @@ body {
 /* ==================== END Rise Ball ==================== */
 
 /* ==================== Rotate Ball ==================== */
-.loader .rotate-ball > div,
-.loader .rotate-ball > div:before,
-.loader .rotate-ball > div:after {
+.loader .rotate-ball > div {
 	position: absolute;
 	display: block;
 	width: 16px;
@@ -204,23 +200,21 @@ body {
 	right: 0;
 	margin: auto;
 }
-.loader .rotate-ball > div {
+.loader .rotate-ball {
 	animation-name: rotate-ball;
 	animation-duration: 1s;
 	animation-iteration-count: infinite;
 	animation-timing-function: ease;
 }
-.loader .rotate-ball > div:before,
-.loader .rotate-ball > div:after {
+.loader .rotate-ball > div:nth-child(odd) {
 	content: "";
-	background: #FFFFFF;
 	-webkit-border-radius: 100%;
 		 -moz-border-radius: 100%;
 					border-radius: 100%;
 	opacity: .8;
 }
-.loader .rotate-ball > div:before { left: -50px; }
-.loader .rotate-ball > div:after { right: -50px; }
+.loader .rotate-ball > div:nth-child(1) { left: -50px; }
+.loader .rotate-ball > div:nth-child(3) { right: -50px; }
 /* ==================== END Rotate Ball ==================== */
 
 /* ==================== Transition Cube ==================== */
