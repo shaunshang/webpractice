@@ -44,7 +44,7 @@
 		{type: 9, css_class: "transition-cube cube", num: 2},
 		{type: 10, css_class: "transition-ball ball", num: 2},
 		{type: 11, css_class: "transition-ball-reflect ball", num: 2},
-		{type: 12, css_class: "transition-ball-triangle ball", num: 3},
+		{type: 12, css_class: "transition-ball-triangle circle", num: 3},
 		{type: 13, css_class: "scale-ball ball", num: 1},
 		{type: 14, css_class: "scale-ball-multiple ball", num: 3},
 		{type: 15, css_class: "spin-ball ball", num: 8},
@@ -85,7 +85,7 @@
 			"transform": "scale("+options.thrink+")",
 		});
 
-		if(options.type == 3) {
+		if(options.type == 3 || options.type == 6 || options.type == 12) {
 			targets.css({
 				"border-color": options.background
 			});
@@ -96,10 +96,6 @@
 			$element.find("div:not([class]):nth-child(2)").css({
 				"background": options.background
 			})
-		} else if(options.type == 6) {
-			targets.css({
-				"border-color": options.background
-			});
 		} else {
 			targets.css({
 				"background": options.background
